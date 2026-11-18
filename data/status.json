@@ -1,16 +1,40 @@
 {
-  "generated_at": "2026-11-18T12:55:43.426Z",
+  "generated_at": "2026-11-18T15:34:55.029Z",
   "level": "yellow",
   "level_changed_from_last_run": false,
-  "summary": "Norway's Equinor says it is dealing with an ongoing cyberattack on some IT systems. It says oil and gas output is not affected. The NSA outage is blamed on maintenance, and no official source links the recent outages. US stocks fell again on Nov 17, but futures are up today.",
+  "summary": "The NSA's classified internal network is still being restored, and a US official says the patching is going slower than expected. Officials blame maintenance and a software patch. No official source reports a cyber attack. Markets are steady today and the FAA router problem is resolved.",
   "events": [
+    {
+      "id": "nsa-systems-disruption-2026-11-17",
+      "category": "other",
+      "title": "NSA classified internal network (NSANet) still being restored",
+      "started_at": "2026-11-17T00:00:00Z",
+      "status": "ongoing",
+      "impact": "The NSA closed its campus to most staff and kept essential staff only. A US official says patching is slower than expected. The NSA says mission-critical work continues.",
+      "stated_cause": "NSA says scheduled routine maintenance. Officials also cite a software patch. No official source reports a cyber attack. The official would not give more detail.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "CNN live updates",
+          "url": "https://edition.cnn.com/2026/11/18/politics/live-news/markwayne-mullin-raia-worldwide-threats"
+        },
+        {
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/politics/national-security/classified-nsa-network-went-no-indication-was-attack-sources-say-rcna609859"
+        },
+        {
+          "name": "ABC News (Australia)",
+          "url": "https://www.abc.net.au/news/2026-11-18/classified-us-national-security-communications-network-outage/107397306"
+        }
+      ]
+    },
     {
       "id": "equinor-cyberattack-2026-11-17",
       "category": "other",
-      "title": "Norway's Equinor reports an ongoing cyberattack on some IT systems",
+      "title": "Norway's Equinor reports a cyberattack on some IT systems",
       "started_at": "2026-11-17T00:00:00Z",
       "status": "ongoing",
-      "impact": "Equinor says production and operations are not affected and it sees no sign of stolen data. Norway's security authority NSM says it is in contact with the company.",
+      "impact": "Equinor said oil and gas output and operations are not affected and it sees no sign of stolen data. I found no newer update this run.",
       "stated_cause": "Equinor calls it a cyberattack. Who did it and how they got in are unknown.",
       "confirmed": true,
       "sources": [
@@ -21,34 +45,30 @@
         {
           "name": "CBC",
           "url": "https://www.cbc.ca/news/canada/newfoundland-labrador/equinor-cyberattack-9.7425613"
-        },
-        {
-          "name": "Oilprice.com",
-          "url": "https://oilprice.com/Company-News/Equinor-Hit-by-Cyberattack-but-Oil-and-Gas-Production-Remains-Unaffected.html"
         }
       ]
     },
     {
-      "id": "nsa-systems-disruption-2026-11-17",
+      "id": "website-malicious-code-178-orgs-2026-11-16",
       "category": "other",
-      "title": "NSA classified internal network (NSANet) disrupted",
-      "started_at": "2026-11-17T00:00:00Z",
-      "status": "ongoing",
-      "impact": "CNN says the campus went to essential staff only while the network is restored, and the fix was not complete. NSA says mission-critical work continued.",
-      "stated_cause": "NSA says routine maintenance. The Director of National Intelligence says a software patch for flaws found last month. No official source reports a cyber attack.",
+      "title": "Malicious code planted on sites using Optimizely tools",
+      "started_at": "2026-11-16T00:00:00Z",
+      "status": "resolved",
+      "impact": "Newsweek reported up to 178 organizations were hit. Optimizely says it removed the code and reset access. Real-world harm to visitors is unknown.",
+      "stated_cause": "Optimizely says a weakness on its platform let attackers inject code. Who did it is unknown. Nothing links it to the other outages.",
       "confirmed": true,
       "sources": [
         {
-          "name": "CNN",
-          "url": "https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down"
+          "name": "Deadline",
+          "url": "https://deadline.com/2026/11/cnn-nsa-outage-cyber-attack-worries-1237226613/"
         },
         {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/11/17/nsas-classified-internal-communications-network-reportedly-faces-outage"
+          "name": "Newsweek",
+          "url": "https://www.newsweek.com/nsa-down-outage-network-security-communications-systems-12729263"
         },
         {
-          "name": "ABC News (Australia)",
-          "url": "https://www.abc.net.au/news/2026-11-18/classified-us-national-security-communications-network-outage/107397306"
+          "name": "ABC11 live updates",
+          "url": "https://abc11.com/live-updates/tech-outage-live-updates/20048533/"
         }
       ]
     },
@@ -58,8 +78,8 @@
       "title": "FAA nationwide ground stop; router installs paused",
       "started_at": "2026-11-13T20:00:00Z",
       "status": "resolved",
-      "impact": "About 12,462 flights were cancelled on Nov 13. The FAA paused Juniper router installs and turned off one function on more than 60 similar routers. A House hearing is set for today.",
-      "stated_cause": "FAA says a new router sent out a flood of data that overloaded old equipment. HPE says its gear worked as configured. Root cause is not yet known. FAA reports no sign of a cyberattack.",
+      "impact": "The FAA paused Juniper router installs and turned off one function on more than 60 other routers. It is using older Cisco routers meanwhile. Congress is questioning officials today.",
+      "stated_cause": "Officials say a new router flooded the network with data and overwhelmed older equipment. Duffy says the root cause is not yet known. HPE says its gear worked as configured.",
       "confirmed": true,
       "sources": [
         {
@@ -67,32 +87,32 @@
           "url": "https://www.cnn.com/2026/11/17/us/faa-ground-stop-juniper-router-installations"
         },
         {
-          "name": "Quartz",
-          "url": "https://qz.com/faa-halts-juniper-router-installations-ground-stop-111726"
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/17/us-senators-demand-faa-pause-upgrades-linked-to-nationwide-ground-stop"
         },
         {
-          "name": "Airways Magazine",
-          "url": "https://www.airwaysmag.com/new-post/senators-faa-juniper-router-pause"
+          "name": "Fox 5 NY",
+          "url": "https://www.fox5ny.com/news/we-dont-have-clarity-what-caused-faa-groundstop-duffy-says"
         }
       ]
     },
     {
       "id": "us-equities-selloff-2026-11-17",
       "category": "markets",
-      "title": "S&P 500 fell a fourth day; futures up after Nvidia",
+      "title": "S&P 500 fell a fourth day; mixed and steady today",
       "started_at": "2026-11-14T14:30:00Z",
       "status": "ongoing",
-      "impact": "On Nov 17 the S&P 500 fell 1.03% to 7,340.53 and the Dow fell 1.64%. S&P futures are up about 0.4% today. I saw no trading halts or exchange glitches.",
-      "stated_cause": "Reports cite worry about AI stock values, rates and Nvidia's leadership change. One report says the NSA outage news added to selling.",
+      "impact": "On Nov 17 the S&P 500 fell 1.03% to 7,340.53 and the Dow fell 1.64%. Today the S&P 500 is about flat and the Dow is down a few tenths of a percent. I saw no trading halts.",
+      "stated_cause": "Reports cite AI stock worries, interest rates and Nvidia news. Nvidia's earnings beat gave a lift today. No exchange problem reported.",
       "confirmed": true,
       "sources": [
         {
           "name": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-18-dow-sp-500-nasdaq-nvidia-anthropic-ipo-090613569.html"
         },
         {
-          "name": "Bloomberg",
-          "url": "https://www.bloomberg.com/news/articles/2026-11-17/stock-market-today-dow-s-p-live-updates"
+          "name": "Investrade",
+          "url": "https://investrade.com/morning-preview-november-18-2026/"
         },
         {
           "name": "TipRanks",
@@ -103,24 +123,24 @@
     {
       "id": "bitcoin-weekly-decline-2026-11",
       "category": "markets",
-      "title": "Bitcoin near 64-65K USD, down about 12-13% on the week",
+      "title": "Bitcoin near 64K USD, down about 13% on the week",
       "started_at": "2026-11-10T00:00:00Z",
       "status": "ongoing",
-      "impact": "Price data shows BTC near 64K-65K, roughly flat to slightly lower over 24 hours. This is a gradual slide, not a crash. I found no exchange outage.",
-      "stated_cause": "Price sites give no cause. One market note says traders expect a possible Fed rate hike next month.",
+      "impact": "Price data shows BTC around 63.7K to 64.2K, down about 1-2% in 24 hours. This is a slow slide, not a crash. I found no exchange outage.",
+      "stated_cause": "Price sites give no single cause. Market notes point to Fed rate-hike talk.",
       "confirmed": true,
       "sources": [
         {
-          "name": "Fortune",
-          "url": "https://fortune.com/article/price-of-bitcoin-11-18-2026/"
+          "name": "Coinbase",
+          "url": "https://www.coinbase.com/price/bitcoin"
         },
         {
           "name": "CoinGecko",
           "url": "https://www.coingecko.com/en/coins/bitcoin"
         },
         {
-          "name": "Coinbase",
-          "url": "https://www.coinbase.com/price/bitcoin"
+          "name": "Fortune",
+          "url": "https://fortune.com/article/price-of-bitcoin-11-18-2026/"
         }
       ]
     },
@@ -150,8 +170,8 @@
       "title": "Chase banking services disrupted",
       "started_at": "2026-11-16T00:00:00Z",
       "status": "resolved",
-      "impact": "Some Chase customers could not use certain services on Monday. Chase now looks operational.",
-      "stated_cause": "Chase says a software bug in an on-premise hardware system caused it, and it is not cyber-related.",
+      "impact": "Some Chase customers could not use certain services on Monday. Chase looks operational now.",
+      "stated_cause": "Chase says a software bug in an on-site hardware system caused it, and it is not cyber-related.",
       "confirmed": true,
       "sources": [
         {
@@ -175,72 +195,48 @@
       "confirmed": true,
       "sources": [
         {
-          "name": "Fox News live updates",
-          "url": "https://www.foxnews.com/live-news/tech-outages-microsoft-banks-faa-fbi-11-17-26"
+          "name": "ABC11 live updates",
+          "url": "https://abc11.com/live-updates/tech-outage-live-updates/20048533/"
         },
         {
-          "name": "ABC News 4",
-          "url": "https://abcnews4.com/news/nation-world/list-a-wave-of-outages-hits-us-companies-and-government-systems-in-a-matter-of-days-faa-bank-microsoft"
+          "name": "Fox News live updates",
+          "url": "https://www.foxnews.com/live-news/tech-outages-microsoft-banks-faa-fbi-11-17-26"
         }
       ]
     },
     {
-      "id": "united-airlines-systemwide-outage-2026-11-16",
-      "category": "aviation",
-      "title": "United Airlines tech outage delays departures",
-      "started_at": "2026-11-16T00:00:00Z",
-      "status": "resolved",
-      "impact": "Some United departures were delayed on Monday. United said it was resolved.",
-      "stated_cause": "Unknown. United called it a technology issue. No official source links it to the FAA event.",
+      "id": "cloudflare-minor-incidents-2026-11-18",
+      "category": "cloud",
+      "title": "Cloudflare shows degraded performance on its status page",
+      "started_at": "2026-11-18T15:03:00Z",
+      "status": "ongoing",
+      "impact": "The status page lists degraded performance for some services. Recent incidents were minor and regional, mostly resolved within about an hour. I saw no wire report of a wide outage.",
+      "stated_cause": "Cloudflare gives different causes for different issues. Cause of today's degradation is unknown.",
       "confirmed": true,
       "sources": [
         {
-          "name": "Yahoo News live blog",
-          "url": "https://www.yahoo.com/news/us/live/faa-ground-stop-latest-updates-duffy-blames-contractor-l3harris-thousands-more-flights-canceled-saturday-no-sign-of-cyberattack-161329174.html"
+          "name": "Cloudflare Status",
+          "url": "https://www.cloudflarestatus.com"
         },
         {
-          "name": "ABC News 4",
-          "url": "https://abcnews4.com/news/nation-world/list-a-wave-of-outages-hits-us-companies-and-government-systems-in-a-matter-of-days-faa-bank-microsoft"
-        }
-      ]
-    },
-    {
-      "id": "website-malicious-code-178-orgs-2026-11-16",
-      "category": "other",
-      "title": "Hackers reportedly planted malicious code on sites of up to 178 organizations",
-      "started_at": "2026-11-16T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Newsweek says visitors' personal and financial data could be exposed. A live blog also mentions a security incident at a digital tools platform used by big firms. I could not confirm details.",
-      "stated_cause": "Described as hackers planting code. Who did it and how are unknown.",
-      "confirmed": false,
-      "sources": [
-        {
-          "name": "Newsweek",
-          "url": "https://www.newsweek.com/nsa-down-outage-network-security-communications-systems-12729263"
-        },
-        {
-          "name": "ABC11 live updates",
-          "url": "https://abc11.com/live-updates/tech-outage-live-updates/20048533/"
+          "name": "Pulsetic",
+          "url": "https://pulsetic.com/status/cloudflare/"
         }
       ]
     },
     {
       "id": "telecom-carrier-user-reports-2026-11-18",
       "category": "telecom",
-      "title": "AT&T and Spectrum user complaints on outage trackers",
+      "title": "AT&T user complaints on outage trackers",
       "started_at": "2026-11-18T05:00:00Z",
       "status": "ongoing",
-      "impact": "Hundreds of user reports for AT&T and mixed data for Spectrum. No carrier confirmation or wire report seen. Looks like normal background noise.",
+      "impact": "Several hundred user reports on one tracker. No carrier statement or wire report seen. Looks like normal background noise.",
       "stated_cause": "Unknown. No carrier has given a cause.",
       "confirmed": false,
       "sources": [
         {
           "name": "Sunday Guardian Live (AT&T)",
           "url": "https://sundayguardianlive.com/trending/att-outage-today-is-att-down-in-the-us-users-report-5g-home-internet-mobile-signal-sos-updates-broadband-problems-as-connectivity-issues-hit-customers-across-services-check-latest-status-323849/"
-        },
-        {
-          "name": "Sunday Guardian Live (Spectrum)",
-          "url": "https://sundayguardianlive.com/world/spectrum-outage-today-is-spectrum-down-in-the-us-users-report-wifi-and-broadband-outage-as-internet-suddenly-stops-working-in-several-areas-check-latest-update-323887/"
         }
       ]
     },
@@ -250,39 +246,39 @@
       "title": "Routine CISA notices on actively exploited flaws",
       "started_at": "2026-11-10T00:00:00Z",
       "status": "ongoing",
-      "impact": "CISA keeps adding exploited bugs to its known-exploited list and posting routine advisories. I saw no new Emergency Directive in the last 3 days.",
+      "impact": "CISA keeps posting routine advisories and adding exploited bugs to its list. I saw no new Emergency Directive in the last 3 days.",
       "stated_cause": "Attackers exploiting software flaws. No notice links to the outages above.",
       "confirmed": true,
       "sources": [
         {
-          "name": "CISA",
-          "url": "https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog"
-        },
-        {
           "name": "CISA ICS advisory",
           "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06"
+        },
+        {
+          "name": "CISA",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog"
         }
       ]
     }
   ],
   "connection_assessment": {
     "verdict": "unrelated",
-    "confidence": "medium",
-    "reasoning": "FAA: a new router flooded old gear with data; root cause unknown. NSA: maintenance patch. Apple: internal update. Chase: software bug. Equinor: cyberattack, culprit unknown. No official source links any of them; Rubio said he has zero information of a link.",
-    "would_change_my_mind": "An official statement blaming the same company or attacker, or Equinor's attacker being tied to the US outages, would make me think they are connected."
+    "confidence": "low",
+    "reasoning": "FAA: a new router overloaded old gear, root cause still unknown. NSA: maintenance and a software patch, no detail given. Apple, Chase and Marriott each gave their own cause. Secretary Rubio said there is zero information linking them. No official source reports a cyber attack.",
+    "would_change_my_mind": "An official statement blaming the same company or attacker, or several big systems failing at the same moment, would make me think they are connected."
   },
   "alert": {
     "send": false,
     "headline": "",
-    "reason": "Equinor's attack is confirmed but says it has not hit production, and nothing officially links it to the US outages."
+    "reason": "No new confirmed event links the incidents. The NSA network is still being restored but officials give a maintenance cause."
   },
-  "prep_note": "No action needed for most people. Keep some cash on hand and use your usual bank app, in case of short outages. Allow extra time for flights and check airline apps before leaving. Be careful with unexpected emails or login pages. Businesses that use Juniper routers or Equinor systems should watch vendor notices.",
+  "prep_note": "No action needed for most people. Keep some cash and a charged phone handy. Check your flight status before you leave for the airport. Use official apps and websites, not links in messages, for any bank or travel updates.",
   "run": {
     "model": "claude-sonnet-5-5",
-    "input": 79418,
-    "output": 6274,
+    "input": 80976,
+    "output": 6159,
     "searches": 6,
-    "cost_usd": 0.2816
+    "cost_usd": 0.2835
   },
   "source_health": [
     {
@@ -290,19 +286,19 @@
       "ok": true
     },
     {
-      "name": "Cloudflare status",
-      "ok": true
-    },
-    {
       "name": "CISA advisories (RSS)",
       "ok": true
     },
     {
-      "name": "FAA NAS status",
+      "name": "Cloudflare status",
       "ok": true
     },
     {
       "name": "Azure status (RSS)",
+      "ok": true
+    },
+    {
+      "name": "FAA NAS status",
       "ok": true
     },
     {
@@ -311,7 +307,7 @@
     }
   ],
   "alert_sent": {
-    "at": "2026-11-18T12:55:03.849Z",
+    "at": "2026-11-18T15:34:14.459Z",
     "reason": "new confirmed critical-sector event"
   }
 }
