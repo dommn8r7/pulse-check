@@ -6,34 +6,44 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Pulse Check: is something going on?</title>
 <style>
-  :root { --bg:#0f1216; --card:#181d24; --text:#e8ecf1; --muted:#8e99a8; --line:#262d37;
-          --green:#1f9d57; --yellow:#d9a400; --orange:#e8731a; --red:#d93025; --err:#6b7280; }
+  :root { --bg:#050816; --text:#eef2ff; --muted:#93a0bd; --line:rgba(120,160,255,.16);
+          --green:#22c55e; --yellow:#facc15; --orange:#f97316; --red:#ef4444; --err:#6b7280; }
   * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
-  main { max-width:680px; margin:0 auto; padding:16px 16px 48px; }
-  .badge { border-radius:16px; padding:28px 16px; text-align:center; font-size:34px; font-weight:800; letter-spacing:.06em; color:#fff; background:var(--err); }
-  .badge.green{background:var(--green)} .badge.yellow{background:var(--yellow);color:#1a1400}
-  .badge.orange{background:var(--orange)} .badge.red{background:var(--red)}
-  .tagline { text-align:center; color:var(--muted); font-size:15px; margin:12px 0 0; }
-  .updated { text-align:center; color:var(--muted); font-size:14px; margin:10px 0 14px; }
-  .stale { background:#4a1d1d; border:1px solid var(--red); color:#ffd6d3; padding:12px 14px; border-radius:12px; margin-bottom:14px; font-weight:600; }
-  .changed { text-align:center; font-size:13px; color:var(--muted); margin-top:-6px; margin-bottom:10px; }
-  section { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; margin-bottom:14px; }
-  h2 { margin:0 0 8px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
+  body { margin:0; color:var(--text); font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; min-height:100vh;
+         background: radial-gradient(900px 500px at 50% -120px, rgba(60,110,255,.28), transparent 70%), var(--bg); background-attachment:fixed; }
+  main { max-width:680px; margin:0 auto; padding:22px 16px 56px; }
+  .brand { text-align:center; font-size:12px; letter-spacing:.32em; text-transform:uppercase; color:#7da2ff; margin:0 0 14px; font-weight:700; }
+  .badge { --c:var(--err); border-radius:22px; padding:34px 16px 30px; text-align:center; color:#0b1020; background:linear-gradient(160deg, var(--c), color-mix(in srgb, var(--c) 70%, #000));
+           box-shadow:0 0 0 1px rgba(255,255,255,.12) inset, 0 12px 50px color-mix(in srgb, var(--c) 55%, transparent); animation:glow 3.2s ease-in-out infinite; }
+  .badge .lvl { font-size:13px; font-weight:800; letter-spacing:.3em; opacity:.8; }
+  .badge .lbl { font-size:36px; font-weight:900; letter-spacing:.04em; line-height:1.1; margin-top:6px; }
+  .badge.green{--c:var(--green)} .badge.yellow{--c:var(--yellow)} .badge.orange{--c:var(--orange)} .badge.red{--c:var(--red);color:#fff}
+  @keyframes glow { 0%,100%{filter:brightness(1)} 50%{filter:brightness(1.12)} }
+  .scale { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin:12px 0 0; }
+  .scale span { text-align:center; font-size:11px; font-weight:800; letter-spacing:.12em; padding:7px 0; border-radius:10px; background:var(--c); color:#0b1020; opacity:.22; }
+  .scale span.on { opacity:1; box-shadow:0 0 18px color-mix(in srgb, var(--c) 60%, transparent); }
+  .scale .green{--c:var(--green)} .scale .yellow{--c:var(--yellow)} .scale .orange{--c:var(--orange)} .scale .red{--c:var(--red);color:#fff}
+  .tagline { text-align:center; color:#c7d2ee; font-size:16px; margin:18px 0 0; }
+  .updated { text-align:center; color:var(--muted); font-size:13px; margin:6px 0 18px; }
+  .stale { background:rgba(239,68,68,.15); border:1px solid var(--red); color:#ffd6d3; padding:12px 14px; border-radius:12px; margin-bottom:14px; font-weight:600; }
+  .changed { text-align:center; font-size:13px; color:var(--muted); margin-top:-10px; margin-bottom:12px; }
+  section { background:rgba(255,255,255,.04); border:1px solid var(--line); border-radius:18px; padding:16px 18px; margin-bottom:14px; backdrop-filter:blur(6px); }
+  h2 { margin:0 0 10px; font-size:12px; text-transform:uppercase; letter-spacing:.16em; color:#7da2ff; }
   p { margin:0 0 8px; } p:last-child { margin-bottom:0; }
-  .ev { border-top:1px solid var(--line); padding:12px 0; } .ev:first-of-type { border-top:0; padding-top:0; }
-  .ev h3 { margin:0 0 4px; font-size:16px; }
+  .ev { border-top:1px solid var(--line); padding:14px 0; } .ev:first-of-type { border-top:0; padding-top:0; }
+  .ev h3 { margin:0 0 6px; font-size:16px; }
   .tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:6px; }
-  .tag { font-size:12px; padding:2px 8px; border-radius:999px; background:#232a34; color:var(--muted); }
-  .tag.ok { background:#16341f; color:#7fdc9f; } .tag.un { background:#3a2f12; color:#f1cf72; }
+  .tag { font-size:12px; padding:2px 9px; border-radius:999px; background:rgba(255,255,255,.08); color:var(--muted); }
+  .tag.ok { background:rgba(34,197,94,.18); color:#7fe3a4; } .tag.un { background:rgba(250,204,21,.16); color:#f5d76e; }
   .meta { font-size:14px; color:var(--muted); }
-  .links a { display:inline-block; margin:4px 12px 0 0; color:#7db7ff; font-size:14px; word-break:break-all; }
-  .strip { display:flex; gap:3px; align-items:flex-end; height:34px; }
-  .strip span { flex:1; min-width:4px; border-radius:3px; background:var(--err); height:100%; opacity:.9; }
+  .links a { display:inline-block; margin:4px 12px 0 0; color:#8db8ff; font-size:14px; word-break:break-all; }
+  details { margin-top:4px; } summary { cursor:pointer; color:#7da2ff; font-size:14px; padding:6px 0; }
+  .strip { display:flex; gap:4px; align-items:flex-end; height:34px; }
+  .strip span { flex:1; min-width:4px; border-radius:4px; background:var(--err); height:100%; }
   .strip .green{background:var(--green)} .strip .yellow{background:var(--yellow)} .strip .orange{background:var(--orange)} .strip .red{background:var(--red)}
-  .strip .none{background:#222831}
-  .legend { display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-top:4px; }
-  .disclaimer { font-size:13px; color:var(--muted); text-align:center; margin-top:22px; }
+  .strip .none{background:rgba(255,255,255,.08)}
+  .legend { display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-top:6px; }
+  .disclaimer { font-size:12.5px; color:var(--muted); text-align:center; margin-top:24px; }
   .note { font-size:13px; color:var(--muted); }
 </style>
 </head>
@@ -70,27 +80,30 @@ function render(s, history) {
   if (stale) {
     h += `<div class="stale">Out of date: last good check ${esc(fmt(s.generated_at))} (${Math.round(ageMin)} min ago). The scan may have failed, so do not rely on this status.${s.stale_reason ? `<br><span class="note">${esc(s.stale_reason)}</span>` : ""}</div>`;
   }
-  h += `<div class="badge ${esc(s.level)}">${esc(LABEL[s.level] || s.level.toUpperCase())}</div>`;
+  h += `<p class="brand">Pulse Check</p><div class="badge ${esc(s.level)}"><div class="lvl">${esc(String(s.level).toUpperCase())}</div><div class="lbl">${esc(LABEL[s.level] || s.level.toUpperCase())}</div></div>`;
+  h += `<div class="scale">${["green","yellow","orange","red"].map((l) => `<span class="${l}${l === s.level ? " on" : ""}">${l.toUpperCase()}</span>`).join("")}</div>`;
   h += `<p class="tagline">Is it just me, or is something going on?</p><p class="updated">Last checked: ${esc(fmt(s.generated_at))}</p>`;
   if (s.level_changed_from_last_run) h += `<p class="changed">Level changed since last scan</p>`;
   h += `<section><h2>What's going on</h2><p>${esc(s.summary)}</p>${s.guardrail_note ? `<p class="note">${esc(s.guardrail_note)}</p>` : ""}</section>`;
 
-  h += `<section><h2>Events (${s.events.length})</h2>`;
-  if (!s.events.length) h += `<p class="meta">Nothing unusual found in the last 72 hours.</p>`;
-  for (const e of s.events) {
-    h += `<div class="ev"><h3>${esc(e.title)}</h3><div class="tags">
+  const fresh = (e) => e.status !== "resolved" || (Date.now() - Date.parse(e.started_at || 0)) < 36 * 3600e3;
+  const cur = s.events.filter(fresh), old = s.events.filter((e) => !fresh(e));
+  const evHtml = (e) => `<div class="ev"><h3>${esc(e.title)}</h3><div class="tags">
       <span class="tag">${esc(e.category)}</span>
       <span class="tag">${esc(e.status)}</span>
       <span class="tag ${e.confirmed ? "ok" : "un"}">${e.confirmed ? "confirmed" : "unconfirmed"}</span></div>
       <p class="meta">${e.started_at ? "Started " + esc(fmt(e.started_at)) + ". " : ""}${e.impact ? "Affected: " + esc(e.impact) + "." : ""}</p>
       ${e.stated_cause ? `<p class="meta">Stated cause: ${esc(e.stated_cause)}</p>` : ""}
       <div class="links">${e.sources.map((x) => safeUrl(x.url) ? `<a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener noreferrer">${esc(x.name || x.url)}</a>` : "").join("")}</div></div>`;
-  }
+  h += `<section><h2>Happening now (${cur.length})</h2>`;
+  if (!cur.length) h += `<p class="meta">Nothing active right now.</p>`;
+  h += cur.map(evHtml).join("");
+  if (old.length) h += `<details><summary>Earlier, already fixed (${old.length})</summary>${old.map(evHtml).join("")}</details>`;
   h += `</section>`;
 
   const c = s.connection_assessment;
   const VERDICT = { unrelated:"Looks like separate problems", possibly_related:"Might be connected, not proven", likely_related:"Likely connected", unknown:"Too early to tell" };
-  const SURE = { high:"Pretty sure", medium:"Not fully certain", low:"Just a guess" };
+  const SURE = { high:"Pretty sure", medium:"Not fully certain", low:"Not very sure" };
   h += `<section><h2>Is this one big problem or separate ones?</h2><p><b>${esc(VERDICT[c.verdict] || "Too early to tell")}.</b> ${esc(SURE[c.confidence] || "Not fully certain")}.</p>
         <p class="meta"><b>Why:</b> ${esc(c.reasoning)}</p>${c.would_change_my_mind ? `<p class="meta"><b>What would change our mind:</b> ${esc(c.would_change_my_mind)}</p>` : ""}</section>`;
 
