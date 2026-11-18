@@ -290,6 +290,7 @@ async function main() {
   const state = readJson(file("state.json"), { alerted_ids: [], last_alert_rank: -1, spend: {}, consecutive_failures: 0, failure_alerted: false });
   const history = readJson(file("history.json"), []);
   const nowIso = new Date().toISOString();
+  if (process.env.GITHUB_EVENT_NAME === "schedule" && prev && Date.now() - Date.parse(prev.generated_at || 0) < 100 * 60e3) { console.log("Data is fresh, skipping this run."); return; }
 
   try {
     let result, usage = { input: 0, output: 0, searches: 0, cost_usd: 0 }, health = [];
