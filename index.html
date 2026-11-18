@@ -111,7 +111,7 @@ function render(s, history) {
       <p class="meta">${e.started_at ? "Started " + esc(fmt(e.started_at)) + ". " : ""}${e.impact ? "Affected: " + esc(e.impact) + "." : ""}</p>
       ${e.stated_cause ? `<p class="meta">Stated cause: ${esc(e.stated_cause)}</p>` : ""}
       <div class="links">${e.sources.map((x) => safeUrl(x.url) ? `<a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener noreferrer">${esc(x.name || x.url)}</a>` : "").join("")}</div></div>`;
-  h += `<section class="signup"><h2>Get the daily check-in</h2><p class="lead">Free. One calm text or email a day, so you can skip the news. Add your phone to get it by text. Join the list and you'll be first when it starts.</p><iframe src="https://lc.omniaisystems.com/widget/form/Nmk1eTiQWDcsmHArNcEv" id="inline-Nmk1eTiQWDcsmHArNcEv" title="Pulse Check email signup" loading="lazy"></iframe></section>`;
+  h += `<section class="signup"><h2>Get the daily check-in</h2><p class="lead">Free. One calm text a day, so you can skip the news. Add your email too if you want a backup copy. Join the list and you'll be first when it starts.</p><iframe src="https://lc.omniaisystems.com/widget/form/Nmk1eTiQWDcsmHArNcEv" id="inline-Nmk1eTiQWDcsmHArNcEv" title="Pulse Check email signup" loading="lazy"></iframe></section>`;
   h += `<section><h2>Happening now (${cur.length})</h2>`;
   if (!cur.length) h += `<p class="meta">Nothing active right now.</p>`;
   h += cur.map(evHtml).join("");
