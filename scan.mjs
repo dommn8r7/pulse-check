@@ -91,7 +91,7 @@ CORRELATION TEST for each pair of events: shared vendor/dependency? same time wi
 
 HONESTY RULES: never state "this is not a cyber attack" as fact; say "no official source reports a cyber attack and the stated causes are X". Separate confirmed facts from inference. Give a confidence level. If sources conflict, say so and summarize both sides. If you cannot verify, say "unknown". Calm, practical tone. No panic language.
 
-OUTPUT: respond with ONE JSON object only, no markdown fences, no prose, exactly this shape:
+OUTPUT RULES: ONE JSON object only, no markdown fences, no prose before or after, no citation markup. Inside JSON strings NEVER use double quotes (use single quotes) and never use line breaks; keep every string under 300 characters; list at most 12 events (most important first). Exactly this shape:
 {"generated_at":"ISO timestamp","level":"green|yellow|orange|red","level_changed_from_last_run":false,"summary":"3-5 plain sentences","events":[{"id":"stable-kebab-id","category":"cloud|aviation|banking|payments|markets|telecom|power|cisa|geopolitical|other","title":"","started_at":"ISO","status":"ongoing|resolved","impact":"","stated_cause":"","confirmed":true,"sources":[{"name":"","url":"https://..."}]}],"connection_assessment":{"verdict":"unrelated|possibly_related|likely_related|unknown","confidence":"low|medium|high","reasoning":"","would_change_my_mind":""},"alert":{"send":false,"headline":"","reason":""},"prep_note":""}
 prep_note: calm practical steps, ONLY when level is yellow or above, else empty string. Every event needs at least one source with a real URL you actually saw. Quiet day = green with an empty or short events list.`;
 
@@ -109,7 +109,7 @@ Do the scan now. Use web search for anything the feeds do not cover, especially 
 
   const body = {
     model: MODEL,
-    max_tokens: 6000,
+    max_tokens: 10000,
     system: SYSTEM,
     messages: [{ role: "user", content: userMsg }],
     tools: [{ type: SEARCH_TOOL, name: "web_search", max_uses: MAX_SEARCHES }],
@@ -129,10 +129,43 @@ Do the scan now. Use web search for anything the feeds do not cover, especially 
   clearTimeout(t);
   const j = await r.json();
   if (!r.ok) throw new Error("API " + r.status + ": " + JSON.stringify(j).slice(0, 300));
-  const text = (j.content || []).filter((b) => b.type === "text").map((b) => b.text).join("\n");
+  return { text: finalText(j.content || []), usage: usageOf(j) };
+}
+
+// Use only the text AFTER the last search step (the model's final answer), joined with no separator.
+function finalText(content) {
+  let last = -1;
+  content.forEach((b, i) => { if (b.type === "server_tool_use" || b.type === "web_search_tool_result") last = i; });
+  const tail = content.slice(last + 1).filter((b) => b.type === "text").map((b) => b.text);
+  const all = content.filter((b) => b.type === "text").map((b) => b.text);
+  return (tail.length ? tail : all).join("");
+}
+
+function usageOf(j) {
   const searches = j.usage?.server_tool_use?.web_search_requests ?? 0;
   const cost = ((j.usage?.input_tokens || 0) * PRICE_IN + (j.usage?.output_tokens || 0) * PRICE_OUT) / 1e6 + searches * PRICE_SEARCH;
-  return { text, usage: { input: j.usage?.input_tokens || 0, output: j.usage?.output_tokens || 0, searches, cost_usd: Number(cost.toFixed(4)) } };
+  return { input: j.usage?.input_tokens || 0, output: j.usage?.output_tokens || 0, searches, cost_usd: Number(cost.toFixed(4)) };
+}
+
+// One cheap no-tools call that repairs malformed JSON (unescaped quotes, stray text, trailing commas).
+async function repairJson(badText) {
+  const r = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "content-type": "application/json", "x-api-key": ENV.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01" },
+    body: JSON.stringify({
+      model: MODEL,
+      max_tokens: 8000,
+      system: "You repair malformed JSON. Output ONE valid JSON object only: no markdown, no commentary. Keep all content; escape or replace inner double quotes with single quotes; remove trailing commas; close any unclosed strings, arrays or objects.",
+      messages: [{ role: "user", content: badText.slice(0, 40000) }],
+    }),
+  });
+  const j = await r.json();
+  if (!r.ok) throw new Error("repair API " + r.status);
+  return { text: finalText(j.content || []), usage: usageOf(j) };
+}
+
+function addUsage(a, b) {
+  return { input: a.input + b.input, output: a.output + b.output, searches: a.searches + b.searches, cost_usd: Number((a.cost_usd + b.cost_usd).toFixed(4)) };
 }
 
 function extractJson(text) {
@@ -261,7 +294,14 @@ async function main() {
       health = feeds.health;
       const r = await askClaude(prev, feeds.digest);
       usage = r.usage;
-      result = extractJson(r.text);
+      try {
+        result = extractJson(r.text);
+      } catch (parseErr) {
+        console.log("First JSON parse failed (" + parseErr.message + "); trying one repair pass.");
+        const fixed = await repairJson(r.text);
+        usage = addUsage(usage, fixed.usage);
+        result = extractJson(fixed.text);
+      }
     }
 
     const status = validate(result);
