@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pulse Check: is something going on?</title>
+<style>
+  :root { --bg:#0f1216; --card:#181d24; --text:#e8ecf1; --muted:#8e99a8; --line:#262d37;
+          --green:#1f9d57; --yellow:#d9a400; --orange:#e8731a; --red:#d93025; --err:#6b7280; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:16px 16px 48px; }
+  .badge { border-radius:16px; padding:28px 16px; text-align:center; font-size:34px; font-weight:800; letter-spacing:.06em; color:#fff; background:var(--err); }
+  .badge.green{background:var(--green)} .badge.yellow{background:var(--yellow);color:#1a1400}
+  .badge.orange{background:var(--orange)} .badge.red{background:var(--red)}
+  .tagline { text-align:center; color:var(--muted); font-size:15px; margin:12px 0 0; }
+  .updated { text-align:center; color:var(--muted); font-size:14px; margin:10px 0 14px; }
+  .stale { background:#4a1d1d; border:1px solid var(--red); color:#ffd6d3; padding:12px 14px; border-radius:12px; margin-bottom:14px; font-weight:600; }
+  .changed { text-align:center; font-size:13px; color:var(--muted); margin-top:-6px; margin-bottom:10px; }
+  section { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; margin-bottom:14px; }
+  h2 { margin:0 0 8px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
+  p { margin:0 0 8px; } p:last-child { margin-bottom:0; }
+  .ev { border-top:1px solid var(--line); padding:12px 0; } .ev:first-of-type { border-top:0; padding-top:0; }
+  .ev h3 { margin:0 0 4px; font-size:16px; }
+  .tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:6px; }
+  .tag { font-size:12px; padding:2px 8px; border-radius:999px; background:#232a34; color:var(--muted); }
+  .tag.ok { background:#16341f; color:#7fdc9f; } .tag.un { background:#3a2f12; color:#f1cf72; }
+  .meta { font-size:14px; color:var(--muted); }
+  .links a { display:inline-block; margin:4px 12px 0 0; color:#7db7ff; font-size:14px; word-break:break-all; }
+  .strip { display:flex; gap:3px; align-items:flex-end; height:34px; }
+  .strip span { flex:1; min-width:4px; border-radius:3px; background:var(--err); height:100%; opacity:.9; }
+  .strip .green{background:var(--green)} .strip .yellow{background:var(--yellow)} .strip .orange{background:var(--orange)} .strip .red{background:var(--red)}
+  .strip .none{background:#222831}
+  .legend { display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-top:4px; }
+  .disclaimer { font-size:13px; color:var(--muted); text-align:center; margin-top:22px; }
+  .note { font-size:13px; color:var(--muted); }
+</style>
+</head>
+<body>
+<main id="app"><div class="badge" id="badge">…</div><p class="updated" id="updated">Loading…</p></main>
+<script>
+const STALE_MIN = 180; // scans run every 2 hours; allow for GitHub cron delay
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+const LABEL = { green:"ALL NORMAL", yellow:"MINOR ISSUES", orange:"WORTH WATCHING", red:"SERIOUS" };
+const safeUrl = (u) => /^https?:\/\//i.test(u) ? u : "";
+const fmt = (iso) => iso ? new Date(iso).toLocaleString([], { month:"short", day:"numeric", hour:"numeric", minute:"2-digit", timeZoneName:"short" }) : "";
+
+async function load(name) {
+  const r = await fetch("data/" + name + "?t=" + Date.now(), { cache: "no-store" });
+  if (!r.ok) throw new Error(name + " " + r.status);
+  return r.json();
+}
+
+function strip(history) {
+  // last 24 hours in 12 two-hour slots, oldest to newest
+  const now = Date.now(), slots = [];
+  for (let i = 11; i >= 0; i--) {
+    const end = now - i * 7200e3, start = end - 7200e3;
+    const hit = history.filter((h) => { const t = Date.parse(h.t); return t > start && t <= end; }).pop();
+    slots.push(hit ? hit.level : "none");
+  }
+  return slots.map((l, i) => `<span class="${esc(l)}" title="${(11 - i) * 2}h ago: ${esc(l)}"></span>`).join("");
+}
+
+function render(s, history) {
+  const ageMin = (Date.now() - Date.parse(s.generated_at)) / 60000;
+  const stale = ageMin > STALE_MIN || !!s.stale_reason;
+  let h = "";
+  if (stale) {
+    h += `<div class="stale">Out of date: last good check ${esc(fmt(s.generated_at))} (${Math.round(ageMin)} min ago). The scan may have failed, so do not rely on this status.${s.stale_reason ? `<br><span class="note">${esc(s.stale_reason)}</span>` : ""}</div>`;
+  }
+  h += `<div class="badge ${esc(s.level)}">${esc(LABEL[s.level] || s.level.toUpperCase())}</div>`;
+  h += `<p class="tagline">Is it just me, or is something going on?</p><p class="updated">Last checked: ${esc(fmt(s.generated_at))}</p>`;
+  if (s.level_changed_from_last_run) h += `<p class="changed">Level changed since last scan</p>`;
+  h += `<section><h2>What's going on</h2><p>${esc(s.summary)}</p>${s.guardrail_note ? `<p class="note">${esc(s.guardrail_note)}</p>` : ""}</section>`;
+
+  h += `<section><h2>Events (${s.events.length})</h2>`;
+  if (!s.events.length) h += `<p class="meta">Nothing unusual found in the last 72 hours.</p>`;
+  for (const e of s.events) {
+    h += `<div class="ev"><h3>${esc(e.title)}</h3><div class="tags">
+      <span class="tag">${esc(e.category)}</span>
+      <span class="tag">${esc(e.status)}</span>
+      <span class="tag ${e.confirmed ? "ok" : "un"}">${e.confirmed ? "confirmed" : "unconfirmed"}</span></div>
+      <p class="meta">${e.started_at ? "Started " + esc(fmt(e.started_at)) + ". " : ""}${e.impact ? "Affected: " + esc(e.impact) + "." : ""}</p>
+      ${e.stated_cause ? `<p class="meta">Stated cause: ${esc(e.stated_cause)}</p>` : ""}
+      <div class="links">${e.sources.map((x) => safeUrl(x.url) ? `<a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener noreferrer">${esc(x.name || x.url)}</a>` : "").join("")}</div></div>`;
+  }
+  h += `</section>`;
+
+  const c = s.connection_assessment;
+  h += `<section><h2>Are these connected?</h2><p><b>${esc(String(c.verdict).replace(/_/g, " "))}</b> &middot; confidence: ${esc(c.confidence)}</p>
+        <p>${esc(c.reasoning)}</p>${c.would_change_my_mind ? `<p class="meta"><b>What would change this:</b> ${esc(c.would_change_my_mind)}</p>` : ""}</section>`;
+
+  if (s.level !== "green" && s.prep_note) h += `<section><h2>Good to know</h2><p>${esc(s.prep_note)}</p></section>`;
+
+  h += `<section><h2>Last 24 hours</h2><div class="strip">${strip(history)}</div><div class="legend"><span>24h ago</span><span>now</span></div></section>`;
+  h += `<p class="disclaimer">A calm summary of public reporting, checked every couple of hours. Not a news service and not an emergency alert system. It can lag real events and cannot prove or rule out an attack. For emergencies, use official channels.</p>`;
+  document.getElementById("app").innerHTML = h;
+}
+
+(async () => {
+  try {
+    const [s, hist] = await Promise.all([load("status.json"), load("history.json").catch(() => [])]);
+    render(s, hist);
+  } catch (e) {
+    document.getElementById("badge").textContent = "NO DATA YET";
+    document.getElementById("updated").textContent = "No scan has run yet, or data could not be loaded.";
+  }
+})();
+</script>
+</body>
+</html>
