@@ -1,7 +1,16 @@
 {
-  "alerted_ids": [],
+  "alerted_ids": [
+    "faa-nationwide-ground-stop-2026-11-13",
+    "us-equities-selloff-2026-11-17",
+    "bitcoin-weekly-decline-2026-11",
+    "cloudflare-minor-incidents-2026-11",
+    "cisa-kev-additions-2026-11",
+    "aws-middle-east-regions-disruption-2026"
+  ],
   "last_alert_rank": -1,
-  "spend": {},
-  "consecutive_failures": 1,
+  "spend": {
+    "2026-11-18": 0.2828
+  },
+  "consecutive_failures": 0,
   "failure_alerted": false
 }
