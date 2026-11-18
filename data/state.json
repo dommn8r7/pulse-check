@@ -9,11 +9,13 @@
     "united-airlines-systemwide-outage-2026-11-16",
     "apple-services-outage-2026-11-17",
     "marriott-systems-outage-2026-11-17",
-    "nsa-systems-disruption-2026-11-17"
+    "nsa-systems-disruption-2026-11-17",
+    "equinor-cyberattack-2026-11-17",
+    "jpmorgan-chase-technical-issue-2026-11-16"
   ],
   "last_alert_rank": -1,
   "spend": {
-    "2026-11-18": 0.9218
+    "2026-11-18": 1.2034
   },
   "consecutive_failures": 0,
   "failure_alerted": false
