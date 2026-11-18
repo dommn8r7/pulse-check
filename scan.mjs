@@ -254,6 +254,13 @@ export function decideAlert(status, prevLevel, state) {
   };
 }
 
+// Quiet hours (Central Time): no pushes 11 PM to 5 AM. Scans still run so the page stays fresh;
+// an alert that fires overnight is simply held and goes out on the first scan after quiet hours end.
+export function isQuiet(date = new Date(), start = Number(process.env.QUIET_START ?? 23), end = Number(process.env.QUIET_END ?? 5)) {
+  const h = Number(new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", hour: "numeric", hourCycle: "h23" }).format(date));
+  return start > end ? (h >= start || h < end) : (h >= start && h < end);
+}
+
 async function sendPush(alert, level) {
   const topic = ENV.NTFY_TOPIC;
   const title = `Pulse Check heads-up (${level})`;
@@ -317,7 +324,10 @@ async function main() {
 
     // alerts
     const alert = decideAlert(status, prev?.level, state);
-    if (alert) {
+    if (alert && isQuiet()) {
+      console.log(`Quiet hours: holding alert (${alert.reason}) until morning.`);
+      status.alert_held = { at: nowIso, reason: alert.reason };
+    } else if (alert) {
       await sendPush(alert, status.level);
       state.alerted_ids = [...new Set([...state.alerted_ids, ...alert.ids])].slice(-300);
       state.last_alert_rank = Math.max(state.last_alert_rank ?? -1, RANK[status.level]);
@@ -340,7 +350,7 @@ async function main() {
     if (prev) { prev.stale_reason = String(err.message || err).slice(0, 200); writeJson(file("status.json"), prev); }
     history.push({ t: nowIso, level: "error" });
     writeJson(file("history.json"), history.slice(-24 * 7));
-    if (state.consecutive_failures >= 3 && !state.failure_alerted) {
+    if (state.consecutive_failures >= 3 && !state.failure_alerted && !isQuiet()) {
       try { await notifyPlain("Pulse Check is failing", `3 runs in a row failed. Last error: ${String(err.message || err).slice(0, 150)}`, 3); state.failure_alerted = true; } catch {}
     }
     writeJson(file("state.json"), state);
