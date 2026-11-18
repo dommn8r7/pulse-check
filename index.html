@@ -37,7 +37,7 @@
   .scale .green{--c:var(--green)} .scale .yellow{--c:var(--yellow)} .scale .orange{--c:var(--orange)} .scale .red{--c:var(--red);color:#fff}
   .share { display:block; margin:14px auto 0; background:rgba(125,162,255,.14); color:#cfe0ff; border:1px solid rgba(125,162,255,.45); border-radius:999px; padding:11px 26px; font:700 15px system-ui,-apple-system,sans-serif; letter-spacing:.04em; cursor:pointer; }
   .share:active { transform:scale(.97); }
-  .signup iframe { width:100%; height:270px; border:0; border-radius:12px; background:#fff; margin-top:6px; }
+  .signup iframe { width:100%; height:480px; border:0; border-radius:12px; background:#fff; margin-top:6px; }
   .signup .lead { color:#c7d2ee; font-size:15px; margin:0 0 6px; }
   .tagline { text-align:center; color:#c7d2ee; font-size:16px; margin:18px 0 0; }
   .updated { text-align:center; color:var(--muted); font-size:13px; margin:6px 0 18px; }
@@ -111,7 +111,7 @@ function render(s, history) {
       <p class="meta">${e.started_at ? "Started " + esc(fmt(e.started_at)) + ". " : ""}${e.impact ? "Affected: " + esc(e.impact) + "." : ""}</p>
       ${e.stated_cause ? `<p class="meta">Stated cause: ${esc(e.stated_cause)}</p>` : ""}
       <div class="links">${e.sources.map((x) => safeUrl(x.url) ? `<a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener noreferrer">${esc(x.name || x.url)}</a>` : "").join("")}</div></div>`;
-  h += `<section class="signup"><h2>Get the daily check-in</h2><p class="lead">Free. One calm email a day, so you can skip the news. Join the list and you'll be first when it starts.</p><iframe src="https://lc.omniaisystems.com/widget/form/Nmk1eTiQWDcsmHArNcEv" id="inline-Nmk1eTiQWDcsmHArNcEv" title="Pulse Check email signup" loading="lazy"></iframe></section>`;
+  h += `<section class="signup"><h2>Get the daily check-in</h2><p class="lead">Free. One calm text or email a day, so you can skip the news. Add your phone to get it by text. Join the list and you'll be first when it starts.</p><iframe src="https://lc.omniaisystems.com/widget/form/Nmk1eTiQWDcsmHArNcEv" id="inline-Nmk1eTiQWDcsmHArNcEv" title="Pulse Check email signup" loading="lazy"></iframe></section>`;
   h += `<section><h2>Happening now (${cur.length})</h2>`;
   if (!cur.length) h += `<p class="meta">Nothing active right now.</p>`;
   h += cur.map(evHtml).join("");
