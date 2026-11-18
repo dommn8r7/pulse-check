@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Pulse Check: is something going on?</title>
+<meta property="og:title" content="Pulse Check: is something going on?">
+<meta property="og:description" content="A calm, plain-English check on big outages and incidents, so you don't have to watch the news all day.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="description" content="A calm, plain-English check on big outages and incidents, so you don't have to watch the news all day.">
 <style>
   :root { --bg:#050816; --text:#eef2ff; --muted:#93a0bd; --line:rgba(120,160,255,.16);
           --green:#22c55e; --yellow:#facc15; --orange:#f97316; --red:#ef4444; --err:#6b7280; }
@@ -23,6 +28,8 @@
   .scale span { text-align:center; font-size:11px; font-weight:800; letter-spacing:.12em; padding:7px 0; border-radius:10px; background:var(--c); color:#0b1020; opacity:.22; }
   .scale span.on { opacity:1; box-shadow:0 0 18px color-mix(in srgb, var(--c) 60%, transparent); }
   .scale .green{--c:var(--green)} .scale .yellow{--c:var(--yellow)} .scale .orange{--c:var(--orange)} .scale .red{--c:var(--red);color:#fff}
+  .share { display:block; margin:14px auto 0; background:rgba(125,162,255,.14); color:#cfe0ff; border:1px solid rgba(125,162,255,.45); border-radius:999px; padding:11px 26px; font:700 15px system-ui,-apple-system,sans-serif; letter-spacing:.04em; cursor:pointer; }
+  .share:active { transform:scale(.97); }
   .tagline { text-align:center; color:#c7d2ee; font-size:16px; margin:18px 0 0; }
   .updated { text-align:center; color:var(--muted); font-size:13px; margin:6px 0 18px; }
   .stale { background:rgba(239,68,68,.15); border:1px solid var(--red); color:#ffd6d3; padding:12px 14px; border-radius:12px; margin-bottom:14px; font-weight:600; }
@@ -82,7 +89,7 @@ function render(s, history) {
   }
   h += `<p class="brand">Pulse Check</p><div class="badge ${esc(s.level)}"><div class="lvl">${esc(String(s.level).toUpperCase())}</div><div class="lbl">${esc(LABEL[s.level] || s.level.toUpperCase())}</div></div>`;
   h += `<div class="scale">${["green","yellow","orange","red"].map((l) => `<span class="${l}${l === s.level ? " on" : ""}">${l.toUpperCase()}</span>`).join("")}</div>`;
-  h += `<p class="tagline">Is it just me, or is something going on?</p><p class="updated">Last checked: ${esc(fmt(s.generated_at))}</p>`;
+  h += `<p class="tagline">Is it just me, or is something going on?</p><p class="updated">Last checked: ${esc(fmt(s.generated_at))}</p><button class="share" id="shareBtn" type="button">Share this</button>`;
   if (s.level_changed_from_last_run) h += `<p class="changed">Level changed since last scan</p>`;
   h += `<section><h2>What's going on</h2><p>${esc(s.summary)}</p>${s.guardrail_note ? `<p class="note">${esc(s.guardrail_note)}</p>` : ""}</section>`;
 
@@ -112,6 +119,21 @@ function render(s, history) {
   h += `<section><h2>Last 24 hours</h2><div class="strip">${strip(history)}</div><div class="legend"><span>24h ago</span><span>now</span></div></section>`;
   h += `<p class="disclaimer">A calm summary of public reporting, checked every couple of hours. Not a news service and not an emergency alert system. It can lag real events and cannot prove or rule out an attack. For emergencies, use official channels.</p>`;
   document.getElementById("app").innerHTML = h;
+  const SHARE = {
+    green: "All normal right now. A calm, plain-English check on whether anything big is going on, so you don't have to watch the news:",
+    yellow: "Some minor issues out there right now, nothing alarming. Here's the plain-English version:",
+    orange: "Worth keeping an eye on today. Here's what's going on, in plain English:",
+    red: "Something serious is going on. Here's a calm, plain-English summary:"
+  };
+  const btn = document.getElementById("shareBtn");
+  if (btn) btn.addEventListener("click", async () => {
+    const url = location.origin + location.pathname, text = SHARE[s.level] || SHARE.green;
+    try {
+      if (navigator.share) { await navigator.share({ title: "Pulse Check", text, url }); return; }
+      await navigator.clipboard.writeText(text + " " + url);
+      btn.textContent = "Link copied!"; setTimeout(() => { btn.textContent = "Share this"; }, 2000);
+    } catch (e) { /* user cancelled the share sheet */ }
+  });
 }
 
 (async () => {
