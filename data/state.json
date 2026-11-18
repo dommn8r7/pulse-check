@@ -1,0 +1,7 @@
+{
+  "alerted_ids": [],
+  "last_alert_rank": -1,
+  "spend": {},
+  "consecutive_failures": 1,
+  "failure_alerted": false
+}
