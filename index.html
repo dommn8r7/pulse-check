@@ -89,8 +89,10 @@ function render(s, history) {
   h += `</section>`;
 
   const c = s.connection_assessment;
-  h += `<section><h2>Are these connected?</h2><p><b>${esc(String(c.verdict).replace(/_/g, " "))}</b> &middot; confidence: ${esc(c.confidence)}</p>
-        <p>${esc(c.reasoning)}</p>${c.would_change_my_mind ? `<p class="meta"><b>What would change this:</b> ${esc(c.would_change_my_mind)}</p>` : ""}</section>`;
+  const VERDICT = { unrelated:"Looks like separate problems", possibly_related:"Might be connected, not proven", likely_related:"Likely connected", unknown:"Too early to tell" };
+  const SURE = { high:"Pretty sure", medium:"Not fully certain", low:"Just a guess" };
+  h += `<section><h2>Is this one big problem or separate ones?</h2><p><b>${esc(VERDICT[c.verdict] || "Too early to tell")}.</b> ${esc(SURE[c.confidence] || "Not fully certain")}.</p>
+        <p class="meta"><b>Why:</b> ${esc(c.reasoning)}</p>${c.would_change_my_mind ? `<p class="meta"><b>What would change our mind:</b> ${esc(c.would_change_my_mind)}</p>` : ""}</section>`;
 
   if (s.level !== "green" && s.prep_note) h += `<section><h2>Good to know</h2><p>${esc(s.prep_note)}</p></section>`;
 
