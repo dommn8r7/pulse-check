@@ -1,17 +1,37 @@
 {
-  "generated_at": "2026-11-18T04:27:50.583Z",
+  "generated_at": "2026-11-18T08:13:29.402Z",
   "level": "yellow",
   "level_changed_from_last_run": false,
-  "summary": "Several US outages hit in a few days: the FAA ground stop, United, Apple, Marriott, some banks and reportedly the NSA. Causes are known for only two: a new router at the FAA, and an Apple 'internal update'. Officials say they look unrelated, and Rubio said there is 'zero' information that a malign actor is behind them. US stocks fell on Nov 17 but did not halt, and Bitcoin is down about 12-14% on the week with a calm last day. Telecom, power and geopolitical checks found nothing new, but they were thin this run.",
+  "summary": "The newest outages hit the NSA's internal network and Apple services on Nov 17. The NSA cited routine maintenance and Apple cited an internal update. The Director of National Intelligence says it is not a cyberattack or a coordinated nation-state effort. Stocks fell again, but futures rose after Nvidia's earnings.",
   "events": [
+    {
+      "id": "nsa-systems-disruption-2026-11-17",
+      "category": "other",
+      "title": "NSA classified internal network (NSANet) reported down",
+      "started_at": "2026-11-17T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Six sources told CNN the NSA's internal communications network went down. How long it lasted and whether it is fixed are unknown. I saw no recovery report.",
+      "stated_cause": "NSA pointed to scheduled routine maintenance. A source told the WSJ a system patch was under way. No official source reports a cyber attack.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/11/17/apple-microsoft-faa-jpmorgan-outages.html"
+        },
+        {
+          "name": "Forbes Middle East",
+          "url": "https://www.forbesmiddleeast.com/innovation/cybersecurity/nsa-network-apple-services-hit-by-outages-as-equinor-reports-cyberattack"
+        }
+      ]
+    },
     {
       "id": "faa-nationwide-ground-stop-2026-11-13",
       "category": "aviation",
-      "title": "FAA nationwide ground stop after router overload; router installs paused",
+      "title": "FAA nationwide ground stop; router installs paused",
       "started_at": "2026-11-13T20:00:00Z",
       "status": "resolved",
-      "impact": "Flights halted nationwide on Nov 13; about 12,462 flights were cancelled. FAA paused Juniper router installs on Nov 17 and turned off the suspect functions on 60+ routers. FAA NAS feed now shows only weather delays in Florida.",
-      "stated_cause": "FAA says a new router in El Dorado, Arkansas flooded older equipment with data. HPE says its router worked as configured. Root cause is still unknown. DOT brought in the FBI to check for hacking; no hack has been reported.",
+      "impact": "More than 12,000 flights were cancelled on Nov 13. The FAA paused Juniper router installs on Nov 17 and turned off the suspect function on about 60 similar routers.",
+      "stated_cause": "FAA says a new router at El Dorado, Arkansas flooded other equipment with data. HPE says its gear worked as configured. Duffy says root cause is not yet clear. The FBI is helping check that no hack occurred.",
       "confirmed": true,
       "sources": [
         {
@@ -19,52 +39,12 @@
           "url": "https://www.cnn.com/2026/11/17/us/faa-ground-stop-juniper-router-installations"
         },
         {
+          "name": "FedScoop",
+          "url": "https://fedscoop.com/faa-nationwide-ground-stop-investigation-what-happened/"
+        },
+        {
           "name": "ABC News",
           "url": "https://abcnews.com/US/faa-halts-router-installation-nationwide-ground-stop/story?id=138221009"
-        },
-        {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/11/17/us-senators-demand-faa-pause-upgrades-linked-to-nationwide-ground-stop"
-        }
-      ]
-    },
-    {
-      "id": "united-airlines-systemwide-outage-2026-11-16",
-      "category": "aviation",
-      "title": "United Airlines system outage delays departures",
-      "started_at": "2026-11-16T00:00:00Z",
-      "status": "resolved",
-      "impact": "A system outage lasting more than 90 minutes delayed United departures on Monday. United said it was resolved.",
-      "stated_cause": "Unknown. Only called a technology issue; no official link to the FAA event.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "CP24 / CTV",
-          "url": "https://www.cp24.com/news/canada/2026/11/18/apple-nsa-us-banks-hit-with-outages-trump-says-everything-is-fine/"
-        },
-        {
-          "name": "Yahoo News live blog",
-          "url": "https://www.yahoo.com/news/us/live/faa-ground-stop-latest-updates-duffy-blames-contractor-l3harris-thousands-more-flights-canceled-saturday-no-sign-of-cyberattack-161329174.html"
-        }
-      ]
-    },
-    {
-      "id": "jpmorgan-chase-technical-issue-2026-11-17",
-      "category": "banking",
-      "title": "Chase and other US banks report outages",
-      "started_at": "2026-11-17T00:00:00Z",
-      "status": "resolved",
-      "impact": "Chase transactions were disrupted and resumed around 11:49 GMT on Nov 17. Start time is approximate. Reports about other banks come from outage trackers and are not verified.",
-      "stated_cause": "Unknown; described only as a technical issue.",
-      "confirmed": false,
-      "sources": [
-        {
-          "name": "ABC7 New York",
-          "url": "https://abc7ny.com/live-updates/bank-outages-today-live-updates-chase-wells-fargo-america-others-are-reported-down/20045306/"
-        },
-        {
-          "name": "The National Desk",
-          "url": "https://thenationaldesk.com/news/americas-news-now/list-a-wave-of-outages-hits-us-companies-and-government-systems-in-a-matter-of-days-faa-bank-microsoft"
         }
       ]
     },
@@ -74,132 +54,172 @@
       "title": "Apple services (iCloud, Apple Pay, App Store, Support) outage",
       "started_at": "2026-11-17T17:51:00Z",
       "status": "resolved",
-      "impact": "Thousands of Downdetector reports for App Store, iCloud, Apple Pay and Support. Most services recovered by about 20:34 UTC.",
-      "stated_cause": "An Apple spokesperson told CTV the outage was caused by an internal update. The report said nothing suggested an attack.",
+      "impact": "Thousands of Downdetector reports for Apple Support, Apple Pay and iCloud. Apple said many systems were back up and running afterward.",
+      "stated_cause": "Apple says an internal update caused the outage. Apple told Bloomberg it was not a cyberattack.",
       "confirmed": true,
       "sources": [
         {
-          "name": "CP24 / CTV",
-          "url": "https://www.cp24.com/news/canada/2026/11/18/apple-nsa-us-banks-hit-with-outages-trump-says-everything-is-fine/"
+          "name": "Yahoo News",
+          "url": "https://www.yahoo.com/news/us/articles/recent-mass-outages-us-nsa-180255802.html"
         },
         {
-          "name": "Tom's Guide",
-          "url": "https://www.tomsguide.com/news/live/apple-outage-november-17-2026"
+          "name": "BNN Bloomberg",
+          "url": "https://www.bnnbloomberg.ca/business/technology/2026/11/17/apple-nsa-us-banks-services-hit-by-outages-live-updates-here/"
+        }
+      ]
+    },
+    {
+      "id": "jpmorgan-chase-technical-issue-2026-11-16",
+      "category": "banking",
+      "title": "Chase banking services disrupted",
+      "started_at": "2026-11-16T00:00:00Z",
+      "status": "resolved",
+      "impact": "Chase customers could not use some services on Monday. Outage trackers showed other banks too, but reporting says the problem came from Chase. Chase now looks operational.",
+      "stated_cause": "Chase says a software bug in an on-premise hardware system caused it, and it is not cyber-related.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "Yahoo News (AP)",
+          "url": "https://www.yahoo.com/news/us/articles/recent-mass-outages-us-nsa-180255802.html"
+        },
+        {
+          "name": "ABC News 4",
+          "url": "https://abcnews4.com/news/nation-world/list-a-wave-of-outages-hits-us-companies-and-government-systems-in-a-matter-of-days-faa-bank-microsoft"
         }
       ]
     },
     {
       "id": "marriott-systems-outage-2026-11-17",
       "category": "other",
-      "title": "Marriott technology issues affect reservations and check-ins",
+      "title": "Marriott sign-in outage on website and Bonvoy app",
       "started_at": "2026-11-17T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Reservations and check-ins were affected, per Downdetector and a live blog. Start time is approximate and I did not see a recovery report.",
-      "stated_cause": "Unknown; no cause seen.",
+      "status": "resolved",
+      "impact": "Travelers could not sign in on Marriott.com and the Bonvoy app for a time. Marriott says it is fixed.",
+      "stated_cause": "Marriott says it was a technical issue. Its review found no sign of a cyberattack.",
       "confirmed": true,
       "sources": [
         {
-          "name": "ABC7 Los Angeles live blog",
-          "url": "https://abc7.com/live-updates/tech-outage-live-updates/20048533/"
+          "name": "Fox News live updates",
+          "url": "https://www.foxnews.com/live-news/tech-outages-microsoft-banks-faa-fbi-11-17-26"
         },
         {
-          "name": "The National Desk",
-          "url": "https://thenationaldesk.com/news/americas-news-now/list-a-wave-of-outages-hits-us-companies-and-government-systems-in-a-matter-of-days-faa-bank-microsoft"
+          "name": "ABC News 4",
+          "url": "https://abcnews4.com/news/nation-world/list-a-wave-of-outages-hits-us-companies-and-government-systems-in-a-matter-of-days-faa-bank-microsoft"
         }
       ]
     },
     {
-      "id": "nsa-systems-disruption-2026-11-17",
+      "id": "united-airlines-systemwide-outage-2026-11-16",
+      "category": "aviation",
+      "title": "United Airlines tech outage delays departures",
+      "started_at": "2026-11-16T00:00:00Z",
+      "status": "resolved",
+      "impact": "A technology outage delayed some United departures on Monday. United said it was resolved.",
+      "stated_cause": "Unknown. United called it a technology issue. No official source links it to the FAA event.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "Yahoo News live blog",
+          "url": "https://www.yahoo.com/news/us/live/faa-ground-stop-latest-updates-duffy-blames-contractor-l3harris-thousands-more-flights-canceled-saturday-no-sign-of-cyberattack-161329174.html"
+        },
+        {
+          "name": "ABC News 4",
+          "url": "https://abcnews4.com/news/nation-world/list-a-wave-of-outages-hits-us-companies-and-government-systems-in-a-matter-of-days-faa-bank-microsoft"
+        }
+      ]
+    },
+    {
+      "id": "equinor-cyberattack-2026-11-17",
       "category": "other",
-      "title": "NSA reported to have a service disruption",
+      "title": "Norway's Equinor reports a cyberattack on some IT systems",
       "started_at": "2026-11-17T00:00:00Z",
       "status": "ongoing",
-      "impact": "Media lists say NSA systems were disrupted. Scope, timing and recovery are unknown; I found no detail from an official source.",
-      "stated_cause": "Unknown. CTV reported there was no suggestion of an attack or that NSA work was affected.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "CP24 / CTV",
-          "url": "https://www.cp24.com/news/canada/2026/11/18/apple-nsa-us-banks-hit-with-outages-trump-says-everything-is-fine/"
-        },
-        {
-          "name": "The National Desk",
-          "url": "https://thenationaldesk.com/news/americas-news-now/list-a-wave-of-outages-hits-us-companies-and-government-systems-in-a-matter-of-days-faa-bank-microsoft"
-        }
-      ]
-    },
-    {
-      "id": "digital-tools-platform-security-incident-2026-11-17",
-      "category": "cloud",
-      "title": "Platform for business digital tools reports a security incident",
-      "started_at": "2026-11-17T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Only a live-blog headline seen. Company name, scope and impact are unknown to me.",
-      "stated_cause": "Described as a security incident; details unknown.",
+      "impact": "Forbes says Equinor detected a cyberattack on certain IT systems. I saw no details on scope or effect on energy supply, and no second source.",
+      "stated_cause": "Described as a cyberattack by the company, per Forbes. Who did it is unknown.",
       "confirmed": false,
       "sources": [
         {
-          "name": "ABC7 Los Angeles live blog",
-          "url": "https://abc7.com/live-updates/tech-outage-live-updates/20048533/"
+          "name": "Forbes Middle East",
+          "url": "https://www.forbesmiddleeast.com/innovation/cybersecurity/nsa-network-apple-services-hit-by-outages-as-equinor-reports-cyberattack"
         }
       ]
     },
     {
       "id": "us-equities-selloff-2026-11-17",
       "category": "markets",
-      "title": "US stocks fall for a fourth day; S&P 500 lowest close since July",
-      "started_at": "2026-11-17T14:30:00Z",
-      "status": "resolved",
-      "impact": "Dow fell 1.64% to 50,759.42, S&P 500 fell 1.03% to 7,340.53 and Nasdaq fell 0.74%. No halts or exchange glitches seen. Futures rose after Nvidia beat estimates.",
-      "stated_cause": "Reports cite worry about AI stock values, interest-rate fears, and caution before Nvidia earnings.",
+      "title": "US stocks fall a fourth day; futures rebound after Nvidia",
+      "started_at": "2026-11-14T14:30:00Z",
+      "status": "ongoing",
+      "impact": "The S&P 500 slid about 1% on Nov 17 to its lowest level since June. Futures rose Wednesday after Nvidia beat estimates. I saw no trading halts or exchange glitches.",
+      "stated_cause": "Reports cite worry about AI stock values, rate fears and Nvidia's leadership change. Bloomberg also said tech outages added to unease.",
       "confirmed": true,
       "sources": [
         {
-          "name": "BigGo Finance",
-          "url": "https://finance.biggo.com/news/399068d1-ec9b-4c40-ae17-2de802719015"
+          "name": "Swissinfo (Bloomberg)",
+          "url": "https://www.swissinfo.ch/eng/us-stock-futures-jump-after-nvidia-earnings:-markets-wrap/92397458"
         },
         {
           "name": "CNBC",
           "url": "https://www.cnbc.com/2026/11/17/stock-market-today-live-updates.html"
         },
         {
-          "name": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/dow-drops-nearly-860-points-212641725.html"
+          "name": "Investing.com",
+          "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-jump-as-nvidia-earnings-revive-ai-optimism-5034391"
         }
       ]
     },
     {
       "id": "bitcoin-weekly-decline-2026-11",
       "category": "markets",
-      "title": "Bitcoin about 12-14% lower over 7 days, near 64-65K USD",
+      "title": "Bitcoin about 12-13% lower on the week, near 64-65K USD",
       "started_at": "2026-11-10T00:00:00Z",
       "status": "ongoing",
-      "impact": "Price data shows BTC near 64-65K, down roughly 12-14% on the week but within about 2% over 24 hours. This is a gradual drop, not a sudden crash. No exchange outage found.",
-      "stated_cause": "Not stated in sources checked. One market note mentions pricing in a possible Fed rate hike.",
+      "impact": "Price data shows BTC near 64.6K, down about 12.6% over 7 days but almost flat over 24 hours. This is a gradual slide, not a crash. I found no exchange outage.",
+      "stated_cause": "Not stated by price sources. One market note says traders are pricing in a possible Fed rate hike next month.",
       "confirmed": true,
       "sources": [
-        {
-          "name": "CoinGecko",
-          "url": "https://www.coingecko.com/en/coins/bitcoin"
-        },
         {
           "name": "Coinglass",
           "url": "https://www.coinglass.com/currencies/BTC"
         },
         {
-          "name": "Bitcoin.com",
-          "url": "https://www.bitcoin.com/price/bitcoin/"
+          "name": "CoinGecko",
+          "url": "https://www.coingecko.com/en/coins/bitcoin"
+        },
+        {
+          "name": "CoinMarketCap",
+          "url": "https://coinmarketcap.com/currencies/bitcoin/"
+        }
+      ]
+    },
+    {
+      "id": "telecom-carrier-user-reports-2026-11-18",
+      "category": "telecom",
+      "title": "AT&T and Spectrum user complaints on outage trackers",
+      "started_at": "2026-11-18T05:00:00Z",
+      "status": "ongoing",
+      "impact": "A few hundred Downdetector reports for AT&T, and mixed data for Spectrum. No carrier confirmation or wire-service report seen. Looks like normal background noise.",
+      "stated_cause": "Unknown. No carrier has given a cause.",
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "Sunday Guardian Live (AT&T)",
+          "url": "https://sundayguardianlive.com/trending/att-outage-today-is-att-down-in-the-us-users-report-5g-home-internet-mobile-signal-sos-updates-broadband-problems-as-connectivity-issues-hit-customers-across-services-check-latest-status-323849/"
+        },
+        {
+          "name": "Sunday Guardian Live (Spectrum)",
+          "url": "https://sundayguardianlive.com/world/spectrum-outage-today-is-spectrum-down-in-the-us-users-report-wifi-and-broadband-outage-as-internet-suddenly-stops-working-in-several-areas-check-latest-update-323887/"
         }
       ]
     },
     {
       "id": "cloudflare-minor-incidents-2026-11",
       "category": "cloud",
-      "title": "Cloudflare minor incidents; status shows degraded performance",
+      "title": "Cloudflare status shows degraded performance",
       "started_at": "2026-11-17T21:56:00Z",
       "status": "ongoing",
-      "impact": "Official status page shows Sites and Services at degraded performance as of 03:57 UTC, plus Amsterdam maintenance. Such notices are frequent, so this is near normal.",
-      "stated_cause": "Earlier notes cited Durable Objects timeouts and regional network issues. No deeper cause published.",
+      "impact": "Cloudflare's status page lists Sites and Services as degraded performance as of 04:51 UTC. Such notices are frequent, so this is near normal.",
+      "stated_cause": "No cause published on the status feed I saw.",
       "confirmed": true,
       "sources": [
         {
@@ -211,11 +231,11 @@
     {
       "id": "cisa-kev-additions-2026-11",
       "category": "cisa",
-      "title": "CISA adds actively exploited flaws to its known-exploited list",
+      "title": "Routine CISA notices on actively exploited flaws",
       "started_at": "2026-11-10T00:00:00Z",
       "status": "ongoing",
-      "impact": "Routine active-exploitation notices (Cisco BroadWorks, Check Point and others). The CISA feed shows routine advisories such as a Siemens ROS# bug. I saw no CISA Emergency Directive.",
-      "stated_cause": "Attackers exploiting software flaws; federal patch deadlines apply. None of these notices is linked to the outages above.",
+      "impact": "CISA keeps adding exploited bugs to its known-exploited list and posting routine advisories. I saw no new CISA Emergency Directive in the last 3 days.",
+      "stated_cause": "Attackers exploiting software flaws. No notice links to the outages above.",
       "confirmed": true,
       "sources": [
         {
@@ -223,46 +243,30 @@
           "url": "https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog"
         },
         {
-          "name": "BleepingComputer",
-          "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/"
-        }
-      ]
-    },
-    {
-      "id": "aws-middle-east-regions-disruption-2026",
-      "category": "cloud",
-      "title": "AWS Middle East regions (UAE, Bahrain) long-running disruption",
-      "started_at": "2026-03-01T00:00:00Z",
-      "status": "ongoing",
-      "impact": "AWS says data in Bahrain and one UAE zone cannot be restored. Most customers moved to other regions. Latest feed updates are dated Sep 15.",
-      "stated_cause": "AWS describes infrastructure damage across several zones; no cause beyond that is given.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "AWS Health",
-          "url": "https://status.aws.amazon.com/"
+          "name": "CISA ICS advisory",
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06"
         }
       ]
     }
   ],
   "connection_assessment": {
     "verdict": "unrelated",
-    "confidence": "low",
-    "reasoning": "The FAA says a new router overloaded older equipment, and Apple says an internal update caused its outage. Nobody has given a cause for United, Marriott, the banks or NSA. No official source links them, and Rubio said there is 'zero' information of a malign actor behind the outages.",
-    "would_change_my_mind": "An official statement blaming the same company or attacker, or several big systems failing at the same moment."
+    "confidence": "medium",
+    "reasoning": "The FAA says a new router flooded older gear with data. Apple says an internal update. Chase says a software bug. Marriott says a technical issue. The NSA points to routine maintenance. The Director of National Intelligence says it is not a cyberattack or a coordinated nation-state effort. No official source links them. The FAA's full root cause is still unknown.",
+    "would_change_my_mind": "An official statement blaming the same company or attacker, or several big systems failing at the same moment, would make me think they are connected."
   },
   "alert": {
     "send": false,
     "headline": "",
-    "reason": "Officials see no link between the outages. Stated causes differ, and markets are orderly."
+    "reason": ""
   },
-  "prep_note": "Check flight status before travel and keep a little cash or a second payment card handy. Have a backup way to reach your bank. Save key files offline. Use official sources and be wary of viral claims.",
+  "prep_note": "",
   "run": {
     "model": "claude-sonnet-5-5",
-    "input": 82424,
-    "output": 6820,
+    "input": 86970,
+    "output": 11210,
     "searches": 6,
-    "cost_usd": 0.293
+    "cost_usd": 0.346
   },
   "source_health": [
     {
@@ -278,20 +282,20 @@
       "ok": true
     },
     {
-      "name": "FAA NAS status",
-      "ok": true
-    },
-    {
       "name": "AWS Health (RSS)",
       "ok": true
     },
     {
       "name": "Azure status (RSS)",
       "ok": true
+    },
+    {
+      "name": "FAA NAS status",
+      "ok": true
     }
   ],
-  "alert_sent": {
-    "at": "2026-11-18T04:27:04.967Z",
+  "alert_held": {
+    "at": "2026-11-18T08:12:23.879Z",
     "reason": "new confirmed critical-sector event"
   }
 }
