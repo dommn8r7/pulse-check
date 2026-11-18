@@ -102,8 +102,10 @@ function render(s, history) {
   if (s.level_changed_from_last_run) h += `<p class="changed">Level changed since last scan</p>`;
   h += `<section><h2>What's going on</h2><p>${esc(s.summary)}</p>${s.guardrail_note ? `<p class="note">${esc(s.guardrail_note)}</p>` : ""}</section>`;
 
-  const fresh = (e) => e.status !== "resolved" || (Date.now() - Date.parse(e.started_at || 0)) < 36 * 3600e3;
-  const cur = s.events.filter(fresh), old = s.events.filter((e) => !fresh(e));
+  const age = (e) => Date.now() - Date.parse(e.started_at || 0);
+  const longRun = (e) => e.status !== "resolved" && e.started_at && age(e) > 14 * 86400e3;
+  const fresh = (e) => !longRun(e) && (e.status !== "resolved" || age(e) < 36 * 3600e3);
+  const cur = s.events.filter(fresh), lng = s.events.filter(longRun), old = s.events.filter((e) => !fresh(e) && !longRun(e));
   const evHtml = (e) => `<div class="ev"><h3>${esc(e.title)}</h3><div class="tags">
       <span class="tag">${esc(e.category)}</span>
       <span class="tag">${esc(e.status)}</span>
@@ -115,6 +117,7 @@ function render(s, history) {
   h += `<section><h2>Happening now (${cur.length})</h2>`;
   if (!cur.length) h += `<p class="meta">Nothing active right now.</p>`;
   h += cur.map(evHtml).join("");
+  if (lng.length) h += `<details><summary>Long-running, nothing new lately (${lng.length})</summary>${lng.map(evHtml).join("")}</details>`;
   if (old.length) h += `<details><summary>Earlier, already fixed (${old.length})</summary>${old.map(evHtml).join("")}</details>`;
   h += `</section>`;
 
