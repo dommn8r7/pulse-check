@@ -1,17 +1,57 @@
 {
-  "generated_at": "2026-11-19T12:53:23.283Z",
+  "generated_at": "2026-11-19T21:23:27.852Z",
   "level": "yellow",
   "level_changed_from_last_run": false,
-  "summary": "Equinor is still cleaning up after a real cyberattack on its office computers. Gas production is not affected. The NSA's internal network is still being fixed, and reports differ on whether it is back. Officials say the recent outages are separate and report no coordinated attack.",
+  "summary": "US stocks fell about 2% on Thursday, with the Dow closing below 50,000. Reports blame AI-stock worries, and I saw no trading halts. A report says JPMorgan Chase was hit by a cyberattack on outside service providers. Officials still say the recent outages are not linked.",
   "events": [
+    {
+      "id": "us-equities-selloff-2026-11-17",
+      "category": "markets",
+      "title": "US stocks fall sharply Thursday; Dow closes below 50,000",
+      "started_at": "2026-11-17T14:30:00Z",
+      "status": "ongoing",
+      "impact": "Thu: Dow fell 1,101 to 49,097, S&P 500 fell 2.02% to 7,176, Nasdaq fell 2.25% to 23,879. The VIX fear gauge hit about 28 at midday. I saw no trading halts. Tue and Wed were also lower.",
+      "stated_cause": "Reports point to Anthropic's IPO failing to lift AI stocks, Nvidia weakness and rate worries. No technical or attack cause reported.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/11/18/stock-market-today-live-updates.html"
+        },
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-live-141306032.html"
+        }
+      ]
+    },
+    {
+      "id": "visa-jpmorgan-ransomware-claim-2026-11-17",
+      "category": "banking",
+      "title": "JPMorgan reportedly hit by cyberattack on outside service providers",
+      "started_at": "2026-11-17T00:00:00Z",
+      "status": "ongoing",
+      "impact": "An ABC7 live blog headline says Chase reported a cyberattack on third-party service providers. I could not read the details. Earlier, a ransomware gang claimed Visa and JPMorgan; Visa said an Asia Pacific provider was hit.",
+      "stated_cause": "Per the headline, a cyberattack on outside providers. Chase earlier blamed Monday's outage on a software bug. The gang's claim is unverified.",
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "ABC7 Chicago live updates",
+          "url": "https://abc7chicago.com/live-updates/tech-outage-live-updates/20048533/"
+        },
+        {
+          "name": "Cybernews",
+          "url": "https://cybernews.com/security/visa-jpmorgan-data-breach/"
+        }
+      ]
+    },
     {
       "id": "equinor-cyberattack-2026-11-17",
       "category": "other",
       "title": "Equinor still cleaning up after cyberattack on IT systems",
       "started_at": "2026-11-17T00:00:00Z",
       "status": "ongoing",
-      "impact": "Equinor says production is not affected and it sees no sign of stolen data. An employee said internal email was down. There is no time estimate for full recovery.",
-      "stated_cause": "Equinor calls it a cyberattack but not a virus, so it says it will not spread. On Nov 18 it said it better understands how it happened. Nobody has named who did it.",
+      "impact": "Equinor says production is not affected and it sees no sign of stolen data. Internal email was reported down. There is no time estimate for full recovery.",
+      "stated_cause": "Equinor calls it a cyberattack, not a virus, so it says it cannot spread. On Nov 18 it said it better understands how it happened. Nobody has named who did it.",
       "confirmed": true,
       "sources": [
         {
@@ -19,8 +59,8 @@
           "url": "https://www.equinor.com/news/20261711-equinor-detected-cyber-attack"
         },
         {
-          "name": "Riviera Maritime Media",
-          "url": "https://www.rivieramm.com/news-content-hub/equinor-reports-cyber-attack-on-certain-it-systems-90605"
+          "name": "Reuters via Global Banking and Finance",
+          "url": "https://www.globalbankingandfinance.com/equinor-detects-cyberattack-against-systems/"
         },
         {
           "name": "Security Affairs",
@@ -31,64 +71,48 @@
     {
       "id": "nsa-systems-disruption-2026-11-17",
       "category": "other",
-      "title": "NSA classified internal network still being restored; reports differ",
+      "title": "NSA classified internal network outage enters third day",
       "started_at": "2026-11-17T00:00:00Z",
       "status": "ongoing",
-      "impact": "On Nov 18 a senior official told CNN that patching is going slower than expected. Core national security work is said to be unaffected. An earlier CBS report said the network was running again.",
+      "impact": "A senior official said Wednesday that patching is going slower than expected. The NSA campus was limited to essential staff. Officials say core national security work is unaffected.",
       "stated_cause": "The Director of National Intelligence linked it to urgent patching of PHP software flaws. The NSA first said routine maintenance. No official source reports a cyber attack.",
       "confirmed": true,
       "sources": [
         {
           "name": "CNN live updates",
-          "url": "https://cnn.com/2026/11/18/politics/live-news/markwayne-mullin-raia-worldwide-threats"
+          "url": "https://www.cnn.com/2026/11/18/politics/live-news/markwayne-mullin-raia-worldwide-threats"
         },
         {
-          "name": "CBS News via Yahoo",
-          "url": "https://www.yahoo.com/news/us/articles/nsa-network-outage-linked-software-222821510.html"
+          "name": "The Record",
+          "url": "https://therecord.media/nsa-net-disruptions"
         },
         {
-          "name": "NBC News",
-          "url": "https://www.nbcnews.com/politics/national-security/classified-nsa-network-went-no-indication-was-attack-sources-say-rcna609859"
+          "name": "Fox News",
+          "url": "https://www.foxnews.com/live-news/tech-outages-internet-trump-november-19"
         }
       ]
     },
     {
       "id": "white-house-no-coordinated-attack-statement-2026-11-18",
       "category": "geopolitical",
-      "title": "Officials say no sign recent outages are linked or caused by attackers",
+      "title": "Officials again say recent outages are unrelated and not malicious",
       "started_at": "2026-11-18T00:00:00Z",
       "status": "ongoing",
-      "impact": "US officials call the outages separate technical problems. Some experts and the public still question the timing. This is an official view, not a proven finding.",
+      "impact": "On Thursday the administration urged calm and Rubio said he has zero information linking the outages to a bad actor. This is an official view, not a proven finding.",
       "stated_cause": "Officials point to patching, router work and software bugs. They name no attacker.",
       "confirmed": true,
       "sources": [
         {
+          "name": "Fox News",
+          "url": "https://www.foxnews.com/live-news/tech-outages-internet-trump-november-19"
+        },
+        {
+          "name": "ABC7 Chicago",
+          "url": "https://abc7chicago.com/live-updates/tech-outage-live-updates/20048533/entry/20049517/"
+        },
+        {
           "name": "NBC News",
           "url": "https://www.nbcnews.com/politics/national-security/classified-nsa-network-went-no-indication-was-attack-sources-say-rcna609859"
-        },
-        {
-          "name": "KSAT (AP)",
-          "url": "https://www.ksat.com/business/2026/11/19/tech-outages-are-piling-up-and-ai-is-raising-the-stakes-could-this-be-the-new-normal/"
-        }
-      ]
-    },
-    {
-      "id": "us-equities-selloff-2026-11-17",
-      "category": "markets",
-      "title": "US stocks fall Tue and Wed; futures up Thursday",
-      "started_at": "2026-11-17T14:30:00Z",
-      "status": "ongoing",
-      "impact": "Tue: Dow fell 848 points to 50,759. Wed: Dow fell 561 to 50,198, S&P 500 fell 0.2% to 7,324, Nasdaq rose 0.4% to 24,430. Futures are higher Thursday. I saw no trading halts.",
-      "stated_cause": "Reports point to Nvidia earnings, AI stock worries and Fed rate-hike fears. No technical or attack cause reported.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "TradingView (Benzinga)",
-          "url": "https://www.tradingview.com/news/benzinga:f42c55565094b:0-stock-market-today-dow-s-p-500-futures-rise-as-wall-street-awaits-anthropic-s-listing-panw-ntes-sls-in-focus/"
-        },
-        {
-          "name": "TradingNews",
-          "url": "https://www.tradingnews.com/news/stock-market-today-sp-500-spx-five-month-low-7340-nasdaq-ixic-dow-dji-slide-nvda-beat-eyes-7620-usd-target"
         }
       ]
     },
@@ -98,14 +122,10 @@
       "title": "Bitcoin about 62.7K to 64.2K USD, down roughly 14% on the week",
       "started_at": "2026-11-10T00:00:00Z",
       "status": "ongoing",
-      "impact": "Fortune shows 63,748 at 6am ET. CoinGecko shows about 63,469 and CoinMarketCap about 64,186. It is a slow slide, not a crash. I found no exchange outage.",
+      "impact": "CoinGecko shows about 63,469 (down 1.8% in 24h, 14.1% in 7 days). CoinMarketCap shows about 64,186. Bitget shows about 62,674. It is a steady slide, not a crash. I found no exchange outage.",
       "stated_cause": "CoinGecko cites Fed rate-hike fears and fund outflows. No technical or attack cause reported.",
       "confirmed": true,
       "sources": [
-        {
-          "name": "Fortune",
-          "url": "https://fortune.com/article/price-of-bitcoin-11-19-2026/"
-        },
         {
           "name": "CoinGecko",
           "url": "https://www.coingecko.com/en/coins/bitcoin"
@@ -113,102 +133,66 @@
         {
           "name": "CoinMarketCap",
           "url": "https://coinmarketcap.com/currencies/bitcoin/"
+        },
+        {
+          "name": "Bitget",
+          "url": "https://www.bitget.com/price/bitcoin"
         }
       ]
     },
     {
-      "id": "optimizely-website-malware-2026-11-16",
-      "category": "cloud",
-      "title": "Malware reportedly spread to 178 websites through a web vendor",
+      "id": "marriott-tech-issue-2026-11-19",
+      "category": "other",
+      "title": "Marriott tech issue reported, then resolved",
+      "started_at": "2026-11-19T00:00:00Z",
+      "status": "resolved",
+      "impact": "A live-blog headline says Marriott reported a technology problem and later said it was fixed. I found no details on who was affected.",
+      "stated_cause": "Unknown. No cause seen in the data I could read.",
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "ABC7 Chicago live updates",
+          "url": "https://abc7chicago.com/live-updates/tech-outage-live-updates/20048533/"
+        }
+      ]
+    },
+    {
+      "id": "united-airlines-system-outage-2026-11-16",
+      "category": "aviation",
+      "title": "United Airlines system outage briefly affected departures",
       "started_at": "2026-11-16T00:00:00Z",
-      "status": "ongoing",
-      "impact": "One local TV report says a third-party web vendor, Optimizely, was used to spread malware that steals card data. It names big sites as customers. I found no wire or agency confirmation.",
-      "stated_cause": "A cyberattack through a third-party vendor, per one local TV report. Not verified by a second source.",
+      "status": "resolved",
+      "impact": "A widespread United system outage on Monday briefly affected departing flights. I saw no sign it is still going.",
+      "stated_cause": "Unknown in the data I saw.",
       "confirmed": false,
       "sources": [
         {
-          "name": "WKRC Local 12",
-          "url": "https://local12.com/news/local/cyberattack-hits-178-websites-spreading-malware-as-major-services-falter-tech-technology-apple-cyber-attack-national-security-agency-malware-credit-card-information-cincinnati-ohio-cnn-fox-news-iphone-ipad"
-        }
-      ]
-    },
-    {
-      "id": "visa-jpmorgan-ransomware-claim-2026-11-17",
-      "category": "banking",
-      "title": "Ransomware gang claims Visa and JPMorgan; both dispute impact",
-      "started_at": "2026-11-17T00:00:00Z",
-      "status": "ongoing",
-      "impact": "A gang called n0n set a 48-hour leak deadline. Visa says a third-party provider in Asia Pacific was hit, not its own systems. Chase says its outage was a software bug.",
-      "stated_cause": "The gang's claim is unverified. Visa blames a third-party provider. Chase says it has no evidence of a cyberattack.",
-      "confirmed": false,
-      "sources": [
-        {
-          "name": "Cybernews",
-          "url": "https://cybernews.com/security/visa-jpmorgan-data-breach/"
+          "name": "Fox News",
+          "url": "https://www.foxnews.com/live-news/tech-outages-internet-trump-november-19"
         }
       ]
     },
     {
       "id": "faa-nationwide-ground-stop-2026-11-13",
       "category": "aviation",
-      "title": "FAA nationwide ground stop; Juniper router installs paused",
+      "title": "FAA ground stop; FBI helping review air traffic outage",
       "started_at": "2026-11-13T20:00:00Z",
       "status": "resolved",
-      "impact": "Flights have resumed. The FAA feed at 12:52 UTC shows only a weather delay at Orlando. The FAA paused new Juniper router installs.",
-      "stated_cause": "The FAA says a new router flooded the network with data. Officials say routine telecom maintenance set it off. The FBI is helping to rule out an attack.",
+      "impact": "Flights have resumed. The FAA feed at 21:21 UTC shows only weather and volume delays (SFO, LAS, MCO, TEB). The FAA paused new Juniper router installs.",
+      "stated_cause": "The FAA says a new router flooded the network with data. Officials cite routine telecom maintenance. The FBI is helping the FAA, DOT and L3Harris.",
       "confirmed": true,
       "sources": [
-        {
-          "name": "CNN",
-          "url": "https://edition.cnn.com/2026/11/17/us/faa-ground-stop-juniper-router-installations"
-        },
         {
           "name": "FAA NAS status",
           "url": "https://nasstatus.faa.gov/"
         },
         {
-          "name": "MSSP Alert",
-          "url": "https://www.msspalert.com/brief/federal-aviation-administration-suspends-hpe-juniper-router-installations-following-ground-stop"
-        }
-      ]
-    },
-    {
-      "id": "jpmorgan-chase-technical-issue-2026-11-16",
-      "category": "banking",
-      "title": "Chase banking services disrupted",
-      "started_at": "2026-11-16T00:00:00Z",
-      "status": "resolved",
-      "impact": "Some Chase customers could not use certain services on Monday. Chase looks operational now.",
-      "stated_cause": "Chase says a software bug in an on-site hardware system caused it. It says it has no evidence of a cyberattack.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "Yahoo News (AP)",
-          "url": "https://www.yahoo.com/news/us/articles/recent-mass-outages-us-nsa-180255802.html"
+          "name": "The Record",
+          "url": "https://therecord.media/nsa-net-disruptions"
         },
         {
-          "name": "Cybernews",
-          "url": "https://cybernews.com/security/visa-jpmorgan-data-breach/"
-        }
-      ]
-    },
-    {
-      "id": "apple-services-outage-2026-11-17",
-      "category": "cloud",
-      "title": "Apple services (iCloud, App Store) outage",
-      "started_at": "2026-11-17T17:51:00Z",
-      "status": "resolved",
-      "impact": "Apple Music, the App Store and AppleCare were briefly disrupted. Apple says services are back up.",
-      "stated_cause": "Apple says an internal update caused it. It told media it was not a cyberattack.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "KSAT (AP)",
-          "url": "https://www.ksat.com/business/2026/11/19/tech-outages-are-piling-up-and-ai-is-raising-the-stakes-could-this-be-the-new-normal/"
-        },
-        {
-          "name": "ABC News",
-          "url": "https://abcnews.com/Technology/recent-tech-outages-spurring-cyberattack-fears/story?id=138245555"
+          "name": "CNN",
+          "url": "https://edition.cnn.com/2026/11/17/us/faa-ground-stop-juniper-router-installations"
         }
       ]
     },
@@ -218,13 +202,33 @@
       "title": "Cloudflare status page shows degraded performance",
       "started_at": "2026-11-18T15:03:00Z",
       "status": "ongoing",
-      "impact": "The status page lists degraded performance for Sites and Services, last changed 08:56 UTC today. I saw no wire report of a wide outage.",
+      "impact": "The status page lists degraded performance for Sites and Services, last changed 16:30 UTC today. I saw no wire report of a wide outage.",
       "stated_cause": "Unknown. Cloudflare has not given a cause in the data I saw.",
       "confirmed": true,
       "sources": [
         {
           "name": "Cloudflare Status",
           "url": "https://www.cloudflarestatus.com"
+        }
+      ]
+    },
+    {
+      "id": "apple-services-outage-2026-11-17",
+      "category": "cloud",
+      "title": "Apple services outage (iCloud, App Store, Apple Music)",
+      "started_at": "2026-11-17T17:51:00Z",
+      "status": "resolved",
+      "impact": "Apple confirmed sign-in, App Store and Apple Music problems. Some users also reported Apple Pay trouble. Services are back up.",
+      "stated_cause": "Apple says an internal update caused it. It told media it was not a cyberattack.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "Fox News",
+          "url": "https://www.foxnews.com/live-news/tech-outages-internet-trump-november-19"
+        },
+        {
+          "name": "ABC News",
+          "url": "https://abcnews.com/Technology/recent-tech-outages-spurring-cyberattack-fears/story?id=138245555"
         }
       ]
     },
@@ -246,35 +250,27 @@
     }
   ],
   "connection_assessment": {
-    "verdict": "unrelated",
+    "verdict": "unknown",
     "confidence": "low",
-    "reasoning": "The FAA stop is blamed on a router that flooded the network. Chase blames a software bug, Apple an internal update, and the NSA outage is linked to urgent software patching. Equinor reports a real cyberattack, and nobody has named who did it. No official source links these events.",
+    "reasoning": "Equinor confirms a real cyberattack but has named no one. The NSA outage is blamed on patching, Apple on an internal update, and the FAA on a router. Officials say none are linked. One report says Chase was hit through outside providers, which I could not confirm.",
     "would_change_my_mind": "An official statement blaming the same company or attacker, or several big systems failing at the same moment, would make me think they are connected."
   },
   "alert": {
     "send": false,
     "headline": "",
-    "reason": "No new confirmed link between events, and no new major outage in the last few hours."
+    "reason": "The new Chase report is unconfirmed and officials still see no link. The stock drop has market-based explanations and no halts."
   },
-  "prep_note": "No action is needed for most people. Keep a little cash on hand and check flight status before travel. Use strong passwords and install software updates when offered. Ignore posts claiming a scheduled national blackout, because National Grid called that rumor false.",
+  "prep_note": "No action is needed beyond normal habits. Keep some cash and a backup way to pay. Watch your bank app for odd activity. If you manage a business, install pending security updates but test them first, since patching has caused some of these outages.",
   "run": {
     "model": "claude-sonnet-5-5",
-    "input": 80291,
-    "output": 6514,
+    "input": 80403,
+    "output": 7273,
     "searches": 6,
-    "cost_usd": 0.2857
+    "cost_usd": 0.2935
   },
   "source_health": [
     {
-      "name": "AWS Health (RSS)",
-      "ok": true
-    },
-    {
       "name": "Google Cloud incidents",
-      "ok": true
-    },
-    {
-      "name": "FAA NAS status",
       "ok": true
     },
     {
@@ -282,11 +278,19 @@
       "ok": true
     },
     {
-      "name": "Cloudflare status",
+      "name": "FAA NAS status",
       "ok": true
     },
     {
       "name": "Azure status (RSS)",
+      "ok": true
+    },
+    {
+      "name": "Cloudflare status",
+      "ok": true
+    },
+    {
+      "name": "AWS Health (RSS)",
       "ok": true
     }
   ]
