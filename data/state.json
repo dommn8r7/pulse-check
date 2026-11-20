@@ -16,13 +16,14 @@
     "cloudflare-minor-incidents-2026-11-18",
     "visa-jpmorgan-ransomware-claim-2026-11-17",
     "white-house-no-coordinated-attack-statement-2026-11-18",
-    "marriott-tech-issue-2026-11-19"
+    "marriott-tech-issue-2026-11-19",
+    "playstation-network-outage-2026-11-18"
   ],
   "last_alert_rank": -1,
   "spend": {
     "2026-11-18": 1.7659,
     "2026-11-19": 0.8535,
-    "2026-11-20": 0.3981
+    "2026-11-20": 0.6651
   },
   "consecutive_failures": 0,
   "failure_alerted": false
