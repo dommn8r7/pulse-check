@@ -13,12 +13,16 @@
     "equinor-cyberattack-2026-11-17",
     "jpmorgan-chase-technical-issue-2026-11-16",
     "website-malicious-code-178-orgs-2026-11-16",
-    "cloudflare-minor-incidents-2026-11-18"
+    "cloudflare-minor-incidents-2026-11-18",
+    "visa-jpmorgan-ransomware-claim-2026-11-17",
+    "white-house-no-coordinated-attack-statement-2026-11-18",
+    "marriott-tech-issue-2026-11-19"
   ],
   "last_alert_rank": -1,
   "spend": {
     "2026-11-18": 1.7659,
-    "2026-11-19": 0.8535
+    "2026-11-19": 0.8535,
+    "2026-11-20": 0.3981
   },
   "consecutive_failures": 0,
   "failure_alerted": false
