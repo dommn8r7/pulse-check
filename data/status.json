@@ -1,54 +1,102 @@
 {
-  "generated_at": "2026-11-20T11:19:56.253Z",
+  "generated_at": "2026-11-20T19:59:12.856Z",
   "level": "yellow",
   "level_changed_from_last_run": false,
-  "summary": "Equinor says its cyberattack has been stopped, and production was not hurt. The NSA's classified network is still partly down, and officials blame software patching, not an attack. US stock futures are lower after Thursday's 2% drop. Bitcoin is near 62K, down about 10% on the week.",
+  "summary": "US tech stocks fell harder Friday, with the Nasdaq down roughly 3 to 4% in the afternoon. Reports blame AI worries, not a technical fault, and I saw no trading halts. The NSA network is back, and Equinor says its cyberattack is stopped. No official source links these events.",
   "events": [
     {
-      "id": "equinor-cyberattack-2026-11-17",
-      "category": "power",
-      "title": "Equinor says its cyberattack has been stopped",
-      "started_at": "2026-11-17T17:55:00Z",
-      "status": "resolved",
-      "impact": "Production ran as normal. Equinor sees no sign that data was stolen or changed. Internal email was reported down earlier. Norwegian utility Skagerak Energi also reported an attempted cyberattack this week.",
-      "stated_cause": "Equinor calls it a cyberattack, not a virus, and says it did not seem aimed at Equinor alone. Nobody has said who did it.",
+      "id": "us-equities-selloff-2026-11-17",
+      "category": "markets",
+      "title": "Tech sell-off deepens Friday; Nasdaq down about 3-4% in afternoon",
+      "started_at": "2026-11-19T14:30:00Z",
+      "status": "ongoing",
+      "impact": "Thursday close: Dow 49,097 (-2.2%), Nasdaq 23,879. Friday midday: Nasdaq 100 about -3.4%, S&P 500 about -2%, Dow slightly lower. CNN data at 2:23pm ET showed larger drops. Market is still open. No halts seen.",
+      "stated_cause": "Reports cite AI-stock worries, Nvidia and chip weakness, Anthropic stock, Iran fears and rates. Schwab says tech outages may add to worry. No technical or attack cause reported.",
       "confirmed": true,
       "sources": [
         {
-          "name": "Equinor (official)",
-          "url": "https://www.equinor.com/news/20261711-equinor-detected-cyber-attack"
+          "name": "Benzinga",
+          "url": "https://www.benzinga.com/markets/equities/26/11/63492512/stock-market-today-nasdaq-100-nvidia-seventh-day-chipmakers-smh"
         },
         {
-          "name": "Rigzone",
-          "url": "https://www.rigzone.com/news/equinor_says_cyberattack_stopped-20-nov-2026-185131-article/"
+          "name": "CNN Markets",
+          "url": "https://edition.cnn.com/markets"
         },
         {
-          "name": "Offshore Engineer",
-          "url": "https://www.oedigital.com/news/544489-equinor-stops-cyberattack-with-no-reports-of-production-disruption"
+          "name": "Schwab",
+          "url": "https://www.schwab.com/learn/story/market-volatility"
+        }
+      ]
+    },
+    {
+      "id": "bitcoin-weekly-decline-2026-11",
+      "category": "markets",
+      "title": "Bitcoin near 62K USD, down about 10% on the week",
+      "started_at": "2026-11-10T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Coinglass shows about 61,781, down 3.3% in 24h and 9.5% in 7 days. Coinbase shows about 61,957. One CoinGecko snapshot showed 58.9K, which conflicts with the others and may be stale. Fear index reads extreme fear. No exchange outage found.",
+      "stated_cause": "No technical or attack cause reported. Moves track the broader risk-off mood in stocks.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "Coinglass",
+          "url": "https://www.coinglass.com/currencies/BTC"
+        },
+        {
+          "name": "Coinbase",
+          "url": "https://www.coinbase.com/price/bitcoin"
+        },
+        {
+          "name": "CoinGecko",
+          "url": "https://www.coingecko.com/en/coins/bitcoin"
+        }
+      ]
+    },
+    {
+      "id": "equinor-cyberattack-2026-11-17",
+      "category": "power",
+      "title": "Equinor says cyberattack stopped; Norway says energy sector not the target",
+      "started_at": "2026-11-17T17:55:00Z",
+      "status": "resolved",
+      "impact": "Production ran as normal. No sign data was stolen or changed. Email was reported down earlier. Skagerak Energi also reported an attempted attack and has not said it is over. Norway's security authority says neither attack looks aimed at the energy sector.",
+      "stated_cause": "Equinor says it was a cyberattack, not a virus, and not aimed at Equinor alone. Nobody has said who did it. Officials have drawn no link between the two firms' incidents.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "Industrial Cyber",
+          "url": "https://industrialcyber.co/utilities-energy-power-water-waste/equinor-thwarts-cyberattack-as-separate-intrusion-at-skagerak-energi-raises-concerns-across-norways-energy-sector/"
+        },
+        {
+          "name": "Montel (Norwegian NSM)",
+          "url": "https://montelnews.com/news/1c74ed99-1a75-4b3f-9b86-205565306873/equinor-cyber-attack-not-targeted-at-energy-sector-authority"
+        },
+        {
+          "name": "SecurityWeek",
+          "url": "https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/"
         }
       ]
     },
     {
       "id": "nsa-systems-disruption-2026-11-17",
       "category": "other",
-      "title": "NSA classified network still partly down",
+      "title": "NSA classified network back to normal after almost four days",
       "started_at": "2026-11-17T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Some staff were told to work from home for a third day. A Georgia site that supports Middle East intelligence work was also hit. Officials say mission-critical systems still work.",
-      "stated_cause": "The Director of National Intelligence says patching of PHP software flaws left some systems not coming back up. The NSA said routine maintenance. No official source reports a cyberattack.",
+      "status": "resolved",
+      "impact": "Staff came back on staggered schedules Friday. Officials say the most sensitive intelligence systems worked throughout. Officials called the length of the outage unusually long.",
+      "stated_cause": "Officials link it to patching of PHP software flaws, and the NSA said maintenance. Multiple officials say it was not a cyberattack. A senior official said the patches took longer than expected.",
       "confirmed": true,
       "sources": [
+        {
+          "name": "CNN",
+          "url": "https://www.cnn.com/2026/11/20/politics/nsa-highly-classified-network-outage-resolved"
+        },
         {
           "name": "CBS News",
           "url": "https://www.cbsnews.com/news/national-security-agency-network-outage-software-vulnerability/"
         },
         {
-          "name": "Daily Wire (citing Fox News)",
-          "url": "https://www.dailywire.com/news/outage-hits-nsas-classified-communications-system-for-third-straight-day"
-        },
-        {
-          "name": "NBC News",
-          "url": "https://www.nbcnews.com/politics/national-security/classified-nsa-network-went-no-indication-was-attack-sources-say-rcna609859"
+          "name": "Local12 (TNND)",
+          "url": "https://local12.com/news/nation-world/nsa-national-security-agency-internal-network-outage-resolved-after-3-days-sources-say-maryland-headquarters-employees-staggered-start-time-classified-information-scheduled-maintenance-foreign-intelligence-military-policymakers"
         }
       ]
     },
@@ -59,7 +107,7 @@
       "started_at": "2026-11-19T12:00:00Z",
       "status": "ongoing",
       "impact": "JPMorgan says attackers got marketing data held by vendors, maybe names and emails. Press reports say about 16,000 records leaked. Payments were not disrupted.",
-      "stated_cause": "Hackers hit outside vendors. A ransomware group reportedly leaked data. JPMorgan says this has no link to Monday's outage.",
+      "stated_cause": "Hackers hit outside vendors. A ransomware group reportedly leaked data. JPMorgan says this has no link to its earlier outage.",
       "confirmed": true,
       "sources": [
         {
@@ -73,42 +121,38 @@
       ]
     },
     {
-      "id": "us-equities-selloff-2026-11-17",
-      "category": "markets",
-      "title": "US stocks fell about 2% Thursday; futures lower Friday",
-      "started_at": "2026-11-19T14:30:00Z",
+      "id": "white-house-no-coordinated-attack-statement-2026-11-18",
+      "category": "geopolitical",
+      "title": "Officials say recent US outages are not a coordinated attack",
+      "started_at": "2026-11-18T00:00:00Z",
       "status": "ongoing",
-      "impact": "Dow fell 1,101 points to 49,097 and the Nasdaq fell 2.25% to 23,879 on Thursday. Friday premarket, Nasdaq 100 futures were down about 1.5%. The US market has not opened yet today. I saw no trading halts.",
-      "stated_cause": "Reports point to AI-stock worries around the Anthropic IPO and Nvidia weakness. No technical or attack cause reported.",
+      "impact": "Homeland Security's secretary said he is 98% sure it is not a cyberattack. Some experts say the string of outages is hard to dismiss as coincidence. These are views, not proven findings.",
+      "stated_cause": "Officials point to patching, router work and software bugs, and name no attacker. Microsoft, Chase and United each gave separate causes or said no sign of a cyber issue.",
       "confirmed": true,
       "sources": [
         {
-          "name": "Benzinga",
-          "url": "https://www.benzinga.com/markets/equities/26/11/63465508/stock-market-today-dow-jones-sp-500-futures-fall-as-trump-weighs-iran-decision-intu-rost-keys-in-focus"
+          "name": "Fox News",
+          "url": "https://www.foxnews.com/politics/tech-outage-cascade-exposes-us-vulnerabilities-foreign-cyber-threats"
         },
         {
-          "name": "NBC News",
-          "url": "https://www.nbcnews.com/business/markets/live-blog/anthropic-ipo-live-updates-rcna610159"
+          "name": "US News",
+          "url": "https://www.usnews.com/news/u-s-news-decision-points/articles/2026-11-18/first-flights-then-banks-is-the-u-s-under-a-coordinated-cyberattack"
         }
       ]
     },
     {
-      "id": "bitcoin-weekly-decline-2026-11",
-      "category": "markets",
-      "title": "Bitcoin near 62K USD, down about 10% on the week",
-      "started_at": "2026-11-10T00:00:00Z",
+      "id": "cisa-kev-additions-2026-11-20",
+      "category": "cisa",
+      "title": "CISA adds four actively exploited flaws to its catalog",
+      "started_at": "2026-11-20T00:00:00Z",
       "status": "ongoing",
-      "impact": "Coinbase shows about 61,957, down 2.7% on the day. CoinGecko shows about 61,862, down 2.2% in 24h and 10.8% in 7 days. It is a steady slide, not a crash. I found no exchange outage.",
-      "stated_cause": "No technical or attack cause reported. Earlier reports cited rate worries and fund outflows.",
+      "impact": "Affects SAP NetWeaver, Cisco Expressway, VMware vCenter and Apache Roller. Federal agencies must fix them under CISA rules. This is a routine-type notice, not an emergency directive.",
+      "stated_cause": "CISA says it has evidence of active exploitation. It names no attacker.",
       "confirmed": true,
       "sources": [
         {
-          "name": "Coinbase",
-          "url": "https://www.coinbase.com/price/bitcoin"
-        },
-        {
-          "name": "CoinGecko",
-          "url": "https://www.coingecko.com/en/coins/bitcoin"
+          "name": "CISA",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
         }
       ]
     },
@@ -118,7 +162,7 @@
       "title": "Cloudflare status page shows degraded performance",
       "started_at": "2026-11-18T15:03:00Z",
       "status": "ongoing",
-      "impact": "The status feed (updated 11:16 UTC) lists Cloudflare Sites and Services as degraded, changed 04:35 UTC today. I saw no wire report of a wide outage.",
+      "impact": "The status feed (updated 19:52 UTC) lists Cloudflare Sites and Services as degraded, changed 19:41 UTC today. I saw no wire report of a wide outage.",
       "stated_cause": "Unknown. Cloudflare gave no cause in the data I saw.",
       "confirmed": true,
       "sources": [
@@ -127,62 +171,26 @@
           "url": "https://www.cloudflarestatus.com"
         }
       ]
-    },
-    {
-      "id": "white-house-no-coordinated-attack-statement-2026-11-18",
-      "category": "geopolitical",
-      "title": "Officials say recent outages are unrelated and not malicious",
-      "started_at": "2026-11-18T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Homeland Security's secretary said he is 98% sure it is not a cyberattack. This is an official view, not a proven finding.",
-      "stated_cause": "Officials point to patching, router work and software bugs. They name no attacker.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "Jerusalem Post (WSJ/CNN reports)",
-          "url": "https://www.jpost.com/international/article-915216"
-        },
-        {
-          "name": "NBC News",
-          "url": "https://www.nbcnews.com/politics/national-security/classified-nsa-network-went-no-indication-was-attack-sources-say-rcna609859"
-        }
-      ]
-    },
-    {
-      "id": "playstation-network-outage-2026-11-18",
-      "category": "cloud",
-      "title": "PlayStation Network outage resolved",
-      "started_at": "2026-11-18T18:28:00Z",
-      "status": "resolved",
-      "impact": "Sony confirmed problems with games and network features on Wednesday. By Thursday morning services looked normal again.",
-      "stated_cause": "Sony has not given a cause in what I read.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "Android Authority",
-          "url": "https://www.androidauthority.com/playstation-outage-nov-2026-3736853/"
-        }
-      ]
     }
   ],
   "connection_assessment": {
     "verdict": "unrelated",
     "confidence": "medium",
-    "reasoning": "Equinor says it was hit by a cyberattack that is now stopped, and nobody has named who did it. The NSA outage is blamed on software patching by the intelligence director. JPMorgan says its vendor hack is not linked to its outage. No official source links these.",
+    "reasoning": "The NSA outage is blamed on PHP software patching, and officials say it was not a cyberattack. Equinor and Skagerak report cyberattacks, but nobody has named an attacker, and Norway says they were not aimed at energy. The stock sell-off is blamed on AI worries. No official source links any of these.",
     "would_change_my_mind": "An official statement blaming the same company or attacker, or several big systems failing at the same moment."
   },
   "alert": {
     "send": false,
     "headline": "",
-    "reason": "No confirmed sign of a shared cause or a widespread failure in the last few hours."
+    "reason": "Large tech sell-off has stated market causes, no halts seen, and no official link to the outages."
   },
-  "prep_note": "Keep normal habits. Watch your bank and card accounts for odd activity. Be careful with emails that mention these breaches, since scammers use them. Keep some cash on hand and update your software as usual. Check back for official updates on the NSA outage.",
+  "prep_note": "No action needed beyond normal habits. Keep some cash on hand. Know that card or bank apps can have short glitches. If you invest, expect big swings today and avoid rushed moves. Use official sites for news, not viral posts.",
   "run": {
     "model": "claude-sonnet-5-5",
-    "input": 80280,
-    "output": 4647,
+    "input": 137691,
+    "output": 5803,
     "searches": 6,
-    "cost_usd": 0.267
+    "cost_usd": 0.3934
   },
   "source_health": [
     {
@@ -190,7 +198,7 @@
       "ok": true
     },
     {
-      "name": "CISA advisories (RSS)",
+      "name": "Google Cloud incidents",
       "ok": true
     },
     {
@@ -198,20 +206,20 @@
       "ok": true
     },
     {
-      "name": "Cloudflare status",
-      "ok": true
-    },
-    {
-      "name": "Google Cloud incidents",
+      "name": "CISA advisories (RSS)",
       "ok": true
     },
     {
       "name": "AWS Health (RSS)",
       "ok": true
+    },
+    {
+      "name": "Cloudflare status",
+      "ok": true
     }
   ],
   "alert_sent": {
-    "at": "2026-11-20T11:19:23.005Z",
+    "at": "2026-11-20T19:58:29.865Z",
     "reason": "new confirmed critical-sector event"
   }
 }
