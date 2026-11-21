@@ -1,17 +1,65 @@
 {
-  "generated_at": "2026-11-21T01:22:09.601Z",
+  "generated_at": "2026-11-21T09:36:57.759Z",
   "level": "yellow",
   "level_changed_from_last_run": false,
-  "summary": "US stocks fell sharply Friday. The Nasdaq dropped 5.3% and the Dow had its worst week since March 2020. Reports blame AI worries, and I saw no reports of trading halts. Separately, the USDA confirmed a cyber incident that has lasted about five days.",
+  "summary": "Two US government systems report break-ins this week. The USDA confirmed a cyber threat that hit farm payment systems. The FBI is also probing a suspected breach of its crime database, per news reports. Stocks and Bitcoin fell sharply, with reports blaming AI worries.",
   "events": [
+    {
+      "id": "fbi-ncic-suspected-breach-2026-11-20",
+      "category": "other",
+      "title": "FBI probes suspected breach of its national crime database",
+      "started_at": "2026-11-20T22:00:00Z",
+      "status": "ongoing",
+      "impact": "The FBI is looking into a suspected break-in at the NCIC, which police use to check warrants and records. It is unknown whether the database is down or whether data was taken.",
+      "stated_cause": "Nobody has said who did it or how. The FBI had not made a public statement as of Friday night. Reports rely on two unnamed people briefed on the matter.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "CNN",
+          "url": "https://edition.cnn.com/2026/11/20/politics/fbi-hacked-again-target-crime-database"
+        },
+        {
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/politics/justice-department/fbi-investigating-potential-breach-crime-database-rcna610536"
+        },
+        {
+          "name": "Reuters via Yahoo",
+          "url": "https://www.yahoo.com/news/us/articles/fbis-criminal-information-database-hacked-031545804.html"
+        }
+      ]
+    },
+    {
+      "id": "usda-cyber-incident-2026-11-16",
+      "category": "other",
+      "title": "USDA cyber incident disrupts farm payment and loan systems",
+      "started_at": "2026-11-16T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Farm payment, loan, mapping and contracting systems went offline for days. A USDA official said most systems should return Friday or over the weekend and that no personal data was lost.",
+      "stated_cause": "A USDA under secretary called it a cyberthreat. NBC reports hackers got into the payment system, citing sources. Who did it is unknown.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "ABC News",
+          "url": "https://abcnews.com/GMA/Food/new-government-report-sparks-concern-potential-cyberattack-us/story?id=138316014"
+        },
+        {
+          "name": "DTN",
+          "url": "https://www.dtnpf.com/agriculture/web/ag/columns/washington-insider/article/2026/11/19/usda-loan-software-systems-face-amid"
+        },
+        {
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/politics/national-security/agriculture-department-breached-hackers-sources-say-rcna610497"
+        }
+      ]
+    },
     {
       "id": "us-equities-selloff-2026-11-17",
       "category": "markets",
-      "title": "Stocks close sharply lower Friday; Nasdaq -5.28%, S&P 500 and Dow in correction",
+      "title": "US stocks close sharply lower Friday; Dow and S&P 500 in correction",
       "started_at": "2026-11-19T14:30:00Z",
       "status": "ongoing",
-      "impact": "Friday close: Nasdaq 22,617.73 (-5.28%), S&P 500 6,910.39 (-3.7%), Dow 48,147.33 (-1.93%). Dow down 8% on the week, its worst since March 2020. Nasdaq 100 fell about 10% on the week. I saw no reports of halts.",
-      "stated_cause": "Reports cite worries about AI spending and financing, Nvidia down about 14%, and rate fears. No technical fault or attack is reported. Price data from CNBC and Yahoo match.",
+      "impact": "Friday close: Nasdaq 22,617.73 (-5.28%), S&P 500 6,910.39 (-3.7%), Dow 48,147.33 (-1.93%). The Dow fell 8% on the week, its worst since March 2020. The VIX fear gauge hit 39.53. I saw no reports of trading halts.",
+      "stated_cause": "Reports cite worries about AI spending and chip stocks, with Nvidia down 14%. No technical fault or attack is reported. CNBC, NBC and Yahoo price data match.",
       "confirmed": true,
       "sources": [
         {
@@ -19,25 +67,29 @@
           "url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html"
         },
         {
-          "name": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/quote/%5EDJI/"
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/business/markets/anthropic-shares-markets-selloff-nasdaq-rcna610394"
         },
         {
-          "name": "CNN Markets",
-          "url": "https://edition.cnn.com/markets"
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-19-dow-sp-500-nasdaq-anthropic-nvidia-141644188.html"
         }
       ]
     },
     {
       "id": "bitcoin-weekly-decline-2026-11",
       "category": "markets",
-      "title": "Bitcoin near 62K USD, down about 10% on the week",
+      "title": "Bitcoin falls to about 58K USD, down about 14% on the week",
       "started_at": "2026-11-10T00:00:00Z",
       "status": "ongoing",
-      "impact": "Coinglass shows about 61,781 (-3.3% in 24h, -9.5% in 7 days). Coinbase shows about 61,957. Fear index reads extreme fear at 11. CoinGecko shows 58.8K, which is lower than the others. No exchange outage found.",
-      "stated_cause": "No technical or attack cause reported. The drop moves with the broader fall in stocks.",
+      "impact": "CoinGecko shows about 57,947 (-6% in 24h, -14% in 7 days), with Coinbase Exchange at about 57,997. Coinglass showed 61,781 earlier Friday, so the drop deepened later in the day. No exchange outage found.",
+      "stated_cause": "No technical or attack cause reported. The drop moves with the stock selloff. Fear index read extreme fear at 11 earlier.",
       "confirmed": true,
       "sources": [
+        {
+          "name": "CoinGecko",
+          "url": "https://www.coingecko.com/en/coins/bitcoin"
+        },
         {
           "name": "Coinglass",
           "url": "https://www.coinglass.com/currencies/BTC"
@@ -45,26 +97,90 @@
         {
           "name": "Coinbase",
           "url": "https://www.coinbase.com/price/bitcoin"
-        },
-        {
-          "name": "CoinGecko",
-          "url": "https://www.coingecko.com/en/coins/bitcoin"
         }
       ]
     },
     {
-      "id": "usda-cyber-incident-2026-11-16",
-      "category": "other",
-      "title": "USDA confirms cyber incident; farm payment and mapping systems down about 5 days",
-      "started_at": "2026-11-16T00:00:00Z",
+      "id": "white-house-no-coordinated-attack-statement-2026-11-18",
+      "category": "geopolitical",
+      "title": "Officials say earlier US outages had ordinary causes; cyber director stepping down",
+      "started_at": "2026-11-18T00:00:00Z",
       "status": "ongoing",
-      "impact": "A USDA farm agency shut down mapping, payment and contracting systems. The farmer-payment tool was hit. The disruption was in its fifth day. Full scope is unknown.",
-      "stated_cause": "A USDA under secretary called it a cyberthreat, not a software update, per reports. Nobody has said who did it or how.",
+      "impact": "Officials said the Microsoft, FAA and NSA outages had separate causes. NSA's network is reported back up. National Cyber Director Sean Cairncross is leaving. Some experts doubt it is all coincidence.",
+      "stated_cause": "Microsoft cited an old software defect. The FAA cited a new router. The NSA cited maintenance. The intelligence director cited patching. No official source reports a cyber attack on those.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "SecurityWeek",
+          "url": "https://securityweek.com/industry-reactions-to-major-outages-and-ai-patching-questions-feedback-friday"
+        },
+        {
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/politics/justice-department/fbi-investigating-potential-breach-crime-database-rcna610536"
+        },
+        {
+          "name": "Forbes",
+          "url": "https://www.forbes.com/sites/conormurray/2026/11/18/outages-plague-america-cyber-attacks-are-not-to-blame-trump-official-reportedly-says-as-nsa-apple-microsoft-and-more-hit/"
+        }
+      ]
+    },
+    {
+      "id": "visa-jpmorgan-ransomware-claim-2026-11-17",
+      "category": "banking",
+      "title": "JPMorgan, Visa and Mastercard customer data leaked via outside providers",
+      "started_at": "2026-11-19T12:00:00Z",
+      "status": "ongoing",
+      "impact": "Thousands of customer names and emails were reported leaked. Payments were not reported disrupted.",
+      "stated_cause": "Hackers hit outside service providers. A Chase spokesperson says this is not related to its earlier outage this week.",
       "confirmed": true,
       "sources": [
         {
           "name": "ABC News",
-          "url": "https://abcnews.com/GMA/Food/new-government-report-sparks-concern-potential-cyberattack-us/story?id=138316014"
+          "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705"
+        },
+        {
+          "name": "TODAY/NBC",
+          "url": "https://www.today.com/video/visa-mastercard-jp-morgan-chase-confirm-cyberattack-273882693910"
+        }
+      ]
+    },
+    {
+      "id": "iran-gulf-escalation-2026-11-13",
+      "category": "geopolitical",
+      "title": "Iran and US trade strikes around Bahrain, Kuwait and Hormuz",
+      "started_at": "2026-11-13T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Iran hit US sites in Bahrain and a Kuwait air base. The US struck a missile site on Qeshm Island Tuesday. CENTCOM denied a new strike Friday. Reports differ on new US strikes; Trump says he is not rushing.",
+      "stated_cause": "Iran says it answers US drone flights and strikes on its towers. The US calls its strikes defensive. Talks are stalled.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "CBS News",
+          "url": "https://cbsnews.com/live-updates/iran-war-trump-tehran-denies-chemical-weapons"
+        },
+        {
+          "name": "AP via PBS",
+          "url": "https://www.pbs.org/newshour/world/iran-widens-gulf-attacks-by-targeting-u-s-air-base-in-kuwait-and-sites-in-bahrain"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/18/kuwait-bahrain-face-new-iran-attacks-after-us-strike-on-qeshm-island"
+        }
+      ]
+    },
+    {
+      "id": "cisa-kev-additions-2026-11-20",
+      "category": "cisa",
+      "title": "CISA adds four actively exploited flaws to its catalog",
+      "started_at": "2026-11-20T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Affects SAP NetWeaver, Cisco Expressway, VMware vCenter and Apache Roller. Federal agencies must fix them. This is a routine-type notice, not an emergency directive.",
+      "stated_cause": "CISA says it has evidence of active exploitation. It names no attacker.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "CISA",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
         }
       ]
     },
@@ -74,8 +190,8 @@
       "title": "Undersea cable fault slows internet in Pakistan",
       "started_at": "2026-11-18T00:00:00Z",
       "status": "ongoing",
-      "impact": "Pakistan's telecom authority says the SEA-ME-WE 5 cable has a fault about 11 km offshore. Users see slow or patchy service. Traffic is being rerouted. Cloudflare Radar saw traffic drop by up to 36%.",
-      "stated_cause": "Cause unknown and under investigation. Social posts claim sabotage, but that is unverified and no official source says so.",
+      "impact": "Pakistan's telecom authority reported a SEA-ME-WE 5 fault offshore, with slow service. I found no new update in this run.",
+      "stated_cause": "Cause unknown and under investigation. Sabotage claims on social media are unverified.",
       "confirmed": true,
       "sources": [
         {
@@ -89,96 +205,12 @@
       ]
     },
     {
-      "id": "iran-gulf-escalation-2026-11-13",
-      "category": "geopolitical",
-      "title": "Iran and US trade strikes around Bahrain, Kuwait and the Strait of Hormuz",
-      "started_at": "2026-11-13T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Iran hit US sites in Bahrain several times and an air base in Kuwait. The US struck a missile site on Qeshm Island. Reports say new US strikes are more likely. Oil and shipping costs stay high.",
-      "stated_cause": "Iran says it is answering US drone flights and strikes on its towers. The US calls its strikes defensive. Talks have stalled.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "NPR",
-          "url": "https://www.npr.org/2026/11/17/nx-s1-6044255/us-iran-war-latest-bahrain"
-        },
-        {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/11/18/kuwait-bahrain-face-new-iran-attacks-after-us-strike-on-qeshm-island"
-        },
-        {
-          "name": "CBS News",
-          "url": "https://www.cbsnews.com/live-updates/iran-war-us-gulf-retaliation-strikes-strait-of-hormuz/"
-        }
-      ]
-    },
-    {
-      "id": "white-house-no-coordinated-attack-statement-2026-11-18",
-      "category": "geopolitical",
-      "title": "Officials say US outages are not a coordinated attack; cyber director fired",
-      "started_at": "2026-11-18T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Homeland Security's secretary says 98% sure it is not a cyberattack. The intelligence director said it is not a nation-state effort. Fox reports the National Cyber Director was fired after the outages. Some experts doubt it is coincidence.",
-      "stated_cause": "Officials point to patching, router work and software bugs and name no attacker. The experts' doubts are views, not findings. The USDA incident is described as a cyberthreat.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "Fox News",
-          "url": "https://www.foxnews.com/politics/tech-outage-cascade-exposes-us-vulnerabilities-foreign-cyber-threats"
-        },
-        {
-          "name": "Fox News live",
-          "url": "https://www.foxnews.com/live-news/tech-outages-trump-national-cyber-director-fired-11-20-26"
-        },
-        {
-          "name": "KARE 11",
-          "url": "https://www.kare11.com/article/news/local/breaking-the-news/outages-worry-coordinated-cyber-attack-not-likely/89-6e4c6196-49ac-4c9f-aa33-fce42ce7be25"
-        }
-      ]
-    },
-    {
-      "id": "visa-jpmorgan-ransomware-claim-2026-11-17",
-      "category": "banking",
-      "title": "JPMorgan says outside providers were hacked",
-      "started_at": "2026-11-19T12:00:00Z",
-      "status": "ongoing",
-      "impact": "JPMorgan says attackers got customer info held by outside service providers. Earlier reports said about 16,000 records leaked. Payments were not disrupted.",
-      "stated_cause": "Hackers hit outside vendors. A ransomware group reportedly leaked data. JPMorgan says this is not linked to its earlier outage.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "ABC News",
-          "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705"
-        },
-        {
-          "name": "NewsNation",
-          "url": "https://www.newsnationnow.com/business/j-p-morgan-warning-customers-data-breach/"
-        }
-      ]
-    },
-    {
-      "id": "cisa-kev-additions-2026-11-20",
-      "category": "cisa",
-      "title": "CISA adds four actively exploited flaws to its catalog",
-      "started_at": "2026-11-20T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Affects SAP NetWeaver, Cisco Expressway, VMware vCenter and Apache Roller. Federal agencies must fix them under CISA rules. This is a routine-type notice, not an emergency directive.",
-      "stated_cause": "CISA says it has evidence of active exploitation. It names no attacker.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "CISA",
-          "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
-        }
-      ]
-    },
-    {
       "id": "cloudflare-minor-incidents-2026-11-18",
       "category": "cloud",
-      "title": "Cloudflare status page still shows degraded performance",
+      "title": "Cloudflare status page shows degraded performance",
       "started_at": "2026-11-18T15:03:00Z",
       "status": "ongoing",
-      "impact": "Status feed (updated 01:14 UTC) lists Cloudflare Sites and Services as degraded, last changed 22:25 UTC Nov 20. I saw no wire report of a wide outage.",
+      "impact": "Status feed shows Cloudflare Sites and Services as degraded, last changed 07:44 UTC Nov 21. I saw no wire report of a wide outage.",
       "stated_cause": "Unknown. Cloudflare gave no cause in the data I saw.",
       "confirmed": true,
       "sources": [
@@ -190,31 +222,35 @@
     }
   ],
   "connection_assessment": {
-    "verdict": "unrelated",
-    "confidence": "medium",
-    "reasoning": "The stock fall is blamed on AI worries and rates, not a fault. The USDA says it was a cyberthreat, and nobody has said who did it. The Pakistan cable fault has no stated cause. No official source links any of these.",
-    "would_change_my_mind": "An official statement blaming the same attacker or company, or several big systems failing at the same moment."
+    "verdict": "unknown",
+    "confidence": "low",
+    "reasoning": "The USDA says a cyberthreat forced its shutdowns, and the FBI is checking a suspected breach. Nobody has named a culprit for either, and no official source links them. The earlier Microsoft, FAA and NSA outages were blamed on a software defect, a new router and maintenance. Stocks are blamed on AI worries.",
+    "would_change_my_mind": "An official statement naming the same attacker or company behind the USDA and FBI break-ins, or several big systems failing at the same moment."
   },
   "alert": {
     "send": false,
     "headline": "",
-    "reason": "The stock drop is large but trading ran normally and has a stated market cause. No official link between incidents."
+    "reason": "New FBI report rests on unnamed sources and the FBI has not commented. No official link between incidents."
   },
-  "prep_note": "Markets are volatile, so avoid rushed moves with savings or retirement funds. Keep some cash on hand and check bank apps before holiday travel. Expect possible delays for USDA farm payments. Check airline apps before flying.",
+  "prep_note": "No action needed beyond normal care. Farmers should check the USDA site before relying on payment portals this weekend. Keep some cash and a backup payment card on hand. Use strong passwords and watch for scam emails that mention these breaches.",
   "run": {
     "model": "claude-sonnet-5-5",
-    "input": 80098,
-    "output": 5607,
+    "input": 132310,
+    "output": 5848,
     "searches": 6,
-    "cost_usd": 0.2763
+    "cost_usd": 0.3831
   },
   "source_health": [
+    {
+      "name": "CISA advisories (RSS)",
+      "ok": true
+    },
     {
       "name": "Google Cloud incidents",
       "ok": true
     },
     {
-      "name": "CISA advisories (RSS)",
+      "name": "Azure status (RSS)",
       "ok": true
     },
     {
@@ -223,10 +259,6 @@
     },
     {
       "name": "FAA NAS status",
-      "ok": true
-    },
-    {
-      "name": "Azure status (RSS)",
       "ok": true
     },
     {
