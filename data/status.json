@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-11-20T19:59:12.856Z",
+  "generated_at": "2026-11-21T01:22:09.601Z",
   "level": "yellow",
   "level_changed_from_last_run": false,
-  "summary": "US tech stocks fell harder Friday, with the Nasdaq down roughly 3 to 4% in the afternoon. Reports blame AI worries, not a technical fault, and I saw no trading halts. The NSA network is back, and Equinor says its cyberattack is stopped. No official source links these events.",
+  "summary": "US stocks fell sharply Friday. The Nasdaq dropped 5.3% and the Dow had its worst week since March 2020. Reports blame AI worries, and I saw no reports of trading halts. Separately, the USDA confirmed a cyber incident that has lasted about five days.",
   "events": [
     {
       "id": "us-equities-selloff-2026-11-17",
       "category": "markets",
-      "title": "Tech sell-off deepens Friday; Nasdaq down about 3-4% in afternoon",
+      "title": "Stocks close sharply lower Friday; Nasdaq -5.28%, S&P 500 and Dow in correction",
       "started_at": "2026-11-19T14:30:00Z",
       "status": "ongoing",
-      "impact": "Thursday close: Dow 49,097 (-2.2%), Nasdaq 23,879. Friday midday: Nasdaq 100 about -3.4%, S&P 500 about -2%, Dow slightly lower. CNN data at 2:23pm ET showed larger drops. Market is still open. No halts seen.",
-      "stated_cause": "Reports cite AI-stock worries, Nvidia and chip weakness, Anthropic stock, Iran fears and rates. Schwab says tech outages may add to worry. No technical or attack cause reported.",
+      "impact": "Friday close: Nasdaq 22,617.73 (-5.28%), S&P 500 6,910.39 (-3.7%), Dow 48,147.33 (-1.93%). Dow down 8% on the week, its worst since March 2020. Nasdaq 100 fell about 10% on the week. I saw no reports of halts.",
+      "stated_cause": "Reports cite worries about AI spending and financing, Nvidia down about 14%, and rate fears. No technical fault or attack is reported. Price data from CNBC and Yahoo match.",
       "confirmed": true,
       "sources": [
         {
-          "name": "Benzinga",
-          "url": "https://www.benzinga.com/markets/equities/26/11/63492512/stock-market-today-nasdaq-100-nvidia-seventh-day-chipmakers-smh"
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html"
+        },
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/%5EDJI/"
         },
         {
           "name": "CNN Markets",
           "url": "https://edition.cnn.com/markets"
-        },
-        {
-          "name": "Schwab",
-          "url": "https://www.schwab.com/learn/story/market-volatility"
         }
       ]
     },
@@ -34,8 +34,8 @@
       "title": "Bitcoin near 62K USD, down about 10% on the week",
       "started_at": "2026-11-10T00:00:00Z",
       "status": "ongoing",
-      "impact": "Coinglass shows about 61,781, down 3.3% in 24h and 9.5% in 7 days. Coinbase shows about 61,957. One CoinGecko snapshot showed 58.9K, which conflicts with the others and may be stale. Fear index reads extreme fear. No exchange outage found.",
-      "stated_cause": "No technical or attack cause reported. Moves track the broader risk-off mood in stocks.",
+      "impact": "Coinglass shows about 61,781 (-3.3% in 24h, -9.5% in 7 days). Coinbase shows about 61,957. Fear index reads extreme fear at 11. CoinGecko shows 58.8K, which is lower than the others. No exchange outage found.",
+      "stated_cause": "No technical or attack cause reported. The drop moves with the broader fall in stocks.",
       "confirmed": true,
       "sources": [
         {
@@ -53,61 +53,97 @@
       ]
     },
     {
-      "id": "equinor-cyberattack-2026-11-17",
-      "category": "power",
-      "title": "Equinor says cyberattack stopped; Norway says energy sector not the target",
-      "started_at": "2026-11-17T17:55:00Z",
-      "status": "resolved",
-      "impact": "Production ran as normal. No sign data was stolen or changed. Email was reported down earlier. Skagerak Energi also reported an attempted attack and has not said it is over. Norway's security authority says neither attack looks aimed at the energy sector.",
-      "stated_cause": "Equinor says it was a cyberattack, not a virus, and not aimed at Equinor alone. Nobody has said who did it. Officials have drawn no link between the two firms' incidents.",
+      "id": "usda-cyber-incident-2026-11-16",
+      "category": "other",
+      "title": "USDA confirms cyber incident; farm payment and mapping systems down about 5 days",
+      "started_at": "2026-11-16T00:00:00Z",
+      "status": "ongoing",
+      "impact": "A USDA farm agency shut down mapping, payment and contracting systems. The farmer-payment tool was hit. The disruption was in its fifth day. Full scope is unknown.",
+      "stated_cause": "A USDA under secretary called it a cyberthreat, not a software update, per reports. Nobody has said who did it or how.",
       "confirmed": true,
       "sources": [
         {
-          "name": "Industrial Cyber",
-          "url": "https://industrialcyber.co/utilities-energy-power-water-waste/equinor-thwarts-cyberattack-as-separate-intrusion-at-skagerak-energi-raises-concerns-across-norways-energy-sector/"
-        },
-        {
-          "name": "Montel (Norwegian NSM)",
-          "url": "https://montelnews.com/news/1c74ed99-1a75-4b3f-9b86-205565306873/equinor-cyber-attack-not-targeted-at-energy-sector-authority"
-        },
-        {
-          "name": "SecurityWeek",
-          "url": "https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/"
+          "name": "ABC News",
+          "url": "https://abcnews.com/GMA/Food/new-government-report-sparks-concern-potential-cyberattack-us/story?id=138316014"
         }
       ]
     },
     {
-      "id": "nsa-systems-disruption-2026-11-17",
-      "category": "other",
-      "title": "NSA classified network back to normal after almost four days",
-      "started_at": "2026-11-17T00:00:00Z",
-      "status": "resolved",
-      "impact": "Staff came back on staggered schedules Friday. Officials say the most sensitive intelligence systems worked throughout. Officials called the length of the outage unusually long.",
-      "stated_cause": "Officials link it to patching of PHP software flaws, and the NSA said maintenance. Multiple officials say it was not a cyberattack. A senior official said the patches took longer than expected.",
+      "id": "pakistan-smw5-cable-fault-2026-11-18",
+      "category": "telecom",
+      "title": "Undersea cable fault slows internet in Pakistan",
+      "started_at": "2026-11-18T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Pakistan's telecom authority says the SEA-ME-WE 5 cable has a fault about 11 km offshore. Users see slow or patchy service. Traffic is being rerouted. Cloudflare Radar saw traffic drop by up to 36%.",
+      "stated_cause": "Cause unknown and under investigation. Social posts claim sabotage, but that is unverified and no official source says so.",
       "confirmed": true,
       "sources": [
         {
-          "name": "CNN",
-          "url": "https://www.cnn.com/2026/11/20/politics/nsa-highly-classified-network-outage-resolved"
+          "name": "The National",
+          "url": "https://www.thenationalnews.com/future/technology/2026/11/18/pakistan-internet-problems-subsea-cables/"
+        },
+        {
+          "name": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/networking/pakistan-undersea-cable-fault-causes-internet-failure-near-strait-of-hormuz-fault-detected-offshore-weeks-after-iran-threatened-infrastructure-in-the-region"
+        }
+      ]
+    },
+    {
+      "id": "iran-gulf-escalation-2026-11-13",
+      "category": "geopolitical",
+      "title": "Iran and US trade strikes around Bahrain, Kuwait and the Strait of Hormuz",
+      "started_at": "2026-11-13T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Iran hit US sites in Bahrain several times and an air base in Kuwait. The US struck a missile site on Qeshm Island. Reports say new US strikes are more likely. Oil and shipping costs stay high.",
+      "stated_cause": "Iran says it is answering US drone flights and strikes on its towers. The US calls its strikes defensive. Talks have stalled.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/11/17/nx-s1-6044255/us-iran-war-latest-bahrain"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/18/kuwait-bahrain-face-new-iran-attacks-after-us-strike-on-qeshm-island"
         },
         {
           "name": "CBS News",
-          "url": "https://www.cbsnews.com/news/national-security-agency-network-outage-software-vulnerability/"
+          "url": "https://www.cbsnews.com/live-updates/iran-war-us-gulf-retaliation-strikes-strait-of-hormuz/"
+        }
+      ]
+    },
+    {
+      "id": "white-house-no-coordinated-attack-statement-2026-11-18",
+      "category": "geopolitical",
+      "title": "Officials say US outages are not a coordinated attack; cyber director fired",
+      "started_at": "2026-11-18T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Homeland Security's secretary says 98% sure it is not a cyberattack. The intelligence director said it is not a nation-state effort. Fox reports the National Cyber Director was fired after the outages. Some experts doubt it is coincidence.",
+      "stated_cause": "Officials point to patching, router work and software bugs and name no attacker. The experts' doubts are views, not findings. The USDA incident is described as a cyberthreat.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "Fox News",
+          "url": "https://www.foxnews.com/politics/tech-outage-cascade-exposes-us-vulnerabilities-foreign-cyber-threats"
         },
         {
-          "name": "Local12 (TNND)",
-          "url": "https://local12.com/news/nation-world/nsa-national-security-agency-internal-network-outage-resolved-after-3-days-sources-say-maryland-headquarters-employees-staggered-start-time-classified-information-scheduled-maintenance-foreign-intelligence-military-policymakers"
+          "name": "Fox News live",
+          "url": "https://www.foxnews.com/live-news/tech-outages-trump-national-cyber-director-fired-11-20-26"
+        },
+        {
+          "name": "KARE 11",
+          "url": "https://www.kare11.com/article/news/local/breaking-the-news/outages-worry-coordinated-cyber-attack-not-likely/89-6e4c6196-49ac-4c9f-aa33-fce42ce7be25"
         }
       ]
     },
     {
       "id": "visa-jpmorgan-ransomware-claim-2026-11-17",
       "category": "banking",
-      "title": "JPMorgan, Visa and Mastercard say outside providers were hacked",
+      "title": "JPMorgan says outside providers were hacked",
       "started_at": "2026-11-19T12:00:00Z",
       "status": "ongoing",
-      "impact": "JPMorgan says attackers got marketing data held by vendors, maybe names and emails. Press reports say about 16,000 records leaked. Payments were not disrupted.",
-      "stated_cause": "Hackers hit outside vendors. A ransomware group reportedly leaked data. JPMorgan says this has no link to its earlier outage.",
+      "impact": "JPMorgan says attackers got customer info held by outside service providers. Earlier reports said about 16,000 records leaked. Payments were not disrupted.",
+      "stated_cause": "Hackers hit outside vendors. A ransomware group reportedly leaked data. JPMorgan says this is not linked to its earlier outage.",
       "confirmed": true,
       "sources": [
         {
@@ -117,26 +153,6 @@
         {
           "name": "NewsNation",
           "url": "https://www.newsnationnow.com/business/j-p-morgan-warning-customers-data-breach/"
-        }
-      ]
-    },
-    {
-      "id": "white-house-no-coordinated-attack-statement-2026-11-18",
-      "category": "geopolitical",
-      "title": "Officials say recent US outages are not a coordinated attack",
-      "started_at": "2026-11-18T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Homeland Security's secretary said he is 98% sure it is not a cyberattack. Some experts say the string of outages is hard to dismiss as coincidence. These are views, not proven findings.",
-      "stated_cause": "Officials point to patching, router work and software bugs, and name no attacker. Microsoft, Chase and United each gave separate causes or said no sign of a cyber issue.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "Fox News",
-          "url": "https://www.foxnews.com/politics/tech-outage-cascade-exposes-us-vulnerabilities-foreign-cyber-threats"
-        },
-        {
-          "name": "US News",
-          "url": "https://www.usnews.com/news/u-s-news-decision-points/articles/2026-11-18/first-flights-then-banks-is-the-u-s-under-a-coordinated-cyberattack"
         }
       ]
     },
@@ -159,10 +175,10 @@
     {
       "id": "cloudflare-minor-incidents-2026-11-18",
       "category": "cloud",
-      "title": "Cloudflare status page shows degraded performance",
+      "title": "Cloudflare status page still shows degraded performance",
       "started_at": "2026-11-18T15:03:00Z",
       "status": "ongoing",
-      "impact": "The status feed (updated 19:52 UTC) lists Cloudflare Sites and Services as degraded, changed 19:41 UTC today. I saw no wire report of a wide outage.",
+      "impact": "Status feed (updated 01:14 UTC) lists Cloudflare Sites and Services as degraded, last changed 22:25 UTC Nov 20. I saw no wire report of a wide outage.",
       "stated_cause": "Unknown. Cloudflare gave no cause in the data I saw.",
       "confirmed": true,
       "sources": [
@@ -176,33 +192,25 @@
   "connection_assessment": {
     "verdict": "unrelated",
     "confidence": "medium",
-    "reasoning": "The NSA outage is blamed on PHP software patching, and officials say it was not a cyberattack. Equinor and Skagerak report cyberattacks, but nobody has named an attacker, and Norway says they were not aimed at energy. The stock sell-off is blamed on AI worries. No official source links any of these.",
-    "would_change_my_mind": "An official statement blaming the same company or attacker, or several big systems failing at the same moment."
+    "reasoning": "The stock fall is blamed on AI worries and rates, not a fault. The USDA says it was a cyberthreat, and nobody has said who did it. The Pakistan cable fault has no stated cause. No official source links any of these.",
+    "would_change_my_mind": "An official statement blaming the same attacker or company, or several big systems failing at the same moment."
   },
   "alert": {
     "send": false,
     "headline": "",
-    "reason": "Large tech sell-off has stated market causes, no halts seen, and no official link to the outages."
+    "reason": "The stock drop is large but trading ran normally and has a stated market cause. No official link between incidents."
   },
-  "prep_note": "No action needed beyond normal habits. Keep some cash on hand. Know that card or bank apps can have short glitches. If you invest, expect big swings today and avoid rushed moves. Use official sites for news, not viral posts.",
+  "prep_note": "Markets are volatile, so avoid rushed moves with savings or retirement funds. Keep some cash on hand and check bank apps before holiday travel. Expect possible delays for USDA farm payments. Check airline apps before flying.",
   "run": {
     "model": "claude-sonnet-5-5",
-    "input": 137691,
-    "output": 5803,
+    "input": 80098,
+    "output": 5607,
     "searches": 6,
-    "cost_usd": 0.3934
+    "cost_usd": 0.2763
   },
   "source_health": [
     {
-      "name": "Azure status (RSS)",
-      "ok": true
-    },
-    {
       "name": "Google Cloud incidents",
-      "ok": true
-    },
-    {
-      "name": "FAA NAS status",
       "ok": true
     },
     {
@@ -210,16 +218,20 @@
       "ok": true
     },
     {
-      "name": "AWS Health (RSS)",
+      "name": "Cloudflare status",
       "ok": true
     },
     {
-      "name": "Cloudflare status",
+      "name": "FAA NAS status",
+      "ok": true
+    },
+    {
+      "name": "Azure status (RSS)",
+      "ok": true
+    },
+    {
+      "name": "AWS Health (RSS)",
       "ok": true
     }
-  ],
-  "alert_sent": {
-    "at": "2026-11-20T19:58:29.865Z",
-    "reason": "new confirmed critical-sector event"
-  }
+  ]
 }
