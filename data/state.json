@@ -23,7 +23,8 @@
     "usda-cyber-incident-2026-11-16",
     "microsoft-365-outage-2026-11-12",
     "iran-gulf-escalation-2026-11-13",
-    "pakistan-smw5-cable-fault-2026-11-18"
+    "pakistan-smw5-cable-fault-2026-11-18",
+    "xsolla-paystation-outage-2026-11-21"
   ],
   "last_alert_rank": -1,
   "spend": {
@@ -31,7 +32,7 @@
     "2026-11-19": 0.8535,
     "2026-11-20": 1.0585,
     "2026-11-21": 1.3258,
-    "2026-11-22": 0.3851
+    "2026-11-22": 0.6625
   },
   "consecutive_failures": 0,
   "failure_alerted": false
