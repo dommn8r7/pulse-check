@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-21T23:03:07.079Z",
+  "generated_at": "2026-11-22T02:59:31.016Z",
   "level": "yellow",
   "level_changed_from_last_run": false,
-  "summary": "Two US federal systems reported break-ins this week: the USDA farm payment system and, per news reports, the FBI crime database. No official source links them or names who did it. Bitcoin bounced back above 60,000 dollars. I found no trading halts, big cloud outages or flight system failures.",
+  "summary": "The FBI is investigating an apparent break-in at its national crime database, NCIC. The USDA is also still recovering from a cyber incident. Neither agency has named who did it, and no official source links them. Microsoft blamed its Nov 12 outage on a software bug.",
   "events": [
     {
       "id": "fbi-ncic-suspected-breach-2026-11-20",
@@ -10,8 +10,8 @@
       "title": "FBI probes suspected breach of its national crime database",
       "started_at": "2026-11-20T22:00:00Z",
       "status": "ongoing",
-      "impact": "Police use NCIC to check warrants and records. Nobody has said whether it was down or whether data was taken or changed. New: President Trump called the report 'not good' on Saturday.",
-      "stated_cause": "Unknown. The FBI had not commented publicly as of Saturday. CNN and NBC cite two unnamed people briefed on the case. BleepingComputer sees no sign of a link to the September FBI jobs portal breach.",
+      "impact": "Police use NCIC to check warrants and missing-person records. Reports do not say whether it went down or whether any records were taken or changed. Trump called the report 'not good' on Saturday.",
+      "stated_cause": "Unknown. The FBI had not commented publicly as of Saturday. CNN, NBC, AP and Fox cite unnamed sources. No reported link to the September FBI jobs portal breach.",
       "confirmed": true,
       "sources": [
         {
@@ -34,8 +34,8 @@
       "title": "USDA cyber incident disrupts farm payment and loan systems",
       "started_at": "2026-11-16T00:00:00Z",
       "status": "ongoing",
-      "impact": "Farm loan, payment and conservation tools were offline for days. A USDA official expected most systems back Friday, with work continuing over the weekend. He said no personal data was lost.",
-      "stated_cause": "A USDA under secretary called it a cyberthreat. Staff reset database passwords. As of Friday night USDA had not named an attacker or given a detailed public account.",
+      "impact": "Farm loan, payment and conservation tools were offline for days. An official expected most systems back Friday, with work over the weekend. He said no personal data was lost. I found no newer update.",
+      "stated_cause": "A USDA under secretary called it a cyberthreat. Staff reset database passwords. As of Friday night USDA had not named an attacker or given a detailed account.",
       "confirmed": true,
       "sources": [
         {
@@ -44,11 +44,35 @@
         },
         {
           "name": "WSET/TNND",
-          "url": "https://wset.com/news/nation-world/hackers-allegedly-breach-usda-system-used-to-pay-farmers-reports-payment-system-us-department-of-agriculture-cybersecurity-cyberthreat-united-states-government"
+          "url": "https://cbs12.com/news/nation-world/hackers-allegedly-breach-usda-system-used-to-pay-farmers-reports-payment-system-us-department-of-agriculture-cybersecurity-cyberthreat-united-states-government"
         },
         {
           "name": "IBTimes",
           "url": "https://www.ibtimes.co.uk/usda-cyberattack-disrupts-farmer-payment-systems-1833730"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-365-outage-2026-11-12",
+      "category": "cloud",
+      "title": "Microsoft explains Nov 12 global Microsoft 365 outage",
+      "started_at": "2026-11-12T17:00:00Z",
+      "status": "resolved",
+      "impact": "Outlook, Exchange Online, Teams and Copilot were disrupted for almost 24 hours. Airlines, businesses and government offices were hit. New Saturday: Microsoft gave a fuller cause.",
+      "stated_cause": "Microsoft says a months-old software bug was triggered after Teams traffic moved to Exchange servers that had less capacity. It says the outage was not a cyberattack. No outside source disputes this.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-months-old-bug-caused-global-microsoft-365-outage/"
+        },
+        {
+          "name": "KIRO 7",
+          "url": "https://kiro7.com/news/local/microsoft-blames-months-old-software-glitch-global-service-outage/A4GQBWFXYNFHHHZ452ZO5DVSAY"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/2026_Microsoft_outage"
         }
       ]
     },
@@ -58,13 +82,17 @@
       "title": "Iran and US trade strikes near Hormuz; drone claims",
       "started_at": "2026-11-13T00:00:00Z",
       "status": "ongoing",
-      "impact": "New Saturday: Iran says it shot down two US drones over the Strait of Hormuz. The US had no immediate comment. Tankers face mine and attack risk. Reports say new US strikes are being weighed.",
-      "stated_cause": "Iran says it is answering US actions. The US calls its strikes defensive. Talks to reopen the Strait are stalled. The US added new sanctions on four Iranians.",
+      "impact": "Iran says it downed a US drone over Hormuz. ABC reports ship attacks in Oct and Nov are the highest since the war began. Bahrain and Kuwait said they intercepted Iranian weapons after US strikes on Qeshm Island.",
+      "stated_cause": "Iran says it is answering US actions. The US calls its strikes defensive. Talks to reopen the Strait are stalled. Iran claims of tankers hitting mines are mostly unverified.",
       "confirmed": true,
       "sources": [
         {
           "name": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/11/21/irans-irgc-downs-us-drone-over-hormuz-as-efforts-to-end-war-remain-stalled"
+        },
+        {
+          "name": "ABC News",
+          "url": "https://abcnews.com/International/strait-hormuz-attacks-increased-highest-level-iran-war/story?id=138304456"
         },
         {
           "name": "CBS News",
@@ -75,11 +103,11 @@
     {
       "id": "bitcoin-weekly-decline-2026-11",
       "category": "markets",
-      "title": "Bitcoin rebounds to about 60K USD after a drop below 57K",
+      "title": "Bitcoin holds near 60K USD after a week of losses",
       "started_at": "2026-11-10T00:00:00Z",
       "status": "ongoing",
-      "impact": "Prices checked Saturday: CoinGecko 60,498 (24h range 55,298 to 62,087), Bitcoin.com 60,064 at 18:59 UTC, Bitget 60,181. Down about 8 to 12% on the week. One price page showed 55.8K but looked out of date. No exchange outage found.",
-      "stated_cause": "No technical or attack cause reported. Moves track the wider stock selloff and heavy forced selling in crypto futures, per CoinDesk via Eurasia Business News.",
+      "impact": "Price checks: CoinGecko 60,498 (24h range 55,298 to 62,087, week -12.5%), Coinbase 60,172 (+2% Saturday evening), Bitget 60,181. Prices agree. A CoinMarketCap page showing 55.8K looked out of date. No exchange outage found.",
+      "stated_cause": "No technical or attack cause reported. Earlier reports tie the drop to the stock selloff and forced selling in crypto futures.",
       "confirmed": true,
       "sources": [
         {
@@ -87,8 +115,8 @@
           "url": "https://www.coingecko.com/en/coins/bitcoin"
         },
         {
-          "name": "Bitcoin.com",
-          "url": "https://www.bitcoin.com/price/bitcoin/"
+          "name": "Coinbase",
+          "url": "https://www.coinbase.com/price/bitcoin"
         },
         {
           "name": "Bitget",
@@ -102,7 +130,7 @@
       "title": "US stocks fall sharply; Dow and S&P 500 in correction",
       "started_at": "2026-11-19T14:30:00Z",
       "status": "ongoing",
-      "impact": "Friday close from last run: Nasdaq 22,617.73 (-5.28%), S&P 500 6,910.39 (-3.7%), Dow 48,147.33 (-1.93%). US markets are closed Saturday, so I could not recheck. I found no reports of trading halts.",
+      "impact": "Friday close from last run: Nasdaq 22,617.73 (-5.28%), S&P 500 6,910.39 (-3.7%), Dow 48,147.33 (-1.93%). US markets are closed until Monday, so no recheck. I found no reports of trading halts.",
       "stated_cause": "Reports cite worry about AI spending, with Nvidia down 14%. No technical fault or cyber attack is reported.",
       "confirmed": true,
       "sources": [
@@ -127,7 +155,7 @@
       "started_at": "2026-11-20T00:00:00Z",
       "status": "ongoing",
       "impact": "Covers SAP NetWeaver, Cisco Expressway, VMware vCenter and Apache Roller. Federal agencies must fix them. This is a routine notice, not an emergency directive.",
-      "stated_cause": "CISA says it has evidence of active exploitation. It names no attacker.",
+      "stated_cause": "CISA says it has evidence of active exploitation. It names no attacker and does not link the flaws to the USDA or FBI incidents.",
       "confirmed": true,
       "sources": [
         {
@@ -137,22 +165,18 @@
       ]
     },
     {
-      "id": "xsolla-paystation-outage-2026-11-21",
-      "category": "payments",
-      "title": "Xsolla game payment service reports a major outage",
-      "started_at": "2026-11-21T20:35:00Z",
+      "id": "cloudflare-minor-incidents-2026-11-18",
+      "category": "cloud",
+      "title": "Cloudflare status page shows degraded performance",
+      "started_at": "2026-11-18T15:03:00Z",
       "status": "ongoing",
-      "impact": "A forum post says Xsolla's status page shows a major outage in its Pay Station. Steam also saw a spike in checkout complaints earlier Saturday, but nobody has linked the two.",
-      "stated_cause": "Unknown. Neither Xsolla nor Valve has given a cause in the items I saw.",
-      "confirmed": false,
+      "impact": "Cloudflare's status feed lists Sites and Services as degraded, last changed 01:11 UTC Nov 22. I saw no wire report of a wide outage.",
+      "stated_cause": "Unknown. Cloudflare gave no cause in the data I saw.",
+      "confirmed": true,
       "sources": [
         {
-          "name": "DesignTAXI Community",
-          "url": "https://community.designtaxi.com/topic/48720-is-xsolla-down-november-21-2026/#comment-51184"
-        },
-        {
-          "name": "Sunday Guardian",
-          "url": "https://sundayguardianlive.com/world/steam-outage-today-is-steam-down-in-the-us-gamers-say-its-all-over-as-they-report-server-connection-purchase-error-login-failures-download-problems-hit-gaming-platform-check-latest-updates-325315/"
+          "name": "Cloudflare Status",
+          "url": "https://www.cloudflarestatus.com"
         }
       ]
     },
@@ -177,48 +201,48 @@
       ]
     },
     {
-      "id": "cloudflare-minor-incidents-2026-11-18",
-      "category": "cloud",
-      "title": "Cloudflare status page shows degraded performance",
-      "started_at": "2026-11-18T15:03:00Z",
+      "id": "xsolla-paystation-outage-2026-11-21",
+      "category": "payments",
+      "title": "Xsolla game payment service reports a major outage",
+      "started_at": "2026-11-21T20:35:00Z",
       "status": "ongoing",
-      "impact": "Cloudflare's status feed lists Sites and Services as degraded, last changed 07:44 UTC Nov 21. I saw no wire report of a wide outage.",
-      "stated_cause": "Unknown. Cloudflare gave no cause in the data I saw.",
-      "confirmed": true,
+      "impact": "A forum post says Xsolla's status page showed a major outage in its Pay Station. Steam also had checkout complaints earlier Saturday, but nobody has linked the two. No update found this run.",
+      "stated_cause": "Unknown. Neither Xsolla nor Valve has given a cause in the items I saw.",
+      "confirmed": false,
       "sources": [
         {
-          "name": "Cloudflare Status",
-          "url": "https://www.cloudflarestatus.com"
+          "name": "DesignTAXI Community",
+          "url": "https://community.designtaxi.com/topic/48720-is-xsolla-down-november-21-2026/#comment-51184"
+        },
+        {
+          "name": "Sunday Guardian",
+          "url": "https://sundayguardianlive.com/world/steam-outage-today-is-steam-down-in-the-us-gamers-say-its-all-over-as-they-report-server-connection-purchase-error-login-failures-download-problems-hit-gaming-platform-check-latest-updates-325315/"
         }
       ]
     }
   ],
   "connection_assessment": {
     "verdict": "unrelated",
-    "confidence": "low",
-    "reasoning": "The USDA says it was hit by a cyberthreat and nobody has named who did it. The FBI crime database breach has no stated cause or attacker. No official source links the two, and reporters have found no link to last week's outages, which officials gave ordinary causes for. Airline, bank and market feeds look normal.",
-    "would_change_my_mind": "An official statement blaming the same attacker or company for the USDA and FBI breaches, or several big systems failing at the same moment."
+    "confidence": "medium",
+    "reasoning": "USDA officials call theirs a cyberthreat and reset passwords, but have not named an attacker. The FBI has said nothing about the NCIC report, so the cause is unknown. Microsoft blames a software bug for its outage. No official source links any of these.",
+    "would_change_my_mind": "An official statement blaming the same attacker or company for the USDA and FBI incidents, or several big systems failing at the same moment."
   },
   "alert": {
     "send": false,
     "headline": "",
-    "reason": "Two separate government breaches are being investigated, but no link, no attacker and no wider system failure has been reported."
+    "reason": "Level is unchanged. No official link between incidents and no new widespread outage found."
   },
-  "prep_note": "Farmers using USDA loan or payment tools may see delays this weekend. Check with your local FSA office before deadlines. Everyone else: no action needed. Keep your usual backups and passwords up to date, and watch official FBI and USDA updates.",
+  "prep_note": "No action needed for most people. If you work with police or farm programs, expect delays and check official agency notices. Keep passwords strong and turn on two-step sign-in. Watch for official FBI or USDA updates, and recheck stock prices when markets open Monday.",
   "run": {
     "model": "claude-sonnet-5-5",
-    "input": 135216,
-    "output": 5565,
+    "input": 133130,
+    "output": 5879,
     "searches": 6,
-    "cost_usd": 0.3861
+    "cost_usd": 0.3851
   },
   "source_health": [
     {
       "name": "Google Cloud incidents",
-      "ok": true
-    },
-    {
-      "name": "Azure status (RSS)",
       "ok": true
     },
     {
@@ -236,6 +260,14 @@
     {
       "name": "FAA NAS status",
       "ok": true
+    },
+    {
+      "name": "Azure status (RSS)",
+      "ok": true
     }
-  ]
+  ],
+  "alert_sent": {
+    "at": "2026-11-22T02:58:52.449Z",
+    "reason": "new confirmed critical-sector event"
+  }
 }

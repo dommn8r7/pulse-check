@@ -18,14 +18,20 @@
     "white-house-no-coordinated-attack-statement-2026-11-18",
     "marriott-tech-issue-2026-11-19",
     "playstation-network-outage-2026-11-18",
-    "cisa-kev-additions-2026-11-20"
+    "cisa-kev-additions-2026-11-20",
+    "fbi-ncic-suspected-breach-2026-11-20",
+    "usda-cyber-incident-2026-11-16",
+    "microsoft-365-outage-2026-11-12",
+    "iran-gulf-escalation-2026-11-13",
+    "pakistan-smw5-cable-fault-2026-11-18"
   ],
   "last_alert_rank": -1,
   "spend": {
     "2026-11-18": 1.7659,
     "2026-11-19": 0.8535,
     "2026-11-20": 1.0585,
-    "2026-11-21": 1.3258
+    "2026-11-21": 1.3258,
+    "2026-11-22": 0.3851
   },
   "consecutive_failures": 0,
   "failure_alerted": false
