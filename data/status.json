@@ -1,22 +1,30 @@
 {
-  "generated_at": "2026-11-22T18:26:43.714Z",
+  "generated_at": "2026-11-23T00:11:18.021Z",
   "level": "yellow",
   "level_changed_from_last_run": false,
-  "summary": "A new Delta Air Lines computer problem is delaying many flights today. The FAA reportedly says it is not tied to air traffic systems. The FBI crime database break-in and the USDA incident are still unexplained. No official source links any of them.",
+  "summary": "Delta's computer problem, which delayed many flights Sunday, has been fixed. The FBI crime database break-in and the USDA incident are still unexplained. Stocks and Bitcoin bounced after a hard drop, with no outage or attack reported. No official source links these events.",
   "events": [
     {
       "id": "delta-weight-balance-outage-2026-11-22",
       "category": "aviation",
-      "title": "Delta Air Lines outage delays flights across the US",
+      "title": "Delta Air Lines computer outage delays flights; system back up",
       "started_at": "2026-11-22T00:00:00Z",
-      "status": "ongoing",
-      "impact": "One travel site says up to 3,500 Delta flights were delayed today. I could not check the number myself. FAA's own airport feed shows only weather and volume delays.",
-      "stated_cause": "Delta is working on its weight and balance automation system, per an FAA post quoted by one site. The FAA said the delays are not related to FAA air traffic systems. No cyber cause reported.",
-      "confirmed": false,
+      "status": "resolved",
+      "impact": "Delta used manual workarounds and the FAA briefly held Atlanta-bound flights. Delay counts differ by source, from about 700 to 3,500. Delta says its system is working again. Some delays may linger Monday.",
+      "stated_cause": "Delta blamed its weight and balance system. The FAA said the delays are not related to air traffic control systems. No official source reports a cyber attack.",
+      "confirmed": true,
       "sources": [
         {
-          "name": "The Gate",
-          "url": "https://thegatewithbriancohen.com/systemwide-outage-causes-widespread-delays-with-delta-air-lines-november-22-2026-travel-alert/"
+          "name": "Fox News",
+          "url": "https://www.foxnews.com/us/faa-lifts-ground-stop-atlanta-bound-delta-flights-system-outage"
+        },
+        {
+          "name": "ABC7 New York",
+          "url": "https://abc7ny.com/post/delta-flight-delays-caused-weight-balance-system-outage/20066834/"
+        },
+        {
+          "name": "Star Tribune",
+          "url": "https://www.startribune.com/delta-system-outage-delays-more-than-1000-flights-nationwide-disrupts-travel-at-msp/601926754"
         }
       ]
     },
@@ -26,8 +34,8 @@
       "title": "FBI probes suspected breach of its national crime database",
       "started_at": "2026-11-20T22:00:00Z",
       "status": "ongoing",
-      "impact": "Police use NCIC for warrant and missing-person checks. Reports do not say if it went down or if records were taken or changed. A retired agent warned that altered records could be a risk.",
-      "stated_cause": "Unknown. The FBI had not commented as of Saturday. Reports rely on unnamed sources. Nothing links it to the September ShinyHunters jobs-portal breach.",
+      "impact": "Police use NCIC for warrant and missing-person checks. Reports do not say if it went down or if records were taken or changed.",
+      "stated_cause": "Unknown. The FBI had not commented in the reports I saw. Reports rely on unnamed sources. Nothing links it to the September ShinyHunters jobs-portal breach.",
       "confirmed": true,
       "sources": [
         {
@@ -35,36 +43,32 @@
           "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/"
         },
         {
-          "name": "Fox News",
-          "url": "https://www.foxnews.com/politics/fbi-probes-second-cyberattack-months-hackers-breach-key-crime-database-sources-say"
+          "name": "Axios",
+          "url": "https://www.axios.com/2026/11/21/fbi-hack-personal-records-ncic"
         },
         {
-          "name": "WUSA9",
-          "url": "https://www.wusa9.com/article/news/nation-world/fbi-criminal-information-database-breached-cyberattack-report/507-8a30d23c-a238-4802-9953-24c88f7519e0"
+          "name": "Fox News",
+          "url": "https://www.foxnews.com/politics/fbi-probes-second-cyberattack-months-hackers-breach-key-crime-database-sources-say"
         }
       ]
     },
     {
       "id": "usda-cyber-incident-2026-11-16",
       "category": "other",
-      "title": "USDA cyber incident disrupts farm payment and loan systems",
+      "title": "USDA cyber incident hit farm payment and loan systems",
       "started_at": "2026-11-16T00:00:00Z",
       "status": "ongoing",
-      "impact": "Farm loan, payment and conservation tools were down for days. An official expected most systems back Friday, with work over the weekend. He said no personal data was lost. I found no newer update today.",
-      "stated_cause": "A USDA under secretary called it a cyberthreat. Staff reset database passwords. No attacker named and no account of how it happened.",
+      "impact": "Farm loan and payment tools were down for days. Officials expected most systems back late last week. I found no newer restoration update today.",
+      "stated_cause": "A USDA official called it a cyberthreat. No attacker has been named and no one has said how it happened.",
       "confirmed": true,
       "sources": [
         {
+          "name": "The Next Web",
+          "url": "https://thenextweb.com/news/fbi-ncic-crime-database-breach-usda-hack"
+        },
+        {
           "name": "DTN",
           "url": "https://www.dtnpf.com/agriculture/web/ag/columns/washington-insider/article/2026/11/19/usda-loan-software-systems-face-amid"
-        },
-        {
-          "name": "WSET/TNND",
-          "url": "https://cbs12.com/news/nation-world/hackers-allegedly-breach-usda-system-used-to-pay-farmers-reports-payment-system-us-department-of-agriculture-cybersecurity-cyberthreat-united-states-government"
-        },
-        {
-          "name": "Alaska Story",
-          "url": "https://thealaskastory.com/usda-cyber-incident-disrupts-farm-payments-and-loans-after-a-week-of-other-major-tech-outages/"
         }
       ]
     },
@@ -74,56 +78,52 @@
       "title": "Tanker attacks near Hormuz at highest level of the conflict",
       "started_at": "2026-11-13T00:00:00Z",
       "status": "ongoing",
-      "impact": "Projectiles hit three tankers Friday and Saturday, per a maritime risk firm. Iran says more tankers hit mines. The US is blockading Iranian ports and escorting tankers.",
-      "stated_cause": "Nobody has officially claimed the projectile hits. The risk firm says Iranian involvement is likely. Iran says it controls the strait and its mine claims are mostly unverified.",
+      "impact": "Projectiles hit three tankers Friday and Saturday, per a maritime risk firm. UK maritime monitors report fires and no casualties. Bahrain says Iran hit an industrial site.",
+      "stated_cause": "Nobody has officially claimed the projectile hits. The risk firm says Iranian involvement is likely. Iran says one tanker hit a mine; that is unverified.",
       "confirmed": true,
       "sources": [
         {
           "name": "CNN",
-          "url": "https://www.cnn.com/2026/11/22/middleeast/hormuz-attacks-highest-levels-iran-war-intl"
-        },
-        {
-          "name": "Arab News",
-          "url": "https://www.arabnews.jp/en/middle-east/maritime-agency-says-2-tankers-struck-in-hormuz-as-iran-says-ship-on-fire-3001561"
+          "url": "https://us.cnn.com/2026/11/22/middleeast/hormuz-attacks-highest-levels-iran-war-intl"
         },
         {
           "name": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping"
+        },
+        {
+          "name": "gCaptain",
+          "url": "https://gcaptain.com/another-tanker-hit-in-strait-of-hormuz-as-maritime-attacks-surge-worldwide/"
         }
       ]
     },
     {
       "id": "us-equities-selloff-2026-11-17",
       "category": "markets",
-      "title": "US stocks sold off hard Friday; markets closed until Monday",
+      "title": "US stocks rebound in Sunday futures after worst week in years",
       "started_at": "2026-11-19T14:30:00Z",
       "status": "ongoing",
-      "impact": "Friday close: Nasdaq 22,617.73 (-5.28%). S&P 500 and Dow are in a correction. Nvidia fell about 14% on Friday. No Sunday futures data found yet. No trading halts found.",
-      "stated_cause": "Reports cite AI worries and a Reuters report that the SEC is reviewing Nvidia accounting. The SEC declined comment. No technical fault or cyber attack reported.",
+      "impact": "All three major US indexes ended Friday in correction territory. Sunday evening futures rose: Dow about 0.8-0.9%, S&P 500 about 1.1-1.5%, Nasdaq-100 about 1.9-2.5%. Markets open Monday. No trading halts found.",
+      "stated_cause": "Reports cite AI worries, Nvidia's CEO leaving and a report of an SEC accounting review. No technical fault or cyber attack reported.",
       "confirmed": true,
       "sources": [
         {
-          "name": "FXEmpire",
-          "url": "https://fxempire.com/forecasts/article/nasdaq-index-nvidia-leads-tech-stock-rout-as-nasdaq-nears-bear-market-1646018"
-        },
-        {
-          "name": "NPR",
-          "url": "https://npr.org/2026/11/20/g-s1-154797/nasdaq-sp500-stock-market-ai-sink-negative"
-        },
-        {
           "name": "CNBC",
-          "url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html"
+          "url": "https://www.cnbc.com/2026/11/22/stock-market-today-live-updates.html"
+        },
+        {
+          "name": "Seeking Alpha",
+          "url": "https://seekingalpha.com/news/4675416-sp-500-dow-nasdaq-stock-market"
         }
       ]
     },
     {
       "id": "bitcoin-weekly-decline-2026-11",
       "category": "markets",
-      "title": "Bitcoin steady near 60K USD after a week of losses",
+      "title": "Bitcoin rebounds near 60.6K USD after Saturday dip to about 55.3K",
       "started_at": "2026-11-10T00:00:00Z",
       "status": "ongoing",
-      "impact": "Price check: CoinGecko 60,612, Coinbase 60,172, Bitget 60,181. Prices agree and are up about 1-3% in 24h, down about 6% in 7 days. Some pages show old prices (for example Binance near 79.7K). No crash and no exchange outage found.",
-      "stated_cause": "No technical or attack cause reported. The drop follows the stock selloff and crypto selling.",
+      "impact": "Price check: CoinGecko 60,612, Coinbase 60,906, Coinglass 60,691. Sources agree. Up 1-6% in 24h, down about 6-7% over 7 days. One report says it hit about 55,300 Saturday. Binance page near 79.7K looks stale. No exchange outage found.",
+      "stated_cause": "No technical or attack cause reported. Reports tie the drop to the stock selloff and leveraged bets being closed out.",
       "confirmed": true,
       "sources": [
         {
@@ -135,8 +135,8 @@
           "url": "https://www.coinbase.com/price/bitcoin"
         },
         {
-          "name": "Bitget",
-          "url": "https://www.bitget.com/price/bitcoin"
+          "name": "Coinglass",
+          "url": "https://www.coinglass.com/currencies/BTC"
         }
       ]
     },
@@ -146,8 +146,8 @@
       "title": "CISA adds four actively exploited flaws to its catalog",
       "started_at": "2026-11-20T00:00:00Z",
       "status": "ongoing",
-      "impact": "Covers SAP NetWeaver, Cisco Expressway, VMware vCenter and Apache Roller. This is a routine notice, not an emergency directive. Federal agencies must fix them.",
-      "stated_cause": "CISA cites evidence of active exploitation. It names no attacker and does not tie the flaws to the USDA or FBI incidents.",
+      "impact": "Covers SAP NetWeaver, Cisco Expressway, VMware vCenter and Apache Roller. This is a routine notice, not an emergency directive.",
+      "stated_cause": "CISA cites active exploitation. It names no attacker and does not tie the flaws to the USDA or FBI incidents.",
       "confirmed": true,
       "sources": [
         {
@@ -162,7 +162,7 @@
       "title": "Cloudflare status page shows degraded performance",
       "started_at": "2026-11-18T15:03:00Z",
       "status": "ongoing",
-      "impact": "Cloudflare's status feed lists Sites and Services as degraded, last changed 01:11 UTC Nov 22. I saw no wire report of a wide outage.",
+      "impact": "Cloudflare's status feed lists Sites and Services as degraded, last changed 21:00 UTC Nov 22. I saw no wire report of a wide outage.",
       "stated_cause": "Unknown. Cloudflare gave no cause in the data I saw.",
       "confirmed": true,
       "sources": [
@@ -178,45 +178,37 @@
       "title": "Microsoft explains Nov 12 global Microsoft 365 outage",
       "started_at": "2026-11-12T17:00:00Z",
       "status": "resolved",
-      "impact": "Outlook, Exchange Online, Teams and Copilot were disrupted for almost 24 hours. Microsoft gave its full cause on Saturday.",
-      "stated_cause": "Microsoft says a months-old software bug was triggered after Teams traffic moved to servers with less capacity. It says it was not a cyberattack. No outside source disputes this.",
+      "impact": "Outlook, Exchange Online, Teams and Copilot were disrupted for almost 24 hours. Microsoft published its full explanation Saturday.",
+      "stated_cause": "Microsoft says a months-old software bug was triggered after Teams traffic moved to servers with less capacity. It says it was not a cyberattack.",
       "confirmed": true,
       "sources": [
         {
           "name": "BleepingComputer",
           "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-months-old-bug-caused-global-microsoft-365-outage/"
-        },
-        {
-          "name": "KIRO 7",
-          "url": "https://kiro7.com/news/local/microsoft-blames-months-old-software-glitch-global-service-outage/A4GQBWFXYNFHHHZ452ZO5DVSAY"
         }
       ]
     }
   ],
   "connection_assessment": {
-    "verdict": "unrelated",
-    "confidence": "medium",
-    "reasoning": "The FBI database break-in and the USDA incident both have unknown causes, and no one has named an attacker. The Delta problem is blamed on its own weight and balance system, and the FAA says air traffic systems are not involved. Stocks are falling on AI worries, and Hormuz is a war. No official source links any of these.",
-    "would_change_my_mind": "An official statement blaming the same company or attacker, or several big systems failing at the same moment, would make me think they are connected."
+    "verdict": "unknown",
+    "confidence": "low",
+    "reasoning": "Delta blamed its own weight and balance system, and the FAA said air traffic systems were not involved. The FBI and USDA break-ins have no stated cause or attacker. Stocks fell on AI and Nvidia news. No official source links any of these.",
+    "would_change_my_mind": "An official statement blaming the same attacker or company for the FBI and USDA incidents, or several big systems failing at the same moment."
   },
   "alert": {
     "send": false,
     "headline": "",
-    "reason": "No confirmed link between incidents. The new Delta outage has a stated company cause and is not confirmed by a second source."
+    "reason": "No confirmed link between incidents. Delta is fixed, and markets and Bitcoin are steadier."
   },
-  "prep_note": "If you fly on Delta today, check your flight status and allow extra time. Police, farm-loan and payment services may still be slow. Keep some cash and a backup way to pay. Monday's stock open may be volatile, so avoid rushed money moves.",
+  "prep_note": "Thanksgiving travel is close, so check your flight status before leaving for the airport. Expect some leftover Delta delays Monday. If you rely on USDA farm programs, check for updates from your local office. Markets open Monday, so expect big price swings. Nothing here needs action beyond normal care.",
   "run": {
     "model": "claude-sonnet-5-5",
-    "input": 82095,
-    "output": 4823,
+    "input": 81861,
+    "output": 5203,
     "searches": 6,
-    "cost_usd": 0.2724
+    "cost_usd": 0.2758
   },
   "source_health": [
-    {
-      "name": "CISA advisories (RSS)",
-      "ok": true
-    },
     {
       "name": "Google Cloud incidents",
       "ok": true
@@ -234,8 +226,16 @@
       "ok": true
     },
     {
+      "name": "CISA advisories (RSS)",
+      "ok": true
+    },
+    {
       "name": "AWS Health (RSS)",
       "ok": true
     }
-  ]
+  ],
+  "alert_sent": {
+    "at": "2026-11-23T00:10:43.969Z",
+    "reason": "new confirmed critical-sector event"
+  }
 }
