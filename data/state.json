@@ -25,7 +25,10 @@
     "iran-gulf-escalation-2026-11-13",
     "pakistan-smw5-cable-fault-2026-11-18",
     "xsolla-paystation-outage-2026-11-21",
-    "delta-weight-balance-outage-2026-11-22"
+    "delta-weight-balance-outage-2026-11-22",
+    "spotify-login-outage-2026-11-24",
+    "faa-las-staffing-ground-stop-2026-11-24",
+    "cisa-kev-additions-2026-11-23"
   ],
   "last_alert_rank": -1,
   "spend": {
@@ -35,7 +38,7 @@
     "2026-11-21": 1.3258,
     "2026-11-22": 0.9349,
     "2026-11-23": 0.8169,
-    "2026-11-24": 0.2702
+    "2026-11-24": 0.552
   },
   "consecutive_failures": 0,
   "failure_alerted": false

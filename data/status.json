@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-24T05:54:18.096Z",
+  "generated_at": "2026-11-24T17:30:00.708Z",
   "level": "yellow",
   "level_changed_from_last_run": false,
-  "summary": "The FBI is still investigating a suspected break-in at its national crime database. The Director of National Intelligence has now publicly confirmed the probe but gave no details. Stocks and Bitcoin held their rebound, and I found no trading halts. No official source links the FBI and USDA incidents.",
+  "summary": "Chip stocks fell Tuesday and gave back part of Monday's big rebound. Bitcoin slipped to about 60,000 dollars. I found no trading halts or exchange outages. The FBI crime-database probe and the USDA incident continue, and no official source links them.",
   "events": [
     {
       "id": "fbi-ncic-suspected-breach-2026-11-20",
@@ -10,21 +10,21 @@
       "title": "FBI probes suspected breach of its national crime database",
       "started_at": "2026-11-20T22:00:00Z",
       "status": "ongoing",
-      "impact": "Police use NCIC for warrant and missing-person checks. Reports do not say if it went down or if records were copied. The FBI declined to comment to the AP.",
-      "stated_cause": "Unknown. NEW: the Director of National Intelligence said Sunday the FBI is probing the source and scope but gave no details. No attacker named. No official link to the September ShinyHunters case.",
+      "impact": "Police use NCIC for warrant, stolen-vehicle and missing-person checks. It holds over 18 million records. Reports do not say if data was copied or changed. No new FBI update found today.",
+      "stated_cause": "Unknown. The FBI declined to comment to the AP. No attacker has been named. No official source links this to earlier FBI incidents.",
       "confirmed": true,
       "sources": [
         {
-          "name": "Epoch Times",
-          "url": "https://www.theepochtimes.com/us/fbi-looking-into-potential-hack-of-national-crime-database-intelligence-director-6128172"
-        },
-        {
-          "name": "BleepingComputer",
-          "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/"
+          "name": "SecurityWeek (AP)",
+          "url": "https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/"
         },
         {
           "name": "Forbes",
           "url": "https://www.forbes.com/sites/larsdaniel/2026/11/21/fbi-reportedly-hacked-again-apparent-breach-hits-ncic-crime-database/"
+        },
+        {
+          "name": "Local12 (TNND)",
+          "url": "https://local12.com/news/nation-world/reported-fbi-database-breach-raises-concerns-about-officer-public-safety"
         }
       ]
     },
@@ -34,93 +34,129 @@
       "title": "USDA cyber incident hit farm payment and loan systems",
       "started_at": "2026-11-16T00:00:00Z",
       "status": "ongoing",
-      "impact": "Farm loan, payment and conservation systems were shut down so passwords could be reset. An official said most systems should return by Friday. I found no notice of full restoration yet.",
-      "stated_cause": "A USDA under secretary called it a cyberthreat and said no personal data was lost. USDA has not named an attacker or given a full public account.",
+      "impact": "Farm loan, payment and conservation systems went offline so passwords could be reset. An official said most should be back by Friday, with work possible over the weekend. I found no notice of full restoration.",
+      "stated_cause": "A USDA under secretary called it a cyberthreat and said no data was lost. USDA has not named an attacker or given a full public account of what was affected.",
       "confirmed": true,
       "sources": [
-        {
-          "name": "DTN Progressive Farmer",
-          "url": "https://www.dtnpf.com/agriculture/web/ag/columns/washington-insider/article/2026/11/19/usda-loan-software-systems-face-amid"
-        },
         {
           "name": "Hoosier Ag Today",
           "url": "https://www.hoosieragtoday.com/2026/11/22/usda-cyberattack-disrupts-farmer-payment-systems/"
         },
         {
-          "name": "RRFN",
-          "url": "https://www.rrfn.com/2026/11/23/cyber-attack-at-usda/"
-        }
-      ]
-    },
-    {
-      "id": "us-equities-selloff-2026-11-17",
-      "category": "markets",
-      "title": "US stocks surge Monday after worst week in years",
-      "started_at": "2026-11-19T14:30:00Z",
-      "status": "ongoing",
-      "impact": "Price check: S&P 500 closed up 4.73% at 7,237 and Nasdaq up 6.51%, per Yahoo Finance and Bloomberg. Friday's close was 6,910. Futures are slightly higher tonight. No trading halts found.",
-      "stated_cause": "Reports tie the rebound to Nvidia bringing back Jensen Huang as CEO. The earlier drop was tied to AI worries. No technical fault or cyber attack reported.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "CNBC",
-          "url": "https://www.cnbc.com/2026/11/23/stock-market-today-live-updates.html"
+          "name": "DTN Progressive Farmer",
+          "url": "https://www.dtnpf.com/agriculture/web/ag/columns/washington-insider/article/2026/11/19/usda-loan-software-systems-face-amid"
         },
         {
-          "name": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/quote/%5ESPX/"
-        },
-        {
-          "name": "Bloomberg",
-          "url": "https://www.bloomberg.com/quote/SPX:IND"
-        }
-      ]
-    },
-    {
-      "id": "bitcoin-weekly-decline-2026-11",
-      "category": "markets",
-      "title": "Bitcoin near 61-63K USD, up on the day, down about 5% on the week",
-      "started_at": "2026-11-10T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Price check: CoinGecko 60,871; OKX 61,245; Kraken 61,949; Coinbase 62,768; Coinglass 63,443. Quotes differ by timing but agree on direction. No exchange outage found.",
-      "stated_cause": "No technical or attack cause reported. Moves track the stock selloff and rebound and Fed worries.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "CoinGecko",
-          "url": "https://www.coingecko.com/en/coins/bitcoin"
-        },
-        {
-          "name": "OKX",
-          "url": "https://www.okx.com/en-us/price/bitcoin-btc"
-        },
-        {
-          "name": "Coinbase",
-          "url": "https://www.coinbase.com/price/bitcoin"
+          "name": "IBTimes UK",
+          "url": "https://www.ibtimes.co.uk/usda-cyberattack-disrupts-farmer-payment-systems-1833730"
         }
       ]
     },
     {
       "id": "iran-gulf-escalation-2026-11-13",
       "category": "geopolitical",
-      "title": "Tanker attacks near Strait of Hormuz at highest level of the war",
+      "title": "Iran says four more tankers hit mines near Strait of Hormuz",
       "started_at": "2026-11-13T00:00:00Z",
       "status": "ongoing",
-      "impact": "Three tankers were hit Friday and Saturday, with fires and no deaths reported. Iranian state media claims more mine strikes, not confirmed. Brent fell about 2.6% to near 89 USD. US Treasury added Iran oil sanctions.",
-      "stated_cause": "Nobody has claimed the projectile hits. A maritime risk firm says Iranian involvement is likely. Iran says tankers hit mines; that is unconfirmed.",
+      "impact": "Iran's navy says four tankers caught fire in about 24 hours, three of them under US escort. These are Iranian claims. The UK maritime agency separately confirmed vessels were hit. CBS says oil prices are still slowly falling.",
+      "stated_cause": "Iran says mines. Nobody has claimed the earlier projectile hits. CNBC cites the WSJ saying the US is probing Iran over cyberattacks on tankers. That is a report, not an official finding.",
       "confirmed": true,
       "sources": [
         {
-          "name": "Yahoo News (Marisks report)",
-          "url": "https://sg.news.yahoo.com/iranian-attacks-strait-hormuz-highest-151328519.html"
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/11/24/iran-trump-hormuz-crude-.html"
         },
         {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping"
+          "name": "CBS News",
+          "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-blockade-strait-of-hormuz-ship-attacks/"
         },
         {
-          "name": "gCaptain",
-          "url": "https://gcaptain.com/another-tanker-hit-in-strait-of-hormuz-as-maritime-attacks-surge-worldwide/"
+          "name": "TASS",
+          "url": "https://tass.com/world/2223967"
+        }
+      ]
+    },
+    {
+      "id": "us-equities-selloff-2026-11-17",
+      "category": "markets",
+      "title": "US tech stocks fall Tuesday after Monday's big rebound",
+      "started_at": "2026-11-24T14:30:00Z",
+      "status": "ongoing",
+      "impact": "Price check: S&P 500 about -0.5% to -1% midday near 7,160-7,200 after Monday's close of 7,237 (+4.73%). Nasdaq down about 1.5% to 2.4%. Nvidia down about 7% and AMD about 9%. No trading halts found.",
+      "stated_cause": "Reports cite AI spending doubts, tariff plans and rate worries. Sources differ slightly on the size of the drop because they quote different times. No technical fault or cyber attack reported.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
+        },
+        {
+          "name": "24/7 Wall St",
+          "url": "https://247wallst.com/cards/money-is-rotating-out-of-tech-at-the-open-with-the-nasdaq-d-gspc-market-bell-01m8719tmzcxchtbe7xryz4k16"
+        },
+        {
+          "name": "TipRanks",
+          "url": "https://www.tipranks.com/news/stock-market-today-nov-24-markets-turn-jittery-even-as-huang-returns-to-nvidia"
+        }
+      ]
+    },
+    {
+      "id": "bitcoin-weekly-decline-2026-11",
+      "category": "markets",
+      "title": "Bitcoin near 60K USD, down 2-5% on the day and about 7-8% on the week",
+      "started_at": "2026-11-10T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Price check: Coinbase 59,757 (-2.3%); CoinGecko 59,551 (-4.9%); Bitget 60,066 (-2%). Quotes differ by timing but agree on direction. No exchange outage found.",
+      "stated_cause": "No technical or attack cause reported. The drop moves with the tech-stock pullback and Fed worries.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "Coinbase",
+          "url": "https://www.coinbase.com/price/bitcoin"
+        },
+        {
+          "name": "CoinGecko",
+          "url": "https://www.coingecko.com/en/coins/bitcoin"
+        },
+        {
+          "name": "Bitget",
+          "url": "https://www.bitget.com/price/bitcoin"
+        }
+      ]
+    },
+    {
+      "id": "cloudflare-minor-incidents-2026-11-18",
+      "category": "cloud",
+      "title": "Cloudflare status page shows partial outage on Sites and Services",
+      "started_at": "2026-11-18T15:03:00Z",
+      "status": "ongoing",
+      "impact": "Cloudflare's own status feed lists Sites and Services as a partial outage, last changed 13:38 UTC today. Amsterdam is back to normal. I found no wire report of a wide outage.",
+      "stated_cause": "Unknown. Cloudflare gave no cause in the data I saw.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "Cloudflare Status",
+          "url": "https://www.cloudflarestatus.com"
+        }
+      ]
+    },
+    {
+      "id": "spotify-login-outage-2026-11-24",
+      "category": "cloud",
+      "title": "Spotify login problems for many users",
+      "started_at": "2026-11-24T11:54:00Z",
+      "status": "resolved",
+      "impact": "Thousands reported being unable to log in. TechRadar's live blog said it looked over by about 12:30 UTC. Spotify's status page showed no incident.",
+      "stated_cause": "Unknown. Spotify said it was checking the issues. No official source reports a cyber attack.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "TechRadar",
+          "url": "https://techradar.com/news/live/spotify-down-november-2026"
+        },
+        {
+          "name": "Sportskeeda",
+          "url": "https://tech.sportskeeda.com/mobiles/news-is-spotify-right-now-november-24-2026-outage-status-explored"
         }
       ]
     },
@@ -130,7 +166,7 @@
       "title": "Delta computer outage delayed flights; crews used manual math",
       "started_at": "2026-11-22T00:00:00Z",
       "status": "resolved",
-      "impact": "About 1,654 of 5,000 Delta flights were delayed Sunday. Crews used manual workarounds while automation was restored. No Delta problem shows in the FAA feed now.",
+      "impact": "About 1,654 of 5,000 Delta flights were delayed Sunday. Crews used manual workarounds until automation returned. No Delta problem is in the FAA feed now.",
       "stated_cause": "Delta blamed its weight and balance system. The FAA said the delays were not related to air traffic control systems. No official source reports a cyber attack.",
       "confirmed": true,
       "sources": [
@@ -149,46 +185,14 @@
       "category": "aviation",
       "title": "FAA ground stop at Las Vegas airport for staffing",
       "started_at": "2026-11-24T05:00:00Z",
-      "status": "ongoing",
-      "impact": "The FAA feed shows a ground stop at Las Vegas until 10:30 pm Pacific, plus a delay averaging 35 minutes. LaGuardia is closed overnight except helicopters under a notice.",
-      "stated_cause": "The FAA lists staffing for the Las Vegas ground stop. No equipment failure or cyber attack is listed.",
+      "status": "resolved",
+      "impact": "The FAA feed at 17:29 UTC shows no ground stops or delays. It lists only long-running closures to some private aircraft at LAX, San Diego and Las Vegas.",
+      "stated_cause": "The FAA had listed staffing for the Las Vegas ground stop. No equipment failure or cyber attack was listed.",
       "confirmed": true,
       "sources": [
         {
           "name": "FAA NAS status",
           "url": "https://nasstatus.faa.gov"
-        }
-      ]
-    },
-    {
-      "id": "shopify-checkout-outage-2026-11-23",
-      "category": "cloud",
-      "title": "Shopify checkout reportedly down for some users",
-      "started_at": "2026-11-23T17:41:00Z",
-      "status": "ongoing",
-      "impact": "User reports rose around 12:41 p.m. ET Monday. Size and length are unknown. I found no wire report and no newer update.",
-      "stated_cause": "Unknown. Nothing reported yet.",
-      "confirmed": false,
-      "sources": [
-        {
-          "name": "DesignTAXI Community",
-          "url": "https://community.designtaxi.com/topic/49083-is-shopify-down-november-23-2026/"
-        }
-      ]
-    },
-    {
-      "id": "cloudflare-minor-incidents-2026-11-18",
-      "category": "cloud",
-      "title": "Cloudflare status page shows degraded performance",
-      "started_at": "2026-11-18T15:03:00Z",
-      "status": "ongoing",
-      "impact": "Cloudflare's status feed lists Sites and Services as degraded since Monday and Amsterdam under maintenance. No wire report of a wide outage.",
-      "stated_cause": "Unknown. Cloudflare gave no cause in the data I saw.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "Cloudflare Status",
-          "url": "https://www.cloudflarestatus.com"
         }
       ]
     },
@@ -212,21 +216,21 @@
   "connection_assessment": {
     "verdict": "unrelated",
     "confidence": "medium",
-    "reasoning": "The FBI database case and the USDA case are both government cyber incidents. Nobody has named an attacker or a cause for either, and no official source links them. Delta blamed its own weight system, the Las Vegas stop is for staffing, and the stock and oil moves have market causes.",
-    "would_change_my_mind": "An official statement blaming the same attacker or company, or several big systems failing at the same moment, would make me think they are connected."
+    "reasoning": "The FBI and USDA incidents have no stated cause and no named attacker. Delta blamed its own system, and the FAA said air traffic control was not involved. Stocks and Bitcoin are moving on AI, tariff and rate worries. No official source links any of these.",
+    "would_change_my_mind": "An official statement blaming the same attacker or company for the FBI and USDA incidents, or several big systems failing at the same moment."
   },
   "alert": {
     "send": false,
     "headline": "",
-    "reason": "No new confirmed event shows a link or a wide failure. Level is unchanged."
+    "reason": "No confirmed link between incidents and no sign of widespread failure. Markets are volatile but trading normally."
   },
-  "prep_note": "No action needed for most people. If you rely on USDA farm programs, check your local office before the December 11 enrollment deadline. Keep a backup way to pay, and keep some cash on hand. Use official sites for updates on the FBI and USDA incidents.",
+  "prep_note": "No action needed for most people. Expect more swings in tech stocks and crypto, so avoid rushed trades. Farmers should check the FSA or USDA office for the status of payments and loans. Keep some cash on hand, as you should anyway.",
   "run": {
     "model": "claude-sonnet-5-5",
-    "input": 79265,
-    "output": 5166,
+    "input": 79312,
+    "output": 6314,
     "searches": 6,
-    "cost_usd": 0.2702
+    "cost_usd": 0.2818
   },
   "source_health": [
     {
@@ -238,6 +242,10 @@
       "ok": true
     },
     {
+      "name": "FAA NAS status",
+      "ok": true
+    },
+    {
       "name": "Azure status (RSS)",
       "ok": true
     },
@@ -246,16 +254,12 @@
       "ok": true
     },
     {
-      "name": "FAA NAS status",
-      "ok": true
-    },
-    {
       "name": "AWS Health (RSS)",
       "ok": true
     }
   ],
-  "alert_held": {
-    "at": "2026-11-24T05:53:43.959Z",
+  "alert_sent": {
+    "at": "2026-11-24T17:29:18.446Z",
     "reason": "new confirmed critical-sector event"
   }
 }
