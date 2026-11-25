@@ -28,7 +28,8 @@
     "delta-weight-balance-outage-2026-11-22",
     "spotify-login-outage-2026-11-24",
     "faa-las-staffing-ground-stop-2026-11-24",
-    "cisa-kev-additions-2026-11-23"
+    "cisa-kev-additions-2026-11-23",
+    "faa-sfo-wind-ground-stop-2026-11-24"
   ],
   "last_alert_rank": -1,
   "spend": {
@@ -38,7 +39,8 @@
     "2026-11-21": 1.3258,
     "2026-11-22": 0.9349,
     "2026-11-23": 0.8169,
-    "2026-11-24": 0.552
+    "2026-11-24": 0.552,
+    "2026-11-25": 0.2808
   },
   "consecutive_failures": 0,
   "failure_alerted": false
