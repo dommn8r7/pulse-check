@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-25T22:24:22.902Z",
+  "generated_at": "2026-11-26T04:55:19.584Z",
   "level": "yellow",
   "level_changed_from_last_run": false,
-  "summary": "The FBI confirms it is investigating a break-in at its national crime database, but has not said who did it or what was taken. Stocks swung hard today on AI worries and inflation data, then mostly recovered. Bitcoin is near 58,000 dollars. No official source links these events.",
+  "summary": "The FBI is still investigating a break-in at its national crime database. No one has said who did it. Stocks swung hard Wednesday and mostly recovered, and Bitcoin sits near 59,000 dollars. No official source links these events.",
   "events": [
     {
       "id": "fbi-ncic-suspected-breach-2026-11-20",
@@ -10,21 +10,41 @@
       "title": "FBI investigating break-in at its national crime database",
       "started_at": "2026-11-20T22:00:00Z",
       "status": "ongoing",
-      "impact": "Police use this database to check warrants, stolen cars and missing people. The FBI has not said what was taken or if police lost access. No public sign that records were changed.",
-      "stated_cause": "Unknown. Patel confirmed an active investigation Tuesday and said the matter is ongoing. No attacker has been named or claimed it.",
+      "impact": "Police use this database for warrant checks and stolen car records. Nobody has said what was taken, whether records were changed, or whether police lost access.",
+      "stated_cause": "Unknown. Patel confirmed an active investigation on Nov 24 but gave no details. No group has claimed it. No official link to the September FBI jobs portal breach.",
       "confirmed": true,
       "sources": [
         {
-          "name": "Unbiased Headlines",
-          "url": "https://unbiasedheadlines.com/article/patel-says-fbi-crime-database-hack-investigation-is-ongoing-declines-to-name"
-        },
-        {
-          "name": "SecurityWeek (AP)",
-          "url": "https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/"
+          "name": "CNN via Yahoo",
+          "url": "https://www.yahoo.com/news/us/articles/fbi-probes-apparent-breach-national-150612590.html"
         },
         {
           "name": "BleepingComputer",
           "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/"
+        },
+        {
+          "name": "BreachNews",
+          "url": "https://breachnews.com/cyber-attacks/fbi-investigates-apparent-ncic-crime-database-breach/"
+        }
+      ]
+    },
+    {
+      "id": "usda-cyber-incident-2026-11-16",
+      "category": "other",
+      "title": "USDA cyber incident hit farm payment and loan systems",
+      "started_at": "2026-11-16T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Farm loan, payment and conservation systems were shut down. As of Nov 24, USDA had not said if all systems are back or if financial data was taken.",
+      "stated_cause": "A USDA official said systems were shut down over a cyber threat and no personal data was lost. No attacker has been named.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "DTN Progressive Farmer",
+          "url": "https://www.dtnpf.com/agriculture/web/ag/columns/washington-insider/article/2026/11/24/usda-cybersecurity-incident-leaves-4"
+        },
+        {
+          "name": "Yahoo News",
+          "url": "https://www.yahoo.com/news/us/articles/hackers-disrupt-usda-systems-attack-214000470.html"
         }
       ]
     },
@@ -33,33 +53,33 @@
       "category": "markets",
       "title": "Wild swing in US stocks: Nasdaq fell 4.6% early, then recovered",
       "started_at": "2026-11-25T14:30:00Z",
-      "status": "ongoing",
-      "impact": "Close: S&P 500 7,182.78 (-0.25%), Dow 50,182.95 (+0.33%), Nasdaq 23,585.80 (-0.62%). Early lows were far worse. One report says the Nasdaq-100 briefly fell 20% from its peak. I found no trading halts.",
-      "stated_cause": "Reports cite AI profit worries, hot inflation data (PCE) and new tariff plans. No technical fault or cyber attack is reported.",
+      "status": "resolved",
+      "impact": "Close Nov 25: S&P 500 7,182.78 (-0.25%), Dow 50,182.95 (+0.33%), Nasdaq 23,585.80 (-0.62%). Nasdaq-100 briefly hit 20% below its peak. US markets are closed today for Thanksgiving.",
+      "stated_cause": "Reports point to hot inflation data, AI profit worries and new tariff plans. No technical fault or cyber attack is reported. I found no trading halts.",
       "confirmed": true,
       "sources": [
         {
-          "name": "CNBC",
-          "url": "https://www.cnbc.com/2026/11/24/stock-market-today-live-updates-.html"
-        },
-        {
-          "name": "ABC News",
-          "url": "https://abcnews.com/Business/stocks-tumble-tech-sell-off-resumes-nvidia-falls/story?id=138442070"
-        },
-        {
           "name": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-25-220645995.html"
+        },
+        {
+          "name": "GSM News",
+          "url": "https://gsmglobalnews.com/article/d20261125-mktclose1.html"
+        },
+        {
+          "name": "Cappnotes",
+          "url": "https://cappnotes.substack.com/p/closing-look-wednesday-november-25"
         }
       ]
     },
     {
       "id": "bitcoin-weekly-decline-2026-11",
       "category": "markets",
-      "title": "Bitcoin near 58-59K USD, down about 6-9% on the week",
+      "title": "Bitcoin near 58-60K USD, down about 6-8% on the week",
       "started_at": "2026-11-10T00:00:00Z",
       "status": "ongoing",
-      "impact": "Price check: Coinbase 58,651 (-1.3% on the day, -6% on the week); Coinglass 58,244 (-3.5% on the day). CoinGecko shows about 60,169. Sources differ a little. No exchange outage found.",
-      "stated_cause": "No technical or attack cause reported. Commentary points to hot inflation data and general selling of risky assets.",
+      "impact": "Coinbase 58,651 (-6% on the week); Coinglass 58,244 (24h range 57,876 to 60,675); CoinGecko 60,847 (+2.8% on the day). Sources differ a little. No exchange outage found.",
+      "stated_cause": "No technical or attack cause reported. Commentary points to hot inflation data and selling of risky assets.",
       "confirmed": true,
       "sources": [
         {
@@ -71,64 +91,32 @@
           "url": "https://www.coinglass.com/currencies/BTC"
         },
         {
-          "name": "FXStreet",
-          "url": "https://fxstreet.com/cryptocurrencies/news/bitcoin-vs-good-outlook-btc-and-xau-falter-after-hotter-than-expected-us-pce-inflation-202611251504"
-        }
-      ]
-    },
-    {
-      "id": "usda-cyber-incident-2026-11-16",
-      "category": "other",
-      "title": "USDA cyber incident hit farm payment and loan systems",
-      "started_at": "2026-11-16T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Farm loan, payment and conservation systems were shut down. As of a Nov 24 report, USDA has not said if all systems are back or if financial data was taken.",
-      "stated_cause": "A USDA official said systems were shut down over a cyber threat and no personal data was lost. No attacker is named.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "DTN Progressive Farmer",
-          "url": "https://www.dtnpf.com/agriculture/web/ag/columns/washington-insider/article/2026/11/24/usda-cybersecurity-incident-leaves-4"
-        },
-        {
-          "name": "Brownfield Ag News",
-          "url": "https://brownfieldagnews.com/news/mid-november-cyber-attack-forces-shutdown-of-some-usda-services/"
-        }
-      ]
-    },
-    {
-      "id": "cia-odni-network-breach-2026-11-20",
-      "category": "other",
-      "title": "Reported separate breach of CIA and intelligence office network",
-      "started_at": "2026-11-20T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Said to involve an unclassified open-source analysis network. Full scope is unknown.",
-      "stated_cause": "Unknown. Unnamed sources say it happened the same day as the FBI incident. I found no agency statement and no second independent source.",
-      "confirmed": false,
-      "sources": [
-        {
-          "name": "BreachNews",
-          "url": "https://breachnews.com/cyber-attacks/fbi-investigates-apparent-ncic-crime-database-breach/"
+          "name": "CoinGecko",
+          "url": "https://www.coingecko.com/en/coins/bitcoin"
         }
       ]
     },
     {
       "id": "iran-gulf-escalation-2026-11-13",
       "category": "geopolitical",
-      "title": "More tanker attacks near Strait of Hormuz",
+      "title": "More tanker incidents near Strait of Hormuz",
       "started_at": "2026-11-13T00:00:00Z",
       "status": "ongoing",
-      "impact": "Iran's Guards say two more tankers hit mines Wednesday. Monday, three ships were hit by unidentified projectiles. Brent is about 90 dollars and has fallen over the month, so markets are not panicking.",
-      "stated_cause": "Iran says mines. The UK maritime office says unidentified projectiles. Iranian claims are not independently verified.",
+      "impact": "Iran says more tankers, including an LNG ship, hit mines Wednesday. One daily brief puts Brent near 95 dollars, up about 3.6%. IMO says the strait is unsafe.",
+      "stated_cause": "Iran says mines. UK maritime agency has reported unidentified projectiles on earlier hits. Iranian claims are not independently verified. WSJ reports US is probing Iran over tanker cyberattacks.",
       "confirmed": true,
       "sources": [
         {
           "name": "CNBC",
-          "url": "https://www.cnbc.com/2026/11/24/oil-wti-brent-hormuz-supply.html"
+          "url": "https://www.cnbc.com/2026/11/24/iran-trump-hormuz-crude-.html"
         },
         {
-          "name": "Anadolu Agency",
-          "url": "https://www.aa.com.tr/en/economy/oil-and-european-gas-prices-fall-amid-renewed-attacks-in-strait-of-hormuz/4136916"
+          "name": "Arab News",
+          "url": "https://www.arabnews.com/middle-east/iran-claims-lng-tanker-ablaze-in-hormuz-after-hitting-mine-3013942"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping"
         }
       ]
     },
@@ -139,7 +127,7 @@
       "started_at": "2026-11-25T00:00:00Z",
       "status": "ongoing",
       "impact": "Nov 25 additions cover Danfoss, HPE Juniper, Mitel and Vates products. This is a routine notice, not an emergency directive.",
-      "stated_cause": "CISA cites active exploitation. It names no attacker and does not tie the flaws to the FBI, CIA or USDA incidents.",
+      "stated_cause": "CISA cites active exploitation. It names no attacker and does not tie the flaws to the FBI or USDA incidents.",
       "confirmed": true,
       "sources": [
         {
@@ -149,12 +137,44 @@
       ]
     },
     {
+      "id": "allstate-outage-2026-11-26",
+      "category": "other",
+      "title": "Report of ongoing Allstate customer service outage",
+      "started_at": "2026-11-26T00:00:00Z",
+      "status": "ongoing",
+      "impact": "One site says customers have limited access to services nationwide. Start time and scope are unknown. I found no second source or company statement.",
+      "stated_cause": "Unknown. Nobody has given a cause.",
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "CWIBC",
+          "url": "https://cwibc.co.id/en/thanksgiving-market-closure-allstate-outage"
+        }
+      ]
+    },
+    {
+      "id": "cia-odni-network-breach-2026-11-20",
+      "category": "other",
+      "title": "Reported separate breach of CIA and intelligence office network",
+      "started_at": "2026-11-20T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Said to involve an unclassified open-source analysis network. Full scope is unknown. No new reporting found this run.",
+      "stated_cause": "Unknown. Unnamed sources only. No agency statement and no second independent source.",
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "BreachNews",
+          "url": "https://breachnews.com/cyber-attacks/fbi-investigates-apparent-ncic-crime-database-breach/"
+        }
+      ]
+    },
+    {
       "id": "cloudflare-minor-incidents-2026-11-18",
       "category": "cloud",
       "title": "Cloudflare status page shows reduced performance on Sites and Services",
       "started_at": "2026-11-18T15:03:00Z",
       "status": "ongoing",
-      "impact": "Cloudflare's status feed lists Sites and Services as degraded, last changed 20:08 UTC today. I found no news report of a wide outage.",
+      "impact": "Status feed lists Sites and Services as degraded, last changed 00:11 UTC today. I found no news report of a wide outage.",
       "stated_cause": "Unknown. Cloudflare gave no cause in the data I saw.",
       "confirmed": true,
       "sources": [
@@ -167,22 +187,22 @@
   ],
   "connection_assessment": {
     "verdict": "unrelated",
-    "confidence": "low",
-    "reasoning": "The FBI, CIA and USDA incidents are cyber break-ins, but no one has named an attacker or said how they got in. The stock drop is blamed on AI worries, inflation data and tariffs, and the tanker attacks on the Iran conflict. No official source links any of these.",
-    "would_change_my_mind": "An official statement blaming the same attacker or company for the government breaches, or several big systems like banks, airlines and exchanges failing at the same time."
+    "confidence": "medium",
+    "reasoning": "The FBI and USDA incidents are cyber events with no named attacker. Stocks fell on inflation, AI worries and tariffs. Tanker hits are blamed on mines by Iran. No official source links any of them.",
+    "would_change_my_mind": "An official statement blaming the same attacker or company, or several big systems failing at the same moment."
   },
   "alert": {
     "send": false,
     "headline": "",
-    "reason": "No confirmed outage or attack beyond the ongoing government breaches. Market swings have clear stated causes and recovered."
+    "reason": "No new confirmed outage or official link between events since the last run."
   },
-  "prep_note": "No action needed for most people. Keep some cash on hand in case a card or app glitches, and watch official FBI and USDA updates. Farmers waiting on USDA loans or payments should call their local FSA office. Check financial accounts for odd activity.",
+  "prep_note": "Nothing special is needed. If you are a farmer waiting on USDA loans or payments, check with your local office. Keep a little cash and your usual backups. Markets are closed today and close early Friday.",
   "run": {
     "model": "claude-sonnet-5-5",
-    "input": 80080,
-    "output": 4311,
+    "input": 79405,
+    "output": 4990,
     "searches": 6,
-    "cost_usd": 0.2633
+    "cost_usd": 0.2687
   },
   "source_health": [
     {
@@ -190,11 +210,11 @@
       "ok": true
     },
     {
-      "name": "Azure status (RSS)",
+      "name": "CISA advisories (RSS)",
       "ok": true
     },
     {
-      "name": "CISA advisories (RSS)",
+      "name": "Azure status (RSS)",
       "ok": true
     },
     {
@@ -202,11 +222,11 @@
       "ok": true
     },
     {
-      "name": "AWS Health (RSS)",
+      "name": "FAA NAS status",
       "ok": true
     },
     {
-      "name": "FAA NAS status",
+      "name": "AWS Health (RSS)",
       "ok": true
     }
   ]
