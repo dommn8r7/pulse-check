@@ -31,7 +31,9 @@
     "cisa-kev-additions-2026-11-23",
     "faa-sfo-wind-ground-stop-2026-11-24",
     "allstate-outage-2026-11-26",
-    "thanksgiving-nor-easter-power-2026-11-26"
+    "thanksgiving-nor-easter-power-2026-11-26",
+    "mid-november-outage-wave-2026-11-12",
+    "cisa-kev-additions-2026-11-25"
   ],
   "last_alert_rank": -1,
   "spend": {
@@ -43,7 +45,7 @@
     "2026-11-23": 0.8169,
     "2026-11-24": 0.552,
     "2026-11-25": 0.8169,
-    "2026-11-26": 0.5453
+    "2026-11-26": 0.8269
   },
   "consecutive_failures": 0,
   "failure_alerted": false
