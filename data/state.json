@@ -29,7 +29,9 @@
     "spotify-login-outage-2026-11-24",
     "faa-las-staffing-ground-stop-2026-11-24",
     "cisa-kev-additions-2026-11-23",
-    "faa-sfo-wind-ground-stop-2026-11-24"
+    "faa-sfo-wind-ground-stop-2026-11-24",
+    "allstate-outage-2026-11-26",
+    "thanksgiving-nor-easter-power-2026-11-26"
   ],
   "last_alert_rank": -1,
   "spend": {
@@ -41,7 +43,7 @@
     "2026-11-23": 0.8169,
     "2026-11-24": 0.552,
     "2026-11-25": 0.8169,
-    "2026-11-26": 0.2687
+    "2026-11-26": 0.5453
   },
   "consecutive_failures": 0,
   "failure_alerted": false

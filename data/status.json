@@ -1,30 +1,54 @@
 {
-  "generated_at": "2026-11-26T04:55:19.584Z",
+  "generated_at": "2026-11-26T14:58:46.822Z",
   "level": "yellow",
   "level_changed_from_last_run": false,
-  "summary": "The FBI is still investigating a break-in at its national crime database. No one has said who did it. Stocks swung hard Wednesday and mostly recovered, and Bitcoin sits near 59,000 dollars. No official source links these events.",
+  "summary": "Allstate's nationwide website and app outage is now in its fourth day, and the company has not said why. The FBI is still investigating a break-in at its police database. No official source links these events, and stocks, Bitcoin and oil moved on known news.",
   "events": [
+    {
+      "id": "allstate-outage-2026-11-26",
+      "category": "other",
+      "title": "Allstate nationwide website, app and payment outage, now several days",
+      "started_at": "2026-11-23T13:00:00Z",
+      "status": "ongoing",
+      "impact": "Customers and agents report trouble with logins, payments and claims. Allstate says customers will not lose coverage or be charged late fees. It has given no restoration time.",
+      "stated_cause": "Unknown. Allstate has not given a cause. One blog claims an AI switch caused it, but that claim comes from one source and is not backed up.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "WSB-TV",
+          "url": "https://www.wsbtv.com/news/local/atlanta/allstate-outage-services-disrupted-no-need-worry-about-late-fees/KGUIG5KZZNGG3MJAGMEL6O52AA/"
+        },
+        {
+          "name": "PYMNTS",
+          "url": "https://www.pymnts.com/technology/2026/allstate-outage-locks-customers-agents-out-claims-payments/"
+        },
+        {
+          "name": "Gizmodo",
+          "url": "https://gizmodo.com/allstates-tech-outage-is-leaving-customers-in-the-dark-ahead-of-thanksgiving-2000845539"
+        }
+      ]
+    },
     {
       "id": "fbi-ncic-suspected-breach-2026-11-20",
       "category": "other",
       "title": "FBI investigating break-in at its national crime database",
       "started_at": "2026-11-20T22:00:00Z",
       "status": "ongoing",
-      "impact": "Police use this database for warrant checks and stolen car records. Nobody has said what was taken, whether records were changed, or whether police lost access.",
-      "stated_cause": "Unknown. Patel confirmed an active investigation on Nov 24 but gave no details. No group has claimed it. No official link to the September FBI jobs portal breach.",
+      "impact": "Police use this database for warrant checks and stolen property records. Nobody has said what was taken, whether records changed, or whether police lost access.",
+      "stated_cause": "Unknown. Reports rely on unnamed sources. No group has claimed it and no official link to the September FBI jobs portal breach.",
       "confirmed": true,
       "sources": [
-        {
-          "name": "CNN via Yahoo",
-          "url": "https://www.yahoo.com/news/us/articles/fbi-probes-apparent-breach-national-150612590.html"
-        },
         {
           "name": "BleepingComputer",
           "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/"
         },
         {
-          "name": "BreachNews",
-          "url": "https://breachnews.com/cyber-attacks/fbi-investigates-apparent-ncic-crime-database-breach/"
+          "name": "SecurityWeek (AP)",
+          "url": "https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/"
+        },
+        {
+          "name": "CNN via Yahoo",
+          "url": "https://www.yahoo.com/news/us/articles/fbi-probes-apparent-breach-national-150612590.html"
         }
       ]
     },
@@ -34,7 +58,7 @@
       "title": "USDA cyber incident hit farm payment and loan systems",
       "started_at": "2026-11-16T00:00:00Z",
       "status": "ongoing",
-      "impact": "Farm loan, payment and conservation systems were shut down. As of Nov 24, USDA had not said if all systems are back or if financial data was taken.",
+      "impact": "Farm loan, payment and conservation software was disrupted. As of Nov 24, USDA had not said if everything is back or whether financial data was taken.",
       "stated_cause": "A USDA official said systems were shut down over a cyber threat and no personal data was lost. No attacker has been named.",
       "confirmed": true,
       "sources": [
@@ -49,13 +73,85 @@
       ]
     },
     {
+      "id": "iran-gulf-escalation-2026-11-13",
+      "category": "geopolitical",
+      "title": "More tanker mine reports in Strait of Hormuz; Houthis claim Saudi refinery hit",
+      "started_at": "2026-11-13T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Brent crude rose to about 95 dollars early Thursday, then eased to near 94 in later reports. Tanker tracker Kpler reports lower crude flows out of the Gulf.",
+      "stated_cause": "Iranian state media says tankers hit mines. These claims are not independently confirmed. The Houthis claimed the Ras Tanura refinery attack.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "OilPrice.com",
+          "url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Rallies-as-Hormuz-Mine-Strikes-Rattle-Global-Markets.html"
+        },
+        {
+          "name": "IBTimes (Reuters)",
+          "url": "https://www.ibtimes.com/oil-prices-fall-tanker-mine-strike-claims-oman-3810223"
+        },
+        {
+          "name": "IBTimes Australia",
+          "url": "https://www.ibtimes.com.au/iran-reports-tankers-hit-mines-strait-hormuz-1879433"
+        }
+      ]
+    },
+    {
+      "id": "thanksgiving-nor-easter-power-2026-11-26",
+      "category": "power",
+      "title": "Thanksgiving storm cuts power to about 300,000-500,000 customers",
+      "started_at": "2026-11-26T04:00:00Z",
+      "status": "ongoing",
+      "impact": "Outages are worst in Virginia, Missouri and North Carolina. Hundreds of flights are canceled or delayed. The worst is forecast later today for the Northeast.",
+      "stated_cause": "Weather: a coastal nor'easter and a winter storm. National Weather Service warnings point to high winds and flooding.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "Rolling Out",
+          "url": "https://rollingout.com/2026/11/26/thanksgiving-storm-power-outage-3-states/"
+        },
+        {
+          "name": "WRAL",
+          "url": "https://www.wral.com/news/local/thousands-lose-power-thanksgiving-day-november-2026/"
+        },
+        {
+          "name": "NewsCubby",
+          "url": "https://www.newscubby.com/briefings/thanksgiving-noreaster-power-outages-coastal-flooding-november-26-2026"
+        }
+      ]
+    },
+    {
+      "id": "bitcoin-weekly-decline-2026-11",
+      "category": "markets",
+      "title": "Bitcoin near 58-61K USD, down about 5-8% on the week",
+      "started_at": "2026-11-10T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Coinbase 58,651 (-6% week). CoinGecko 60,741 (+4.7% day, -4.7% week). Coinglass 58,244 (-7.5% week). Sources differ because of timing. No exchange outage found.",
+      "stated_cause": "No technical or attack cause reported. Coinglass data shows mostly long-position liquidations and ETF outflows.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "Coinbase",
+          "url": "https://www.coinbase.com/price/bitcoin"
+        },
+        {
+          "name": "CoinGecko",
+          "url": "https://www.coingecko.com/en/coins/bitcoin"
+        },
+        {
+          "name": "Coinglass",
+          "url": "https://www.coinglass.com/currencies/BTC"
+        }
+      ]
+    },
+    {
       "id": "us-equities-selloff-2026-11-17",
       "category": "markets",
-      "title": "Wild swing in US stocks: Nasdaq fell 4.6% early, then recovered",
+      "title": "Wild swing in US stocks Wednesday, then recovery; markets closed today",
       "started_at": "2026-11-25T14:30:00Z",
       "status": "resolved",
-      "impact": "Close Nov 25: S&P 500 7,182.78 (-0.25%), Dow 50,182.95 (+0.33%), Nasdaq 23,585.80 (-0.62%). Nasdaq-100 briefly hit 20% below its peak. US markets are closed today for Thanksgiving.",
-      "stated_cause": "Reports point to hot inflation data, AI profit worries and new tariff plans. No technical fault or cyber attack is reported. I found no trading halts.",
+      "impact": "Nov 25 close: S&P 500 7,182.78 (-0.25%), Dow 50,182.95 (+0.33%), Nasdaq 23,585.80 (-0.62%). US markets are closed for Thanksgiving.",
+      "stated_cause": "Reports point to hot inflation data, AI profit worries and tariff plans. No technical fault or cyber attack is reported. I found no trading halts.",
       "confirmed": true,
       "sources": [
         {
@@ -65,58 +161,6 @@
         {
           "name": "GSM News",
           "url": "https://gsmglobalnews.com/article/d20261125-mktclose1.html"
-        },
-        {
-          "name": "Cappnotes",
-          "url": "https://cappnotes.substack.com/p/closing-look-wednesday-november-25"
-        }
-      ]
-    },
-    {
-      "id": "bitcoin-weekly-decline-2026-11",
-      "category": "markets",
-      "title": "Bitcoin near 58-60K USD, down about 6-8% on the week",
-      "started_at": "2026-11-10T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Coinbase 58,651 (-6% on the week); Coinglass 58,244 (24h range 57,876 to 60,675); CoinGecko 60,847 (+2.8% on the day). Sources differ a little. No exchange outage found.",
-      "stated_cause": "No technical or attack cause reported. Commentary points to hot inflation data and selling of risky assets.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "Coinbase",
-          "url": "https://www.coinbase.com/price/bitcoin"
-        },
-        {
-          "name": "Coinglass",
-          "url": "https://www.coinglass.com/currencies/BTC"
-        },
-        {
-          "name": "CoinGecko",
-          "url": "https://www.coingecko.com/en/coins/bitcoin"
-        }
-      ]
-    },
-    {
-      "id": "iran-gulf-escalation-2026-11-13",
-      "category": "geopolitical",
-      "title": "More tanker incidents near Strait of Hormuz",
-      "started_at": "2026-11-13T00:00:00Z",
-      "status": "ongoing",
-      "impact": "Iran says more tankers, including an LNG ship, hit mines Wednesday. One daily brief puts Brent near 95 dollars, up about 3.6%. IMO says the strait is unsafe.",
-      "stated_cause": "Iran says mines. UK maritime agency has reported unidentified projectiles on earlier hits. Iranian claims are not independently verified. WSJ reports US is probing Iran over tanker cyberattacks.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "CNBC",
-          "url": "https://www.cnbc.com/2026/11/24/iran-trump-hormuz-crude-.html"
-        },
-        {
-          "name": "Arab News",
-          "url": "https://www.arabnews.com/middle-east/iran-claims-lng-tanker-ablaze-in-hormuz-after-hitting-mine-3013942"
-        },
-        {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping"
         }
       ]
     },
@@ -127,7 +171,7 @@
       "started_at": "2026-11-25T00:00:00Z",
       "status": "ongoing",
       "impact": "Nov 25 additions cover Danfoss, HPE Juniper, Mitel and Vates products. This is a routine notice, not an emergency directive.",
-      "stated_cause": "CISA cites active exploitation. It names no attacker and does not tie the flaws to the FBI or USDA incidents.",
+      "stated_cause": "CISA cites active exploitation. It names no attacker and does not tie the flaws to the FBI, USDA or Allstate incidents.",
       "confirmed": true,
       "sources": [
         {
@@ -137,18 +181,18 @@
       ]
     },
     {
-      "id": "allstate-outage-2026-11-26",
-      "category": "other",
-      "title": "Report of ongoing Allstate customer service outage",
-      "started_at": "2026-11-26T00:00:00Z",
+      "id": "cloudflare-minor-incidents-2026-11-18",
+      "category": "cloud",
+      "title": "Cloudflare status page shows reduced performance on Sites and Services",
+      "started_at": "2026-11-18T15:03:00Z",
       "status": "ongoing",
-      "impact": "One site says customers have limited access to services nationwide. Start time and scope are unknown. I found no second source or company statement.",
-      "stated_cause": "Unknown. Nobody has given a cause.",
-      "confirmed": false,
+      "impact": "Status feed lists Sites and Services as degraded, last changed 14:42 UTC today. I found no news report of a wide outage.",
+      "stated_cause": "Unknown. Cloudflare gave no cause in the data I saw.",
+      "confirmed": true,
       "sources": [
         {
-          "name": "CWIBC",
-          "url": "https://cwibc.co.id/en/thanksgiving-market-closure-allstate-outage"
+          "name": "Cloudflare Status",
+          "url": "https://www.cloudflarestatus.com"
         }
       ]
     },
@@ -158,7 +202,7 @@
       "title": "Reported separate breach of CIA and intelligence office network",
       "started_at": "2026-11-20T00:00:00Z",
       "status": "ongoing",
-      "impact": "Said to involve an unclassified open-source analysis network. Full scope is unknown. No new reporting found this run.",
+      "impact": "Said to involve an unclassified open-source analysis network. Scope unknown. No new reporting found this run.",
       "stated_cause": "Unknown. Unnamed sources only. No agency statement and no second independent source.",
       "confirmed": false,
       "sources": [
@@ -167,44 +211,36 @@
           "url": "https://breachnews.com/cyber-attacks/fbi-investigates-apparent-ncic-crime-database-breach/"
         }
       ]
-    },
-    {
-      "id": "cloudflare-minor-incidents-2026-11-18",
-      "category": "cloud",
-      "title": "Cloudflare status page shows reduced performance on Sites and Services",
-      "started_at": "2026-11-18T15:03:00Z",
-      "status": "ongoing",
-      "impact": "Status feed lists Sites and Services as degraded, last changed 00:11 UTC today. I found no news report of a wide outage.",
-      "stated_cause": "Unknown. Cloudflare gave no cause in the data I saw.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "Cloudflare Status",
-          "url": "https://www.cloudflarestatus.com"
-        }
-      ]
     }
   ],
   "connection_assessment": {
-    "verdict": "unrelated",
-    "confidence": "medium",
-    "reasoning": "The FBI and USDA incidents are cyber events with no named attacker. Stocks fell on inflation, AI worries and tariffs. Tanker hits are blamed on mines by Iran. No official source links any of them.",
-    "would_change_my_mind": "An official statement blaming the same attacker or company, or several big systems failing at the same moment."
+    "verdict": "unknown",
+    "confidence": "low",
+    "reasoning": "Allstate has not said what caused its outage. The FBI and USDA incidents are called cyber intrusions, but no attacker is named. Stocks, Bitcoin and oil moved on inflation, AI and Middle East news, and the power cuts are from weather. No official source links any of these.",
+    "would_change_my_mind": "An official statement blaming the same company or attacker for Allstate, the FBI and USDA, or several big systems failing at the same moment."
   },
   "alert": {
     "send": false,
     "headline": "",
-    "reason": "No new confirmed outage or official link between events since the last run."
+    "reason": "Allstate's outage is confirmed and long-running, but it is a single company with no reported link to other incidents."
   },
-  "prep_note": "Nothing special is needed. If you are a farmer waiting on USDA loans or payments, check with your local office. Keep a little cash and your usual backups. Markets are closed today and close early Friday.",
+  "prep_note": "If you use Allstate, keep proof of your policy and call your local agent for claims or payments. Expect Thanksgiving storm travel delays and power cuts in the Mid-Atlantic and Northeast. Charge phones and keep some cash on hand.",
   "run": {
     "model": "claude-sonnet-5-5",
-    "input": 79405,
-    "output": 4990,
+    "input": 81006,
+    "output": 5455,
     "searches": 6,
-    "cost_usd": 0.2687
+    "cost_usd": 0.2766
   },
   "source_health": [
+    {
+      "name": "Cloudflare status",
+      "ok": true
+    },
+    {
+      "name": "FAA NAS status",
+      "ok": true
+    },
     {
       "name": "Google Cloud incidents",
       "ok": true
@@ -218,16 +254,12 @@
       "ok": true
     },
     {
-      "name": "Cloudflare status",
-      "ok": true
-    },
-    {
-      "name": "FAA NAS status",
-      "ok": true
-    },
-    {
       "name": "AWS Health (RSS)",
       "ok": true
     }
-  ]
+  ],
+  "alert_sent": {
+    "at": "2026-11-26T14:58:10.415Z",
+    "reason": "new confirmed critical-sector event"
+  }
 }
