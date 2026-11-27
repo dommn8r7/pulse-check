@@ -33,7 +33,11 @@
     "allstate-outage-2026-11-26",
     "thanksgiving-nor-easter-power-2026-11-26",
     "mid-november-outage-wave-2026-11-12",
-    "cisa-kev-additions-2026-11-25"
+    "cisa-kev-additions-2026-11-25",
+    "sap-breach-2026-11-26",
+    "wyoming-uranium-cyber-2026-11-25",
+    "thanksgiving-ground-stops-2026-11-26",
+    "us-stocks-volatile-week-2026-11-27"
   ],
   "last_alert_rank": -1,
   "spend": {
@@ -46,7 +50,7 @@
     "2026-11-24": 0.552,
     "2026-11-25": 0.8169,
     "2026-11-26": 0.8269,
-    "2026-11-27": 0.2872
+    "2026-11-27": 0.5754
   },
   "consecutive_failures": 0,
   "failure_alerted": false
