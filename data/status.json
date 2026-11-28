@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-27T18:08:25.115Z",
+  "generated_at": "2026-11-28T01:52:59.646Z",
   "level": "yellow",
   "level_changed_from_last_run": false,
-  "summary": "Allstate's website and app outage is in its fifth day, and the company still has not said why. SAP confirmed a hack of its software code, and 1Password reported a similar break-in. No official source links any of these. Stocks and Bitcoin look normal.",
+  "summary": "1Password and SAP have both confirmed break-ins that started with employee GitHub access. Allstate's outage is still going and the company has not said why. No official source links these or reports a coordinated attack. Stocks and Bitcoin look normal.",
   "events": [
     {
       "id": "allstate-outage-2026-11-26",
       "category": "other",
-      "title": "Allstate website, app and phone outage now in its fifth day",
+      "title": "Allstate website, app and roadside help outage continues into day 5",
       "started_at": "2026-11-23T13:00:00Z",
       "status": "ongoing",
-      "impact": "Some customers and agents still struggle to pay bills, renew policies, file claims online or get roadside help. Allstate says no one loses coverage or pays late fees. No restoration time given.",
-      "stated_cause": "Unknown. Allstate has not given a cause. A Newsweek report, cited by Quartz, says nothing public points to hackers or exposed customer data.",
+      "impact": "Some customers and agents still cannot pay, renew, file claims online or get roadside help online. Allstate says no one loses coverage or pays late fees. No restore time given. Downdetector showed about 150 reports Friday morning.",
+      "stated_cause": "Unknown. Allstate has not said what caused it. No confirmed evidence links it to a cyberattack, a data breach or job cuts.",
       "confirmed": true,
       "sources": [
         {
@@ -19,23 +19,43 @@
           "url": "https://globalnews.ca/news/12168693/allstate-outage-us/"
         },
         {
-          "name": "Quartz (cites WSJ)",
-          "url": "https://qz.com/allstate-outage-claims-roadside-help-thanksgiving-112726"
-        },
-        {
           "name": "TechRepublic",
           "url": "https://www.techrepublic.com/article/news-allstate-outage-payment-coverage/"
+        },
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/stocks/article/allstates-multiday-outage-continues-adding-to-list-of-company-tech-disruptions-163712123.html"
+        }
+      ]
+    },
+    {
+      "id": "1password-github-breach-2026-11-25",
+      "category": "cloud",
+      "title": "1Password confirms attacker used an employee GitHub account to reach backend systems",
+      "started_at": "2026-11-19T00:00:00Z",
+      "status": "ongoing",
+      "impact": "Customer names, emails and account details from some customers were copied, plus private source code. 1Password says vaults and passwords were not reached and its services were not affected.",
+      "stated_cause": "An attacker got into an employee's GitHub account and pushed bad code to backend services. How they got in and who they are is unknown.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "1Password",
+          "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
+        },
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/"
         }
       ]
     },
     {
       "id": "sap-breach-2026-11-26",
       "category": "cloud",
-      "title": "SAP confirms hackers broke into its software development systems",
+      "title": "SAP confirms a security incident in its GitHub development systems",
       "started_at": "2026-11-24T00:00:00Z",
       "status": "ongoing",
-      "impact": "Reports say hackers used stolen employee GitHub tokens to copy or change code. SAP reportedly changed its signing keys. No report says changed code reached customers.",
-      "stated_cause": "Stolen employee login tokens, per Der Spiegel's inside source. SAP has not confirmed those details. Who did it is unknown. SAP says no sign customer business data was reached.",
+      "impact": "SAP restricted GitHub access, paused automated processes and replaced signing keys. It says it has found no sign that customer business data was reached. Media say code was copied or changed; SAP has not confirmed that.",
+      "stated_cause": "Der Spiegel's sources say stolen employee tokens were used. SAP has not confirmed this. Who did it is unknown.",
       "confirmed": true,
       "sources": [
         {
@@ -43,28 +63,12 @@
           "url": "https://www.securityweek.com/sap-confirms-cyberattack-source-code-reportedly-compromised/"
         },
         {
-          "name": "Digg summary",
-          "url": "https://digg.com/tech/ktp73f7p"
+          "name": "Breach News",
+          "url": "https://breachnews.com/cyber-attacks/sap-security-incident-github-source-code-project-granite/"
         },
         {
-          "name": "NewsBytes",
-          "url": "https://www.newsbytesapp.com/news/science/sap-discloses-project-granite-cyberattack-possibly-exposing-source-code/tldr"
-        }
-      ]
-    },
-    {
-      "id": "1password-github-breach-2026-11-25",
-      "category": "cloud",
-      "title": "1Password reportedly disclosed a break-in through an employee GitHub account",
-      "started_at": "2026-11-25T00:00:00Z",
-      "status": "ongoing",
-      "impact": "One article says the attacker reached private code and a build system, and customer account data was downloaded. I could not check this against 1Password's own notice.",
-      "stated_cause": "An attacker got into an employee's GitHub account. Who did it is unknown. Only one article seen, so this is unconfirmed.",
-      "confirmed": false,
-      "sources": [
-        {
-          "name": "QUE.com",
-          "url": "https://que.com/sap-confirms-project-granite-breach-stolen-github-tokens-and-altered-source-code-put-the-software-supply-chain-on-alert/"
+          "name": "Malware News",
+          "url": "https://malware.news/t/sap-security-incident-stolen-github-tokens-and-source-code-risk/127695"
         }
       ]
     },
@@ -74,8 +78,8 @@
       "title": "Wyoming uranium plant still shut after cyber incident",
       "started_at": "2026-11-20T15:00:00Z",
       "status": "ongoing",
-      "impact": "Peninsula Energy shut its Lance plant after plant and wellfield control systems were hit. No restart date. It cannot yet say how this affects 2027 output.",
-      "stated_cause": "The company calls it a cybersecurity incident. It has not said who did it or how. It is checking whether data was taken.",
+      "impact": "Peninsula Energy shut its Lance plant after plant and wellfield control systems were hit. No restart date. No newer update found this run.",
+      "stated_cause": "The company calls it a cybersecurity incident. It has not said who did it or how.",
       "confirmed": true,
       "sources": [
         {
@@ -89,13 +93,29 @@
       ]
     },
     {
+      "id": "uk-dwp-cyber-incident-2026-11-27",
+      "category": "other",
+      "title": "UK benefits department takes online services offline after cyber incident",
+      "started_at": "2026-11-27T00:00:00Z",
+      "status": "ongoing",
+      "impact": "One report says online accounts and applications for Universal Credit, disability benefits and state pensions were down for claimants. Outside the US. Only one report seen.",
+      "stated_cause": "Described as a cyber incident and a precaution. Who did it and how is unknown.",
+      "confirmed": false,
+      "sources": [
+        {
+          "name": "Time News",
+          "url": "https://time.news/dwp-shuts-digital-services-after-cyber-incident-hits-millions/"
+        }
+      ]
+    },
+    {
       "id": "bell-mts-email-cyberattack-2026-11-26",
       "category": "telecom",
       "title": "Bell MTS in Canada says an email outage was a cyberattack",
       "started_at": "2026-11-26T00:00:00Z",
       "status": "ongoing",
-      "impact": "CTV reports a small group of email users had data stolen. Outside the US. I saw only the headline and a short excerpt.",
-      "stated_cause": "The company says a cyberattack. Who did it is unknown.",
+      "impact": "CTV reports a small group of email users had data stolen. Outside the US. No newer update found this run.",
+      "stated_cause": "The company says it was a cyberattack. Who did it is unknown.",
       "confirmed": false,
       "sources": [
         {
@@ -110,8 +130,8 @@
       "title": "South African investing app EasyEquities locked out customers after cyberattack",
       "started_at": "2026-11-26T06:00:00Z",
       "status": "ongoing",
-      "impact": "Customers were locked out. No restore time was given. No newer update found this run. Outside the US.",
-      "stated_cause": "The company emailed customers about a cyberattack with no details. Some people suspect its new app design.",
+      "impact": "Customers were locked out. No restore time given. No newer update found this run. Outside the US.",
+      "stated_cause": "The company told customers of a cyberattack with no details. Some people suspect its new app design.",
       "confirmed": false,
       "sources": [
         {
@@ -121,73 +141,33 @@
       ]
     },
     {
-      "id": "thanksgiving-ground-stops-2026-11-26",
-      "category": "aviation",
-      "title": "Thanksgiving week ground stops: DC storm and Miami runway overrun",
-      "started_at": "2026-11-24T00:00:00Z",
-      "status": "resolved",
-      "impact": "The FAA paused flights to Washington National for thunderstorms. It stopped flights at Miami after a FedEx cargo jet ran off a runway. FAA lists no ground stops now. An O'Hare equipment stop on Nov 24 appears in one report only.",
-      "stated_cause": "Weather in DC. A disabled aircraft in Miami. No injuries were reported in Miami. No official source reports a cyber attack.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "ANI",
-          "url": "https://www.aninews.in/news/world/us/faa-issues-ground-stop-at-miami-airport-after-fedex-cargo-jet-overruns-runway20261126093617"
-        },
-        {
-          "name": "FAA NAS status",
-          "url": "https://nasstatus.faa.gov"
-        },
-        {
-          "name": "Avi-go",
-          "url": "https://avi-go.com/news/articles/467cce9e06988aa0ef3c0ca54e545dd8"
-        }
-      ]
-    },
-    {
-      "id": "thanksgiving-nor-easter-power-2026-11-26",
-      "category": "power",
-      "title": "Thanksgiving storm cut power to more than 850,000 customers",
-      "started_at": "2026-11-26T04:00:00Z",
-      "status": "ongoing",
-      "impact": "Virginia, Maryland and Pennsylvania were hit hardest. Latest outage counts were not found this run.",
-      "stated_cause": "Weather. The National Weather Service reported 50 to 70 mph wind gusts along the East Coast.",
-      "confirmed": true,
-      "sources": [
-        {
-          "name": "The Hill",
-          "url": "https://thehill.com/policy/energy-environment/6244928-thanksgiving-storm-flight-delays-power-outages/"
-        }
-      ]
-    },
-    {
       "id": "iran-gulf-escalation-2026-11-13",
       "category": "geopolitical",
-      "title": "Tanker attacks near Hormuz and Houthi strikes on Saudi sites keep oil high",
+      "title": "Tanker attacks near Hormuz and Houthi strikes on Saudi sites keep oil near month high",
       "started_at": "2026-11-13T00:00:00Z",
       "status": "ongoing",
-      "impact": "Brent crude is about 96 dollars a barrel per the last Reuters-based report. Shipping costs are up. No newer update found this run.",
-      "stated_cause": "Iran says mines hit ships. The Houthis claimed the Saudi refinery attacks. The Hormuz claims are not independently confirmed.",
+      "impact": "Brent crude is about 96 dollars a barrel, near its highest this month and up for the week. Ship traffic through Hormuz is far below normal. One tracker puts Brent's last close near 95.",
+      "stated_cause": "Iran says tankers hit mines; that is not independently confirmed. The Houthis claimed strikes on Saudi energy sites. Reuters also reports continued attacks on ships.",
       "confirmed": true,
       "sources": [
         {
           "name": "CNBC (Reuters)",
-          "url": "https://www.cnbc.com/2026/11/27/brent-oil-wti-hormuz-middle-east.html"
+          "url": "https://www.cnbc.com/amp/2026/11/27/brent-oil-wti-hormuz-middle-east.html"
         },
         {
-          "name": "Tribune (Reuters)",
-          "url": "https://tribune.com.pk/story/2642550/oil-up-2-on-mine-strikes-in-hormuz"
+          "name": "Middle East Monitor",
+          "url": "https://middleeastmonitor.com/20261127-oil-prices-rise-after-tankers-hit-mines-in-strait-of-hormuz"
         }
       ]
     },
     {
-      "id": "bitcoin-weekly-decline-2026-11",
+      "id": "bitcoin-price-check-2026-11-28",
       "category": "markets",
-      "title": "Bitcoin near 60K to 62K USD; no crash found",
+      "title": "Bitcoin about 59.8K to 61.7K USD; no crash found",
       "started_at": "2026-11-10T00:00:00Z",
       "status": "ongoing",
-      "impact": "Coinbase 61,463. CoinMarketCap 61,563. OKX 61,732. CoinGecko 59,962. Coinglass 59,642. Prices agree within about 3 percent. Daily moves are roughly -1.4 to +1.5 percent. Sentiment gauge reads extreme fear. No exchange outage found.",
-      "stated_cause": "No technical or attack cause reported. Reports cite tariff and inflation worries and ETF outflows.",
+      "impact": "Coinbase 61,463. CoinMarketCap 61,563. OKX 61,732. CoinGecko 59,770. Prices agree within about 3 percent. Daily moves are about -1.8 to +1.5 percent. No exchange outage found.",
+      "stated_cause": "No technical or attack cause reported. Reports cite market worries and fund flows.",
       "confirmed": true,
       "sources": [
         {
@@ -203,44 +183,60 @@
           "url": "https://www.coingecko.com/en/coins/bitcoin"
         },
         {
-          "name": "Coinglass",
-          "url": "https://www.coinglass.com/currencies/BTC"
+          "name": "OKX",
+          "url": "https://www.okx.com/en-us/price/bitcoin-btc"
         }
       ]
     },
     {
-      "id": "us-stocks-volatile-week-2026-11-27",
+      "id": "us-stocks-black-friday-2026-11-27",
       "category": "markets",
-      "title": "US stocks rebound on Black Friday after a choppy tech week",
-      "started_at": "2026-11-23T00:00:00Z",
-      "status": "ongoing",
-      "impact": "The Dow and S&P 500 rose about 0.7 percent in the half-day session. Both are up more than 5 percent on the week. No trading halts or exchange glitches found.",
-      "stated_cause": "Market moves tied to AI-stock swings, rate worries and tariff fears. No technical cause reported.",
+      "title": "US stocks close higher in short Black Friday session after Wednesday tech selloff",
+      "started_at": "2026-11-25T00:00:00Z",
+      "status": "resolved",
+      "impact": "One report says the Dow rose 1.1 percent, the S&P 500 1.6 percent and the Nasdaq 2.3 percent. All 11 sectors rose. No halts or exchange glitches found.",
+      "stated_cause": "Tech stocks bounced back after a sharp selloff. No technical cause reported.",
       "confirmed": true,
       "sources": [
         {
-          "name": "CNBC",
-          "url": "https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html"
+          "name": "TradingView (Seeking Alpha)",
+          "url": "https://www.tradingview.com/news/seekingalpha:e521c5511094b:0-u-s-equities-close-on-top-on-black-friday/"
         },
         {
-          "name": "AOL (Yahoo Finance)",
-          "url": "https://www.aol.com/articles/stock-market-today-dow-p-091152000.html"
+          "name": "Around Prague",
+          "url": "https://aroundprague.cz/en/news/us/is-the-stock-market-open-on-black-friday-wall-street-closes-early-nov-27"
         }
       ]
     },
     {
-      "id": "cisa-kev-additions-2026-11-25",
+      "id": "cisa-kev-additions-2026-11-27",
       "category": "cisa",
-      "title": "CISA adds 10 actively exploited flaws to its catalog",
-      "started_at": "2026-11-25T00:00:00Z",
+      "title": "CISA adds 3 actively exploited flaws to its catalog",
+      "started_at": "2026-11-27T00:00:00Z",
       "status": "ongoing",
-      "impact": "Covers Danfoss, HPE Juniper, Mitel and Vates products. This is a routine notice, not an emergency directive. No newer CISA alert in the feed.",
-      "stated_cause": "CISA cites active exploitation. It names no attacker and does not link the flaws to any incident above.",
+      "impact": "Covers OSGeo GeoServer (two flaws) and Drupal Core. This is a routine notice, not an emergency directive.",
+      "stated_cause": "CISA cites active exploitation. It names no attacker and links the flaws to no incident above.",
       "confirmed": true,
       "sources": [
         {
-          "name": "CISA (Nov 25)",
-          "url": "https://www.cisa.gov/news-events/alerts/2026/11/25/cisa-adds-10-known-exploited-vulnerabilities-catalog"
+          "name": "CISA (Nov 27)",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/11/27/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+        }
+      ]
+    },
+    {
+      "id": "faa-ground-stops-check-2026-11-28",
+      "category": "aviation",
+      "title": "FAA shows no ground stops or system outages",
+      "started_at": "2026-11-28T01:51:00Z",
+      "status": "resolved",
+      "impact": "The FAA feed lists only routine airport closures to some private and military aircraft. No delays or ground stops. Earlier Thanksgiving-week stops were weather and a runway overrun in Miami.",
+      "stated_cause": "None needed. No official source reports a cyber attack on air traffic systems.",
+      "confirmed": true,
+      "sources": [
+        {
+          "name": "FAA NAS status",
+          "url": "https://nasstatus.faa.gov"
         }
       ]
     }
@@ -248,25 +244,33 @@
   "connection_assessment": {
     "verdict": "possibly_related",
     "confidence": "low",
-    "reasoning": "Allstate has not said what caused its outage, and no one has blamed hackers. SAP says it was hacked, reportedly through stolen employee GitHub logins. 1Password reportedly had a similar break-in, but that is one report. Nobody officially links them.",
-    "would_change_my_mind": "An official statement tying SAP, 1Password or Allstate to the same attacker or company, or several big systems failing at the same moment, would make me think they are connected."
+    "reasoning": "1Password says an attacker used a stolen employee GitHub login. SAP reportedly had stolen employee GitHub tokens used too, but nobody has said who is behind either. Allstate and the others have no stated cause or link. No official source ties any of these together.",
+    "would_change_my_mind": "An official statement naming the same attacker or company behind several incidents, or several big systems failing at the same moment."
   },
   "alert": {
     "send": false,
     "headline": "",
-    "reason": "No confirmed coordinated attack or widespread failure. Markets and Bitcoin are normal."
+    "reason": "No confirmed evidence of a shared cause or a widespread failure. Stocks, Bitcoin and air travel look normal."
   },
-  "prep_note": "If you use Allstate, keep proof of any payment and call the company if you are unsure it went through. If your company uses SAP or 1Password, watch for official notices and change passwords if told to. Use official contact details only, and ignore unsolicited messages offering help.",
+  "prep_note": "If you use Allstate, call your agent or the phone line and keep proof of any payment. 1Password users should watch for odd emails and only use the official site or app. Developers can review and replace GitHub tokens. Keep a second way to pay bills.",
   "run": {
     "model": "claude-sonnet-5-5",
-    "input": 80814,
-    "output": 6656,
+    "input": 82323,
+    "output": 6628,
     "searches": 6,
-    "cost_usd": 0.2882
+    "cost_usd": 0.2909
   },
   "source_health": [
     {
+      "name": "AWS Health (RSS)",
+      "ok": true
+    },
+    {
       "name": "Google Cloud incidents",
+      "ok": true
+    },
+    {
+      "name": "Azure status (RSS)",
       "ok": true
     },
     {
@@ -278,20 +282,12 @@
       "ok": true
     },
     {
-      "name": "Azure status (RSS)",
-      "ok": true
-    },
-    {
       "name": "FAA NAS status",
-      "ok": true
-    },
-    {
-      "name": "AWS Health (RSS)",
       "ok": true
     }
   ],
   "alert_sent": {
-    "at": "2026-11-27T18:07:38.827Z",
+    "at": "2026-11-28T01:52:15.279Z",
     "reason": "new confirmed critical-sector event"
   }
 }

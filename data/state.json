@@ -37,7 +37,12 @@
     "sap-breach-2026-11-26",
     "wyoming-uranium-cyber-2026-11-25",
     "thanksgiving-ground-stops-2026-11-26",
-    "us-stocks-volatile-week-2026-11-27"
+    "us-stocks-volatile-week-2026-11-27",
+    "1password-github-breach-2026-11-25",
+    "bitcoin-price-check-2026-11-28",
+    "us-stocks-black-friday-2026-11-27",
+    "cisa-kev-additions-2026-11-27",
+    "faa-ground-stops-check-2026-11-28"
   ],
   "last_alert_rank": -1,
   "spend": {
@@ -50,7 +55,8 @@
     "2026-11-24": 0.552,
     "2026-11-25": 0.8169,
     "2026-11-26": 0.8269,
-    "2026-11-27": 0.5754
+    "2026-11-27": 0.5754,
+    "2026-11-28": 0.2909
   },
   "consecutive_failures": 0,
   "failure_alerted": false
